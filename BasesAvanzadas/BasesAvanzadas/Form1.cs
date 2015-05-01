@@ -14,6 +14,7 @@ namespace BasesAvanzadas
     {
         Form2 siguienteForma = new Form2();
         Form3 formaPaciente = new Form3();
+        Form4 formaProfesionalSalud = new Form4();
         public Form1()
         {
             InitializeComponent();
@@ -21,12 +22,12 @@ namespace BasesAvanzadas
 
         private void Pacientes(object sender, EventArgs e)
         {
-            siguienteForma.Show();
+            formaPaciente.Show();
         }
 
         private void ProfesionalDeLaSalud(object sender, EventArgs e)
         {
-            formaPaciente.Show();
+            formaProfesionalSalud.Show();
         }
 
         private void Diagnostico(object sender, EventArgs e)
