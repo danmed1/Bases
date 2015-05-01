@@ -30,10 +30,17 @@ namespace Nota_Actualizacion
         /// </summary>
         private void InternalStartup()
         {
-            this.Startup += new System.EventHandler(ThisDocument_Startup);
-            this.Shutdown += new System.EventHandler(ThisDocument_Shutdown);
+            this.lbCedMT.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl2_Entering);
+            this.Startup += new System.EventHandler(this.ThisDocument_Startup);
+            this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
+
         }
 
         #endregion
+
+        private void richTextContentControl2_Entering(object sender, ContentControlEnteringEventArgs e)
+        {
+
+        }
     }
 }
