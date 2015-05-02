@@ -72,6 +72,8 @@ namespace BasesAvanzadas
         private void altasHospitalBoton_Click(object sender, EventArgs e)
         {
             ////PON AQUI TU FORMA MEMO
+            FormHospital fomraprueba = new FormHospital();
+            fomraprueba.Show();
         }
 
         private void modificarHospitalBoton_Click(object sender, EventArgs e)

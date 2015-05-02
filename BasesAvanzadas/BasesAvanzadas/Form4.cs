@@ -92,5 +92,10 @@ namespace BasesAvanzadas
             }
             this.Close();
         }
+
+        private void tbApMat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -118,6 +118,7 @@
             this.tbApMat.Name = "tbApMat";
             this.tbApMat.Size = new System.Drawing.Size(191, 20);
             this.tbApMat.TabIndex = 8;
+            this.tbApMat.TextChanged += new System.EventHandler(this.tbApMat_TextChanged);
             // 
             // tbCedula
             // 
