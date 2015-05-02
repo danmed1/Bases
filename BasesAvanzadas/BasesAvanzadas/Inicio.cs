@@ -43,7 +43,7 @@ namespace BasesAvanzadas
         private void Hospital(object sender, EventArgs e)
         {
             menuGeneral.Visible = false;
-            altaHospital.Show();
+            altaHospital.ShowDialog();
         }
         private void botonBuscarPaciente_Click(object sender, EventArgs e)
         {
@@ -66,14 +66,13 @@ namespace BasesAvanzadas
         private void datosBoton_Click(object sender, EventArgs e)
         {
             DatosForma datosForma = new DatosForma();
-            datosForma.Show();
+            datosForma.ShowDialog();
         }
 
         private void altasHospitalBoton_Click(object sender, EventArgs e)
-        {
-            ////PON AQUI TU FORMA MEMO
+        {            
             FormHospital fomraprueba = new FormHospital();
-            fomraprueba.Show();
+            fomraprueba.ShowDialog();
         }
 
         private void modificarHospitalBoton_Click(object sender, EventArgs e)
@@ -104,6 +103,11 @@ namespace BasesAvanzadas
 
         }
 
+<<<<<<< HEAD
+        private void altaDatosPersonal_Click(object sender, EventArgs e)
+        {
+            altaProfesional.ShowDialog();
+=======
         private void Inicio_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'proyectoDBADataSet.Hospital' table. You can move, or remove it, as needed.
@@ -125,6 +129,7 @@ namespace BasesAvanzadas
         {
             menuHospital.Visible = true;
             menuGeneral.Visible = false;
+>>>>>>> 30f8e63b035d7e53e56597f9ef80e3421d237db6
         }
 
         private void menuAgregarNotas_Enter(object sender, EventArgs e)

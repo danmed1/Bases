@@ -203,10 +203,21 @@
             // menuPaciente
             // 
             this.menuPaciente.Controls.Add(this.vistaPacientes);
+            this.menuPaciente.Location = new System.Drawing.Point(9, 3);
+            this.menuPaciente.Name = "menuPaciente";
+            this.menuPaciente.Size = new System.Drawing.Size(521, 556);
+=======
+            // menuPaciente
+            // 
+            this.menuPaciente.Controls.Add(this.vistaPacientes);
             this.menuPaciente.Location = new System.Drawing.Point(6, 5);
             this.menuPaciente.Name = "menuPaciente";
+<<<<<<< HEAD
             this.menuPaciente.Size = new System.Drawing.Size(1350, 649);
+=======
+            this.menuPaciente.Size = new System.Drawing.Size(1361, 544);
 >>>>>>> 30f8e63b035d7e53e56597f9ef80e3421d237db6
+>>>>>>> 1ab5f7ead6aea0d7ab80b27a65604cfbe8387e67
             this.menuPaciente.TabIndex = 7;
             this.menuPaciente.TabStop = false;
             // 
@@ -230,9 +241,18 @@
             // 
             this.vistaPacientes.Panel2.Controls.Add(this.menuAgregarNotas);
             this.vistaPacientes.Panel2.Controls.Add(this.dataGridView2);
+<<<<<<< HEAD
             this.vistaPacientes.Size = new System.Drawing.Size(1344, 630);
             this.vistaPacientes.SplitterDistance = 409;
+=======
+<<<<<<< HEAD
+            this.vistaPacientes.Size = new System.Drawing.Size(515, 537);
+            this.vistaPacientes.SplitterDistance = 157;
+=======
+            this.vistaPacientes.Size = new System.Drawing.Size(1355, 525);
+            this.vistaPacientes.SplitterDistance = 413;
 >>>>>>> 30f8e63b035d7e53e56597f9ef80e3421d237db6
+>>>>>>> 1ab5f7ead6aea0d7ab80b27a65604cfbe8387e67
             this.vistaPacientes.TabIndex = 0;
             // 
             // botonMenuGenera
