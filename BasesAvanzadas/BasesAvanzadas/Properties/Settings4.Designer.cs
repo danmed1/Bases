@@ -33,5 +33,16 @@ namespace BasesAvanzadas.Properties {
                 return ((string)(this["ProyectoDBAConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.100.106;Initial Catalog=ProyectoDBA;User ID=Admin;Password=pa" +
+            "ssword")]
+        public string ProyectoDBAConnectionString1 {
+            get {
+                return ((string)(this["ProyectoDBAConnectionString1"]));
+            }
+        }
     }
 }
