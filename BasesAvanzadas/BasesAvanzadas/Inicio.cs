@@ -12,7 +12,9 @@ namespace BasesAvanzadas
 {
     public partial class Inicio : Form
     {
-      
+
+        Form4 altaProfesional = new Form4();
+        FormHospital altaHospital = new FormHospital();
         public Inicio()
         {
             InitializeComponent();
@@ -28,6 +30,8 @@ namespace BasesAvanzadas
 
         private void ProfesionalDeLaSalud(object sender, EventArgs e)
         {
+            menuGeneral.Visible = false;
+            altaProfesional.Show();            
         }
 
         private void Diagnostico(object sender, EventArgs e)
