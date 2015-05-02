@@ -33,7 +33,11 @@ namespace BasesAvanzadas
             menuGeneral.Visible = false;
             altaProfesional.Show();            
         }
-
+        private void Hospital(object sender, EventArgs e)
+        {
+            menuGeneral.Visible = false;
+            altaHospital.Show();
+        }
         private void Diagnostico(object sender, EventArgs e)
         {
 
