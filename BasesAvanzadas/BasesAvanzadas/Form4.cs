@@ -15,7 +15,7 @@ namespace BasesAvanzadas
     {
         public Form4()
         {
-            InitializeComponent();
+            InitializeComponent(); 
             mostrarPerfil();            
             mostrarEspecialidad();        
         }

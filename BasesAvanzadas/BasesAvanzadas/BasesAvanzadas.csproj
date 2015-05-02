@@ -99,6 +99,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoDBADataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProyectoDBADataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoDBADataSet11.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DatosForma.resx">
       <DependentUpon>DatosForma.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +149,17 @@
     </None>
     <None Include="ProyectoDBADataSet1.xss">
       <DependentUpon>ProyectoDBADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet11.xsc">
+      <DependentUpon>ProyectoDBADataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProyectoDBADataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectoDBADataSet11.xss">
+      <DependentUpon>ProyectoDBADataSet11.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

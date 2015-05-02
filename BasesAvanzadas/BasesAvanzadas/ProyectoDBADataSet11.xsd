@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="ProyectoDBADataSet" targetNamespace="http://tempuri.org/ProyectoDBADataSet1.xsd" xmlns:mstns="http://tempuri.org/ProyectoDBADataSet1.xsd" xmlns="http://tempuri.org/ProyectoDBADataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="ProyectoDBADataSet1" targetNamespace="http://tempuri.org/ProyectoDBADataSet11.xsd" xmlns:mstns="http://tempuri.org/ProyectoDBADataSet11.xsd" xmlns="http://tempuri.org/ProyectoDBADataSet11.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -64,7 +64,7 @@ SELECT Id_Hospital, Nombre, Direccion FROM Hospital WHERE (Id_Hospital = @Id_Hos
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="ProyectoDBADataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProyectoDBADataSet" msprop:Generator_UserDSName="ProyectoDBADataSet">
+  <xs:element name="ProyectoDBADataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProyectoDBADataSet1" msprop:Generator_UserDSName="ProyectoDBADataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Hospital" msprop:Generator_TableClassName="HospitalDataTable" msprop:Generator_TableVarName="tableHospital" msprop:Generator_TablePropName="Hospital" msprop:Generator_RowDeletingName="HospitalRowDeleting" msprop:Generator_RowChangingName="HospitalRowChanging" msprop:Generator_RowEvHandlerName="HospitalRowChangeEventHandler" msprop:Generator_RowDeletedName="HospitalRowDeleted" msprop:Generator_UserTableName="Hospital" msprop:Generator_RowChangedName="HospitalRowChanged" msprop:Generator_RowEvArgName="HospitalRowChangeEvent" msprop:Generator_RowClassName="HospitalRow">

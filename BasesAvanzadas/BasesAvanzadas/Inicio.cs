@@ -114,11 +114,27 @@ namespace BasesAvanzadas
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'proyectoDBADataSet1.Hospital' Puede moverla o quitarla según sea necesario.
+            this.hospitalTableAdapter1.Fill(this.proyectoDBADataSet1.Hospital);
             // TODO: esta línea de código carga datos en la tabla 'proyectoDBADataSet.Paciente' Puede moverla o quitarla según sea necesario.
-            this.pacienteTableAdapter.Fill(this.proyectoDBADataSet.Paciente);
+          //  this.pacienteTableAdapter.Fill(this.proyectoDBADataSet.Paciente);
 
         }
 
+        private void pacienteBoton_Click(object sender, EventArgs e)
+        {
+            Pacientes(sender,e);
+        }
 
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void hospitalBoton_Click_1(object sender, EventArgs e)
+        {
+            menuHospital.Visible = true;
+            menuGeneral.Visible = false;
+        }
     }
 }

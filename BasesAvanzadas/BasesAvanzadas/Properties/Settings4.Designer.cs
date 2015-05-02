@@ -26,7 +26,7 @@ namespace BasesAvanzadas.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=COMPULI;Initial Catalog=ProyectoDBA;Persist Security Info=True;User I" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.100.106;Initial Catalog=ProyectoDBA;Persist Security Info=True;User I" +
             "D=Admin;Password=password")]
         public string ProyectoDBAConnectionString {
             get {
