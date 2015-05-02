@@ -32,7 +32,7 @@
             this.pacienteBoton = new System.Windows.Forms.Button();
             this.personalBoton = new System.Windows.Forms.Button();
             this.cerrarSesion = new System.Windows.Forms.Button();
-this.hospitalBoton = new System.Windows.Forms.Button();
+            this.hospitalBoton = new System.Windows.Forms.Button();
             this.Division1 = new System.Windows.Forms.SplitContainer();
             this.menuGeneral = new System.Windows.Forms.GroupBox();
             this.menuPaciente = new System.Windows.Forms.GroupBox();
@@ -151,7 +151,6 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             this.hospitalBoton.Text = "Hospitales";
             this.hospitalBoton.UseVisualStyleBackColor = true;
             this.hospitalBoton.Click += new System.EventHandler(this.hospitalBoton_Click);
-            //this.button5.Click += new System.EventHandler(this.Hospital);
             // 
             // Division1
             // 
@@ -186,9 +185,9 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             // menuPaciente
             // 
             this.menuPaciente.Controls.Add(this.vistaPacientes);
-            this.menuPaciente.Location = new System.Drawing.Point(9, 15);
+            this.menuPaciente.Location = new System.Drawing.Point(9, 3);
             this.menuPaciente.Name = "menuPaciente";
-            this.menuPaciente.Size = new System.Drawing.Size(511, 544);
+            this.menuPaciente.Size = new System.Drawing.Size(521, 556);
             this.menuPaciente.TabIndex = 7;
             this.menuPaciente.TabStop = false;
             // 
@@ -211,8 +210,8 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             // vistaPacientes.Panel2
             // 
             this.vistaPacientes.Panel2.Controls.Add(this.dataGridView2);
-            this.vistaPacientes.Size = new System.Drawing.Size(505, 525);
-            this.vistaPacientes.SplitterDistance = 154;
+            this.vistaPacientes.Size = new System.Drawing.Size(515, 537);
+            this.vistaPacientes.SplitterDistance = 157;
             this.vistaPacientes.TabIndex = 0;
             // 
             // botonMenuGenera
@@ -498,6 +497,7 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             this.altaDatosPersonal.TabIndex = 3;
             this.altaDatosPersonal.Text = "Altas";
             this.altaDatosPersonal.UseVisualStyleBackColor = true;
+            this.altaDatosPersonal.Click += new System.EventHandler(this.altaDatosPersonal_Click);
             // 
             // buscarDetallesPersonalBoton
             // 
