@@ -104,6 +104,29 @@ namespace BasesAvanzadas
 
         }
 
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'proyectoDBADataSet.Hospital' table. You can move, or remove it, as needed.
+            this.hospitalTableAdapter.Fill(this.proyectoDBADataSet.Hospital);
+
+        }
+
+        private void pacienteBoton_Click(object sender, EventArgs e)
+        {
+            Pacientes(sender,e);
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void hospitalBoton_Click_1(object sender, EventArgs e)
+        {
+            menuHospital.Visible = true;
+            menuGeneral.Visible = false;
+        }
+
 
     }
 }
