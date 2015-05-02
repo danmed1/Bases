@@ -70,6 +70,8 @@ namespace BasesAvanzadas
         private void altasHospitalBoton_Click(object sender, EventArgs e)
         {
             ////PON AQUI TU FORMA MEMO
+            FormHospital fomraprueba = new FormHospital();
+            fomraprueba.Show();
         }
 
         private void modificarHospitalBoton_Click(object sender, EventArgs e)
@@ -96,7 +98,24 @@ namespace BasesAvanzadas
 
         private void menuGeneral_Enter(object sender, EventArgs e)
         {
-            AutoSize = true;
+            
+
+        }
+
+        private void altaDatosPersonal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'proyectoDBADataSet.Paciente' Puede moverla o quitarla según sea necesario.
+            this.pacienteTableAdapter.Fill(this.proyectoDBADataSet.Paciente);
 
         }
 

@@ -32,7 +32,7 @@
             this.pacienteBoton = new System.Windows.Forms.Button();
             this.personalBoton = new System.Windows.Forms.Button();
             this.cerrarSesion = new System.Windows.Forms.Button();
-this.hospitalBoton = new System.Windows.Forms.Button();
+            this.hospitalBoton = new System.Windows.Forms.Button();
             this.Division1 = new System.Windows.Forms.SplitContainer();
             this.menuGeneral = new System.Windows.Forms.GroupBox();
             this.menuPaciente = new System.Windows.Forms.GroupBox();
@@ -74,6 +74,13 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             this.modificarHospitalBoton = new System.Windows.Forms.Button();
             this.altasHospitalBoton = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.proyectoDBADataSet = new BasesAvanzadas.ProyectoDBADataSet();
+            this.pacienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pacienteTableAdapter = new BasesAvanzadas.ProyectoDBADataSetTableAdapters.PacienteTableAdapter();
+            this.numSeguroSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apPatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apMatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Division1)).BeginInit();
             this.Division1.Panel1.SuspendLayout();
             this.Division1.Panel2.SuspendLayout();
@@ -105,6 +112,8 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyectoDBADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pacienteBoton
@@ -185,9 +194,9 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             // menuPaciente
             // 
             this.menuPaciente.Controls.Add(this.vistaPacientes);
-            this.menuPaciente.Location = new System.Drawing.Point(9, 15);
+            this.menuPaciente.Location = new System.Drawing.Point(9, -1);
             this.menuPaciente.Name = "menuPaciente";
-            this.menuPaciente.Size = new System.Drawing.Size(511, 544);
+            this.menuPaciente.Size = new System.Drawing.Size(727, 560);
             this.menuPaciente.TabIndex = 7;
             this.menuPaciente.TabStop = false;
             // 
@@ -210,8 +219,8 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             // vistaPacientes.Panel2
             // 
             this.vistaPacientes.Panel2.Controls.Add(this.dataGridView2);
-            this.vistaPacientes.Size = new System.Drawing.Size(505, 525);
-            this.vistaPacientes.SplitterDistance = 154;
+            this.vistaPacientes.Size = new System.Drawing.Size(721, 541);
+            this.vistaPacientes.SplitterDistance = 219;
             this.vistaPacientes.TabIndex = 0;
             // 
             // botonMenuGenera
@@ -279,11 +288,19 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             // 
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.DataSource = this.dataSet1BindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 58);
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numSeguroSocialDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.apPatDataGridViewTextBoxColumn,
+            this.apMatDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.pacienteBindingSource;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(53, 213);
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(498, 541);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // menuContextPaciente
             // 
@@ -497,6 +514,7 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             this.altaDatosPersonal.TabIndex = 3;
             this.altaDatosPersonal.Text = "Altas";
             this.altaDatosPersonal.UseVisualStyleBackColor = true;
+            this.altaDatosPersonal.Click += new System.EventHandler(this.altaDatosPersonal_Click);
             // 
             // buscarDetallesPersonalBoton
             // 
@@ -602,6 +620,48 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             this.dataGridView4.Size = new System.Drawing.Size(256, 275);
             this.dataGridView4.TabIndex = 0;
             // 
+            // proyectoDBADataSet
+            // 
+            this.proyectoDBADataSet.DataSetName = "ProyectoDBADataSet";
+            this.proyectoDBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pacienteBindingSource
+            // 
+            this.pacienteBindingSource.DataMember = "Paciente";
+            this.pacienteBindingSource.DataSource = this.proyectoDBADataSet;
+            // 
+            // pacienteTableAdapter
+            // 
+            this.pacienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // numSeguroSocialDataGridViewTextBoxColumn
+            // 
+            this.numSeguroSocialDataGridViewTextBoxColumn.DataPropertyName = "NumSeguroSocial";
+            this.numSeguroSocialDataGridViewTextBoxColumn.HeaderText = "NumSeguroSocial";
+            this.numSeguroSocialDataGridViewTextBoxColumn.Name = "numSeguroSocialDataGridViewTextBoxColumn";
+            this.numSeguroSocialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apPatDataGridViewTextBoxColumn
+            // 
+            this.apPatDataGridViewTextBoxColumn.DataPropertyName = "Ap_Pat";
+            this.apPatDataGridViewTextBoxColumn.HeaderText = "Ap_Pat";
+            this.apPatDataGridViewTextBoxColumn.Name = "apPatDataGridViewTextBoxColumn";
+            this.apPatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apMatDataGridViewTextBoxColumn
+            // 
+            this.apMatDataGridViewTextBoxColumn.DataPropertyName = "Ap_Mat";
+            this.apMatDataGridViewTextBoxColumn.HeaderText = "Ap_Mat";
+            this.apMatDataGridViewTextBoxColumn.Name = "apMatDataGridViewTextBoxColumn";
+            this.apMatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -617,6 +677,7 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             this.Controls.Add(this.menuPaciente);
             this.Name = "Inicio";
             this.Text = "Equipo Negro App";
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.Division1.Panel1.ResumeLayout(false);
             this.Division1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Division1)).EndInit();
@@ -650,6 +711,8 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyectoDBADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -702,6 +765,13 @@ this.hospitalBoton = new System.Windows.Forms.Button();
         private System.Windows.Forms.Button modificarHospitalBoton;
         private System.Windows.Forms.Button regresarMenuGeneralBoton;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private ProyectoDBADataSet proyectoDBADataSet;
+        private System.Windows.Forms.BindingSource pacienteBindingSource;
+        private ProyectoDBADataSetTableAdapters.PacienteTableAdapter pacienteTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numSeguroSocialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apPatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apMatDataGridViewTextBoxColumn;
     }
 }
 
