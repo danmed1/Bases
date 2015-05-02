@@ -32,7 +32,7 @@
             this.pacienteBoton = new System.Windows.Forms.Button();
             this.personalBoton = new System.Windows.Forms.Button();
             this.cerrarSesion = new System.Windows.Forms.Button();
-            this.hospitalBoton = new System.Windows.Forms.Button();
+this.hospitalBoton = new System.Windows.Forms.Button();
             this.Division1 = new System.Windows.Forms.SplitContainer();
             this.menuGeneral = new System.Windows.Forms.GroupBox();
             this.menuPaciente = new System.Windows.Forms.GroupBox();
@@ -151,6 +151,7 @@
             this.hospitalBoton.Text = "Hospitales";
             this.hospitalBoton.UseVisualStyleBackColor = true;
             this.hospitalBoton.Click += new System.EventHandler(this.hospitalBoton_Click);
+            this.button5.Click += new System.EventHandler(this.Hospital);
             // 
             // Division1
             // 

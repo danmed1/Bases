@@ -8,9 +8,6 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BasesAvanzadas</RootNamespace>
-<<<<<<< HEAD
-    <AssemblyName>BasesAvanzadas</AssemblyName>    
-=======
     <AssemblyName>BasesAvanzadas</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -53,17 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatosForma.cs">
+    <Compile Include="FormHospital.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatosForma.Designer.cs">
-      <DependentUpon>DatosForma.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalForma.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HospitalForma.Designer.cs">
-      <DependentUpon>HospitalForma.cs</DependentUpon>
+    <Compile Include="FormHospital.Designer.cs">
+      <DependentUpon>FormHospital.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -85,17 +76,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <EmbeddedResource Include="FormHospital.resx">
+      <DependentUpon>FormHospital.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Properties\Settings4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DatosForma.resx">
-      <DependentUpon>DatosForma.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HospitalForma.resx">
-      <DependentUpon>HospitalForma.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>

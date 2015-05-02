@@ -12,7 +12,9 @@ namespace BasesAvanzadas
 {
     public partial class Inicio : Form
     {
-      
+
+        Form4 altaProfesional = new Form4();
+        FormHospital altaHospital = new FormHospital();
         public Inicio()
         {
             InitializeComponent();
@@ -38,7 +40,11 @@ namespace BasesAvanzadas
         {
             Application.Exit();
         }
-
+        private void Hospital(object sender, EventArgs e)
+        {
+            menuGeneral.Visible = false;
+            altaHospital.Show();
+        }
         private void botonBuscarPaciente_Click(object sender, EventArgs e)
         {
             menuContextPaciente.Visible = true;
