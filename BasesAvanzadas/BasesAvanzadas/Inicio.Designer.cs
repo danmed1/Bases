@@ -118,9 +118,9 @@
             // menuPaciente
             // 
             this.menuPaciente.Controls.Add(this.vistaPacientes);
-            this.menuPaciente.Location = new System.Drawing.Point(6, 110);
+            this.menuPaciente.Location = new System.Drawing.Point(6, 5);
             this.menuPaciente.Name = "menuPaciente";
-            this.menuPaciente.Size = new System.Drawing.Size(1361, 544);
+            this.menuPaciente.Size = new System.Drawing.Size(1350, 649);
             this.menuPaciente.TabIndex = 7;
             this.menuPaciente.TabStop = false;
             // 
@@ -142,9 +142,10 @@
             // 
             // vistaPacientes.Panel2
             // 
+            this.vistaPacientes.Panel2.Controls.Add(this.menuAgregarNotas);
             this.vistaPacientes.Panel2.Controls.Add(this.dataGridView2);
-            this.vistaPacientes.Size = new System.Drawing.Size(1355, 525);
-            this.vistaPacientes.SplitterDistance = 413;
+            this.vistaPacientes.Size = new System.Drawing.Size(1344, 630);
+            this.vistaPacientes.SplitterDistance = 409;
             this.vistaPacientes.TabIndex = 0;
             // 
             // botonMenuGenera
@@ -213,17 +214,18 @@
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.DataSource = this.dataSet1BindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 58);
+            this.dataGridView2.Location = new System.Drawing.Point(19, 59);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(53, 213);
+            this.dataGridView2.Size = new System.Drawing.Size(905, 382);
             this.dataGridView2.TabIndex = 0;
             // 
             // menuContextPaciente
             // 
             this.menuContextPaciente.Controls.Add(this.ContextPacienteVista);
-            this.menuContextPaciente.Location = new System.Drawing.Point(35, 65);
+            this.menuContextPaciente.Controls.Add(this.menuPersonal);
+            this.menuContextPaciente.Location = new System.Drawing.Point(-2, 2);
             this.menuContextPaciente.Name = "menuContextPaciente";
-            this.menuContextPaciente.Size = new System.Drawing.Size(1315, 500);
+            this.menuContextPaciente.Size = new System.Drawing.Size(1358, 557);
             this.menuContextPaciente.TabIndex = 8;
             this.menuContextPaciente.TabStop = false;
             // 
@@ -241,8 +243,8 @@
             this.ContextPacienteVista.Panel1.Controls.Add(this.verNotaBoton);
             this.ContextPacienteVista.Panel1.Controls.Add(this.agregarNotaBoton);
             this.ContextPacienteVista.Panel1.Controls.Add(this.datosBoton);
-            this.ContextPacienteVista.Size = new System.Drawing.Size(1309, 481);
-            this.ContextPacienteVista.SplitterDistance = 424;
+            this.ContextPacienteVista.Size = new System.Drawing.Size(1352, 538);
+            this.ContextPacienteVista.SplitterDistance = 438;
             this.ContextPacienteVista.TabIndex = 0;
             // 
             // expedienteBoton
@@ -305,11 +307,12 @@
             this.menuAgregarNotas.Controls.Add(this.regresarMenuContexPacienteBoton);
             this.menuAgregarNotas.Controls.Add(this.button3);
             this.menuAgregarNotas.Controls.Add(this.notaAltaboton);
-            this.menuAgregarNotas.Location = new System.Drawing.Point(905, 492);
+            this.menuAgregarNotas.Location = new System.Drawing.Point(-417, -19);
             this.menuAgregarNotas.Name = "menuAgregarNotas";
-            this.menuAgregarNotas.Size = new System.Drawing.Size(66, 357);
+            this.menuAgregarNotas.Size = new System.Drawing.Size(1344, 557);
             this.menuAgregarNotas.TabIndex = 9;
             this.menuAgregarNotas.TabStop = false;
+            this.menuAgregarNotas.Enter += new System.EventHandler(this.menuAgregarNotas_Enter);
             // 
             // regresarMenuContexPacienteBoton
             // 
@@ -345,9 +348,9 @@
             // 
             this.menuVerNota.Controls.Add(this.dataGridView1);
             this.menuVerNota.Controls.Add(this.regresarMenuNotaBoton);
-            this.menuVerNota.Location = new System.Drawing.Point(18, 91);
+            this.menuVerNota.Location = new System.Drawing.Point(0, 0);
             this.menuVerNota.Name = "menuVerNota";
-            this.menuVerNota.Size = new System.Drawing.Size(1338, 480);
+            this.menuVerNota.Size = new System.Drawing.Size(1353, 560);
             this.menuVerNota.TabIndex = 10;
             this.menuVerNota.TabStop = false;
             // 
@@ -372,9 +375,9 @@
             // menuPersonal
             // 
             this.menuPersonal.Controls.Add(this.vistaDetallesPersonal);
-            this.menuPersonal.Location = new System.Drawing.Point(61, 24);
+            this.menuPersonal.Location = new System.Drawing.Point(3, 0);
             this.menuPersonal.Name = "menuPersonal";
-            this.menuPersonal.Size = new System.Drawing.Size(1300, 538);
+            this.menuPersonal.Size = new System.Drawing.Size(1355, 554);
             this.menuPersonal.TabIndex = 12;
             this.menuPersonal.TabStop = false;
             // 
@@ -397,8 +400,8 @@
             // vistaDetallesPersonal.Panel2
             // 
             this.vistaDetallesPersonal.Panel2.Controls.Add(this.dataGridView3);
-            this.vistaDetallesPersonal.Size = new System.Drawing.Size(1294, 519);
-            this.vistaDetallesPersonal.SplitterDistance = 427;
+            this.vistaDetallesPersonal.Size = new System.Drawing.Size(1349, 535);
+            this.vistaDetallesPersonal.SplitterDistance = 445;
             this.vistaDetallesPersonal.TabIndex = 0;
             // 
             // modicarDatosPersonalBoton
@@ -470,9 +473,10 @@
             // menuHospital
             // 
             this.menuHospital.Controls.Add(this.splitContainer1);
-            this.menuHospital.Location = new System.Drawing.Point(78, 5);
+            this.menuHospital.Controls.Add(this.menuVerNota);
+            this.menuHospital.Location = new System.Drawing.Point(3, 5);
             this.menuHospital.Name = "menuHospital";
-            this.menuHospital.Size = new System.Drawing.Size(1289, 557);
+            this.menuHospital.Size = new System.Drawing.Size(1352, 557);
             this.menuHospital.TabIndex = 13;
             this.menuHospital.TabStop = false;
             // 
@@ -491,8 +495,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView4);
-            this.splitContainer1.Size = new System.Drawing.Size(1283, 538);
-            this.splitContainer1.SplitterDistance = 427;
+            this.splitContainer1.Size = new System.Drawing.Size(1346, 538);
+            this.splitContainer1.SplitterDistance = 448;
             this.splitContainer1.TabIndex = 0;
             // 
             // regresarMenuGeneralBoton
@@ -546,9 +550,9 @@
             // 
             this.menuGeneral.AutoSize = true;
             this.menuGeneral.Controls.Add(this.Division1);
-            this.menuGeneral.Location = new System.Drawing.Point(6, 5);
+            this.menuGeneral.Location = new System.Drawing.Point(11, 5);
             this.menuGeneral.Name = "menuGeneral";
-            this.menuGeneral.Size = new System.Drawing.Size(1347, 517);
+            this.menuGeneral.Size = new System.Drawing.Size(1347, 557);
             this.menuGeneral.TabIndex = 15;
             this.menuGeneral.TabStop = false;
             // 
@@ -653,13 +657,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1362, 561);
-            this.Controls.Add(this.menuGeneral);
             this.Controls.Add(this.menuHospital);
-            this.Controls.Add(this.menuAgregarNotas);
             this.Controls.Add(this.menuContextPaciente);
-            this.Controls.Add(this.menuPersonal);
-            this.Controls.Add(this.menuVerNota);
             this.Controls.Add(this.menuPaciente);
+            this.Controls.Add(this.menuGeneral);
             this.Name = "Inicio";
             this.Text = "Equipo Negro App";
             this.Load += new System.EventHandler(this.Inicio_Load);

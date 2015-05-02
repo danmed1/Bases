@@ -127,6 +127,11 @@ namespace BasesAvanzadas
             menuGeneral.Visible = false;
         }
 
+        private void menuAgregarNotas_Enter(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }
