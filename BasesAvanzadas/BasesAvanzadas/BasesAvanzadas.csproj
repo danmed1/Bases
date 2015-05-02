@@ -74,7 +74,13 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="FormHospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHospital.Designer.cs">
+      <DependentUpon>FormHospital.cs</DependentUpon>
+    </Compile>
+	<Compile Include="Form4.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form4.Designer.cs">
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Include="FormHospital.resx">
+      <DependentUpon>FormHospital.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
