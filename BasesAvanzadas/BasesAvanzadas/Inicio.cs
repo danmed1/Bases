@@ -43,7 +43,7 @@ namespace BasesAvanzadas
         private void Hospital(object sender, EventArgs e)
         {
             menuGeneral.Visible = false;
-            altaHospital.ShowDialog();
+            altaHospital.Show();
         }
         private void botonBuscarPaciente_Click(object sender, EventArgs e)
         {
@@ -66,13 +66,14 @@ namespace BasesAvanzadas
         private void datosBoton_Click(object sender, EventArgs e)
         {
             DatosForma datosForma = new DatosForma();
-            datosForma.ShowDialog();
+            datosForma.Show();
         }
 
         private void altasHospitalBoton_Click(object sender, EventArgs e)
-        {            
+        {
+            ////PON AQUI TU FORMA MEMO
             FormHospital fomraprueba = new FormHospital();
-            fomraprueba.ShowDialog();
+            fomraprueba.Show();
         }
 
         private void modificarHospitalBoton_Click(object sender, EventArgs e)
@@ -103,37 +104,16 @@ namespace BasesAvanzadas
 
         }
 
-<<<<<<< HEAD
-        private void altaDatosPersonal_Click(object sender, EventArgs e)
-        {
-            altaProfesional.ShowDialog();
-=======
         private void Inicio_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'proyectoDBADataSet.Hospital' table. You can move, or remove it, as needed.
-            this.hospitalTableAdapter.Fill(this.proyectoDBADataSet.Hospital);
-
-        }
-
-        private void pacienteBoton_Click(object sender, EventArgs e)
-        {
-            Pacientes(sender,e);
-        }
-
-        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void hospitalBoton_Click_1(object sender, EventArgs e)
-        {
-            menuHospital.Visible = true;
-            menuGeneral.Visible = false;
->>>>>>> 30f8e63b035d7e53e56597f9ef80e3421d237db6
-        }
-
-        private void menuAgregarNotas_Enter(object sender, EventArgs e)
-        {
+            // TODO: This line of code loads data into the 'proyectoDBADataSet1.Hospital' table. You can move, or remove it, as needed.
+            this.hospitalTableAdapter.Fill(this.proyectoDBADataSet1.Hospital);
+            // TODO: This line of code loads data into the 'proyectoDBADataSet1.Paciente' table. You can move, or remove it, as needed.
+            this.pacienteTableAdapter.Fill(this.proyectoDBADataSet1.Paciente);
+            // TODO: This line of code loads data into the 'proyectoDBADataSet1.Nota_Gen' table. You can move, or remove it, as needed.
+            this.nota_GenTableAdapter.Fill(this.proyectoDBADataSet1.Nota_Gen);
+            // TODO: This line of code loads data into the 'proyectoDBADataSet.Profesional_Salud' table. You can move, or remove it, as needed.
+            this.profesional_SaludTableAdapter.Fill(this.proyectoDBADataSet.Profesional_Salud);
 
         }
 
