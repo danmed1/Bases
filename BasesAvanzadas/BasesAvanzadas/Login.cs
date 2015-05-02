@@ -26,5 +26,9 @@ namespace BasesAvanzadas
         {
 
         }
+
+        private void entrar_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
