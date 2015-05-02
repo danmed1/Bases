@@ -32,7 +32,7 @@
             this.pacienteBoton = new System.Windows.Forms.Button();
             this.personalBoton = new System.Windows.Forms.Button();
             this.cerrarSesion = new System.Windows.Forms.Button();
-this.hospitalBoton = new System.Windows.Forms.Button();
+            this.hospitalBoton = new System.Windows.Forms.Button();
             this.Division1 = new System.Windows.Forms.SplitContainer();
             this.menuGeneral = new System.Windows.Forms.GroupBox();
             this.menuPaciente = new System.Windows.Forms.GroupBox();
@@ -143,6 +143,7 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             // 
             // hospitalBoton
             // 
+<<<<<<< HEAD
             this.hospitalBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hospitalBoton.Location = new System.Drawing.Point(3, 234);
             this.hospitalBoton.Name = "hospitalBoton";
@@ -151,6 +152,16 @@ this.hospitalBoton = new System.Windows.Forms.Button();
             this.hospitalBoton.Text = "Hospitales";
             this.hospitalBoton.UseVisualStyleBackColor = true;
             this.hospitalBoton.Click += new System.EventHandler(this.hospitalBoton_Click);
+=======
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(3, 234);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(272, 61);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Hospitales";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Hospital);
+>>>>>>> bdcb9fdf848e4464918688aa41dfbab3491b23a8
             // 
             // Division1
             // 

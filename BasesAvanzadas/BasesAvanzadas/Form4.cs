@@ -29,7 +29,7 @@ namespace BasesAvanzadas
         private void mostrarPerfil()
         {
 
-            SqlConnection conn = new SqlConnection("Data Source=COMPULI;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection conn = new SqlConnection("Data Source=192.168.100.106;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
             conn.Open();
             SqlCommand sc = new SqlCommand("SELECT * FROM Perfil", conn);
             SqlDataReader reader;
@@ -53,7 +53,7 @@ namespace BasesAvanzadas
         private void mostrarEspecialidad()
         {
 
-            SqlConnection conn = new SqlConnection("Data Source=COMPULI;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection conn = new SqlConnection("Data Source=192.168.100.106;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
             conn.Open();
             SqlCommand sc = new SqlCommand("SELECT * FROM Especialidad", conn);
             SqlDataReader reader;

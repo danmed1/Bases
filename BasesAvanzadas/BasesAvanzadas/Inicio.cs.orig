@@ -14,6 +14,7 @@ namespace BasesAvanzadas
     {
 
         Form4 altaProfesional = new Form4();
+        FormHospital altaHospital = new FormHospital();
         public Inicio()
         {
             InitializeComponent();
@@ -37,13 +38,22 @@ namespace BasesAvanzadas
 
         private void Salir(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Application.Exit();
+        }
+
+        private void botonBuscarPaciente_Click(object sender, EventArgs e)
+=======
+            menuGeneral.Visible = false;
+            altaProfesional.Show();            
         }
         private void Hospital(object sender, EventArgs e)
         {
             menuGeneral.Visible = false;
+            altaHospital.Show();
         }
-        private void botonBuscarPaciente_Click(object sender, EventArgs e)
+        private void Diagnostico(object sender, EventArgs e)
+>>>>>>> bdcb9fdf848e4464918688aa41dfbab3491b23a8
         {
             menuContextPaciente.Visible = true;
             menuPaciente.Visible = false;
