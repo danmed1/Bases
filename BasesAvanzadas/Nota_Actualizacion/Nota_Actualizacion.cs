@@ -12,7 +12,7 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace Nota_Actualizacion
 {
-    public partial class ThisDocument
+    public partial class Nota_Actualizacion
     {
         private void ThisDocument_Startup(object sender, System.EventArgs e)
         {

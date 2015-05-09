@@ -12,10 +12,11 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace Nota_Ingreso
 {
-    public partial class ThisDocument
+    public  partial class ThisDocument
     {
         private void ThisDocument_Startup(object sender, System.EventArgs e)
         {
+
         }
 
         private void ThisDocument_Shutdown(object sender, System.EventArgs e)
@@ -30,10 +31,20 @@ namespace Nota_Ingreso
         /// </summary>
         private void InternalStartup()
         {
-            this.Startup += new System.EventHandler(ThisDocument_Startup);
-            this.Shutdown += new System.EventHandler(ThisDocument_Shutdown);
+            this.comboMtrat.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.ComboBoxContentControl_Entering);
+            this.Startup += new System.EventHandler(this.ThisDocument_Startup);
+            this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
+
         }
 
         #endregion
+
+        public void lbNomMT_Entering(object sender, System.EventArgs e) { }
+
+        private void ComboBoxContentControl_Entering(object sender, ContentControlEnteringEventArgs e)
+        {
+            
+        }
+       
     }
 }

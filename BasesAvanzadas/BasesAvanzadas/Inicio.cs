@@ -18,6 +18,7 @@ namespace BasesAvanzadas
             InitializeComponent();
             menuPaciente.Visible = false;
             menuContextPaciente.Visible = false;
+            
         }
 
         private void Pacientes(object sender, EventArgs e)
