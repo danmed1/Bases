@@ -35,6 +35,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,17 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatosForma.cs">
+    <Compile Include="FormHospital.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatosForma.Designer.cs">
-      <DependentUpon>DatosForma.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalForma.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HospitalForma.Designer.cs">
-      <DependentUpon>HospitalForma.cs</DependentUpon>
+    <Compile Include="FormHospital.Designer.cs">
+      <DependentUpon>FormHospital.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -71,12 +68,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHospital.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormHospital.Designer.cs">
-      <DependentUpon>FormHospital.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,30 +76,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <EmbeddedResource Include="FormHospital.resx">
+      <DependentUpon>FormHospital.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Properties\Settings4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="ProyectoDBADataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProyectoDBADataSet1.xsd</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="DatosForma.resx">
-      <DependentUpon>DatosForma.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HospitalForma.resx">
-      <DependentUpon>HospitalForma.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormHospital.resx">
-      <DependentUpon>FormHospital.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
@@ -130,37 +111,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings4.Designer.cs</LastGenOutput>
     </None>
-    <None Include="ProyectoDBADataSet1.xsc">
-      <DependentUpon>ProyectoDBADataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="ProyectoDBADataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProyectoDBADataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProyectoDBADataSet1.xss">
-      <DependentUpon>ProyectoDBADataSet1.xsd</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="WordClientPkgLib">
-      <Guid>{8BDC7D34-D8F8-4CF5-944A-D265202A443F}</Guid>
-      <VersionMajor>12</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -12,13 +12,22 @@ namespace BasesAvanzadas
 {
     public partial class Inicio : Form
     {
-      
+
+        Form4 altaProfesional = new Form4();
+        FormHospital altaHospital = new FormHospital();
         public Inicio()
         {
             InitializeComponent();
             menuPaciente.Visible = false;
             menuContextPaciente.Visible = false;
+<<<<<<< HEAD
             
+=======
+            menuAgregarNotas.Visible = false;
+            menuVerNota.Visible = false;
+            menuHospital.Visible = false;
+            menuPersonal.Visible = false;
+>>>>>>> f6c0911d466838b1aaa7b0ed3b9b1d565d595ba0
         }
 
         private void Pacientes(object sender, EventArgs e)
@@ -26,50 +35,92 @@ namespace BasesAvanzadas
             menuPaciente.Visible = true;
             menuGeneral.Visible = false;
         }
-
-        private void ProfesionalDeLaSalud(object sender, EventArgs e)
-        {
-        }
-
-        private void Diagnostico(object sender, EventArgs e)
-        {
-
+        private void Personal(object sender, EventArgs e) {
+            menuPersonal.Visible = true;
+            menuGeneral.Visible = false;
         }
 
         private void Salir(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void Hospital(object sender, EventArgs e)
         {
-
+            menuGeneral.Visible = false;
+            altaHospital.Show();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void vistaPacientes_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void botonBuscarPaciente_Click(object sender, EventArgs e)
         {
             menuContextPaciente.Visible = true;
             menuPaciente.Visible = false;
         }
 
-        private void vistaContextPaciente_Enter(object sender, EventArgs e)
+        private void agregarNotaBoton_Click(object sender, EventArgs e)
         {
+            menuContextPaciente.Visible = false;
+            menuAgregarNotas.Visible = true;
+        }
+
+        private void verNotaBoton_Click(object sender, EventArgs e)
+        {
+            menuVerNota.Visible = true;
+            menuContextPaciente.Visible = false;
+        }
+
+        private void datosBoton_Click(object sender, EventArgs e)
+        {
+            DatosForma datosForma = new DatosForma();
+            datosForma.Show();
+        }
+
+        private void altasHospitalBoton_Click(object sender, EventArgs e)
+        {
+            ////PON AQUI TU FORMA MEMO
+            FormHospital fomraprueba = new FormHospital();
+            fomraprueba.Show();
+        }
+
+        private void modificarHospitalBoton_Click(object sender, EventArgs e)
+        {
+            HospitalForma hospitalforma = new HospitalForma();
+            hospitalBoton.Show();
+        }
+
+        private void hospitalBoton_Click(object sender, EventArgs e)
+        {
+            menuHospital.Visible = true;
+        }
+
+        private void regresarPacienteMenuBoton_Click(object sender, EventArgs e)
+        {
+            menuContextPaciente.Visible = false;
+            menuPaciente.Visible = true;
+        }
+
+        private void expedienteBoton_Click(object sender, EventArgs e)
+        {
+            //cosas de word
+        }
+
+        private void menuGeneral_Enter(object sender, EventArgs e)
+        {
+            AutoSize = true;
 
         }
 
-        private void Division1_Panel2_Paint(object sender, PaintEventArgs e)
+        private void Inicio_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'proyectoDBADataSet1.Hospital' table. You can move, or remove it, as needed.
+            this.hospitalTableAdapter.Fill(this.proyectoDBADataSet1.Hospital);
+            // TODO: This line of code loads data into the 'proyectoDBADataSet1.Paciente' table. You can move, or remove it, as needed.
+            this.pacienteTableAdapter.Fill(this.proyectoDBADataSet1.Paciente);
+            // TODO: This line of code loads data into the 'proyectoDBADataSet1.Nota_Gen' table. You can move, or remove it, as needed.
+            this.nota_GenTableAdapter.Fill(this.proyectoDBADataSet1.Nota_Gen);
+            // TODO: This line of code loads data into the 'proyectoDBADataSet.Profesional_Salud' table. You can move, or remove it, as needed.
+            this.profesional_SaludTableAdapter.Fill(this.proyectoDBADataSet.Profesional_Salud);
 
         }
+
+
     }
 }
