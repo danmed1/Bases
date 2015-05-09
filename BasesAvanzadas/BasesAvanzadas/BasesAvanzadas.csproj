@@ -9,6 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BasesAvanzadas</RootNamespace>
     <AssemblyName>BasesAvanzadas</AssemblyName>
+    <AssemblyName>BasesAvanzadas</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -35,6 +36,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -77,11 +81,17 @@
     <Compile Include="FormHospital.Designer.cs">
       <DependentUpon>FormHospital.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="AltaPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="AltaPersonal.Designer.cs">
+      <DependentUpon>AltaPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalForma.Designer.cs">
+      <DependentUpon>PersonalForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +104,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoDBADataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoDBADataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoDBADataSet11.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DatosForma.resx">
       <DependentUpon>DatosForma.cs</DependentUpon>
@@ -110,8 +125,11 @@
     <EmbeddedResource Include="FormHospital.resx">
       <DependentUpon>FormHospital.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="AltaPersonal.resx">
+      <DependentUpon>AltaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalForma.resx">
+      <DependentUpon>PersonalForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -141,26 +159,17 @@
     <None Include="ProyectoDBADataSet1.xss">
       <DependentUpon>ProyectoDBADataSet1.xsd</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="WordClientPkgLib">
-      <Guid>{8BDC7D34-D8F8-4CF5-944A-D265202A443F}</Guid>
-      <VersionMajor>12</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
+    <None Include="ProyectoDBADataSet11.xsc">
+      <DependentUpon>ProyectoDBADataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProyectoDBADataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectoDBADataSet11.xss">
+      <DependentUpon>ProyectoDBADataSet11.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

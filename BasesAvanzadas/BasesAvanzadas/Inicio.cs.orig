@@ -13,7 +13,7 @@ namespace BasesAvanzadas
     public partial class Inicio : Form
     {
 
-        AltaPersonal altaProfesional = new AltaPersonal();
+        Form4 altaProfesional = new Form4();
         FormHospital altaHospital = new FormHospital();
         public Inicio()
         {
@@ -38,14 +38,22 @@ namespace BasesAvanzadas
 
         private void Salir(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Application.Exit();
+        }
+
+        private void botonBuscarPaciente_Click(object sender, EventArgs e)
+=======
+            menuGeneral.Visible = false;
+            altaProfesional.Show();            
         }
         private void Hospital(object sender, EventArgs e)
         {
             menuGeneral.Visible = false;
             altaHospital.Show();
         }
-        private void botonBuscarPaciente_Click(object sender, EventArgs e)
+        private void Diagnostico(object sender, EventArgs e)
+>>>>>>> bdcb9fdf848e4464918688aa41dfbab3491b23a8
         {
             menuContextPaciente.Visible = true;
             menuPaciente.Visible = false;
@@ -72,8 +80,6 @@ namespace BasesAvanzadas
         private void altasHospitalBoton_Click(object sender, EventArgs e)
         {
             ////PON AQUI TU FORMA MEMO
-            FormHospital fomraprueba = new FormHospital();
-            fomraprueba.Show();
         }
 
         private void modificarHospitalBoton_Click(object sender, EventArgs e)
@@ -85,7 +91,6 @@ namespace BasesAvanzadas
         private void hospitalBoton_Click(object sender, EventArgs e)
         {
             menuHospital.Visible = true;
-            menuGeneral.Visible = false;
         }
 
         private void regresarPacienteMenuBoton_Click(object sender, EventArgs e)
@@ -103,71 +108,6 @@ namespace BasesAvanzadas
         {
             AutoSize = true;
 
-        }
-
-        private void Inicio_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'proyectoDBADataSet1.Hospital' table. You can move, or remove it, as needed.
-            this.hospitalTableAdapter.Fill(this.proyectoDBADataSet1.Hospital);
-            // TODO: This line of code loads data into the 'proyectoDBADataSet1.Paciente' table. You can move, or remove it, as needed.
-            this.pacienteTableAdapter.Fill(this.proyectoDBADataSet1.Paciente);
-            // TODO: This line of code loads data into the 'proyectoDBADataSet1.Nota_Gen' table. You can move, or remove it, as needed.
-            this.nota_GenTableAdapter.Fill(this.proyectoDBADataSet1.Nota_Gen);
-            // TODO: This line of code loads data into the 'proyectoDBADataSet.Profesional_Salud' table. You can move, or remove it, as needed.
-            this.profesional_SaludTableAdapter.Fill(this.proyectoDBADataSet.Profesional_Salud);
-
-        }
-
-        private void regresarMenuPrincipalBoton_Click(object sender, EventArgs e)
-        {
-            menuPersonal.Visible = false;
-            menuGeneral.Visible = true;
-        }
-
-        private void regresarMenuNotaBoton_Click(object sender, EventArgs e)
-        {
-            menuVerNota.Visible = false;
-            menuContextPaciente.Visible = true;
-        }
-
-        private void botonMenuGenera_Click(object sender, EventArgs e)
-        {
-            menuPaciente.Visible = false;
-            menuGeneral.Visible = true;
-        }
-
-        private void regresarMenuGeneralBoton_Click(object sender, EventArgs e)
-        {
-            menuHospital.Visible = false;
-            menuGeneral.Visible = true;
-        }
-
-        private void regresarMenuContexPacienteBoton_Click(object sender, EventArgs e)
-        {
-            menuAgregarNotas.Visible = false;
-            menuContextPaciente.Visible = true;
-        }
-
-        private void modicarDatosPersonalBoton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void altaDatosPersonal_Click(object sender, EventArgs e)
-        {
-            AltaPersonal altaPersonal = new AltaPersonal();
-            altaPersonal.Show();
-        }
-
-        private void buscarDetallesPersonalBoton_Click(object sender, EventArgs e)
-        {
-            String apellidoP = apellidoPersonal.Text;
-            String nombreP = nombrePersonal.Text;
-
-            if (!apellidoP.Equals(""))
-            {
-                
-            }
         }
 
 

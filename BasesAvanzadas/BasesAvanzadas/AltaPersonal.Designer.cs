@@ -1,6 +1,6 @@
 ﻿namespace BasesAvanzadas
 {
-    partial class Form4
+    partial class AltaPersonal
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.cbPerfil = new System.Windows.Forms.ComboBox();
             this.cbEspecialidad = new System.Windows.Forms.ComboBox();
             this.bGuardar = new System.Windows.Forms.Button();
+            this.regresarMenuPaciente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -153,11 +154,22 @@
             this.bGuardar.UseVisualStyleBackColor = true;
             this.bGuardar.Click += new System.EventHandler(this.Profesional);
             // 
-            // Form4
+            // regresarMenuPaciente
+            // 
+            this.regresarMenuPaciente.Location = new System.Drawing.Point(86, 282);
+            this.regresarMenuPaciente.Name = "regresarMenuPaciente";
+            this.regresarMenuPaciente.Size = new System.Drawing.Size(75, 23);
+            this.regresarMenuPaciente.TabIndex = 13;
+            this.regresarMenuPaciente.Text = "Regresar";
+            this.regresarMenuPaciente.UseVisualStyleBackColor = true;
+            this.regresarMenuPaciente.Click += new System.EventHandler(this.regresarMenuPaciente_Click);
+            // 
+            // AltaPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 336);
+            this.Controls.Add(this.regresarMenuPaciente);
             this.Controls.Add(this.bGuardar);
             this.Controls.Add(this.cbEspecialidad);
             this.Controls.Add(this.cbPerfil);
@@ -171,8 +183,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form4";
-            this.Text = "Form4";
+            this.Name = "AltaPersonal";
+            this.Text = "Alta Personal";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +205,6 @@
         private System.Windows.Forms.ComboBox cbPerfil;
         private System.Windows.Forms.ComboBox cbEspecialidad;
         private System.Windows.Forms.Button bGuardar;
+        private System.Windows.Forms.Button regresarMenuPaciente;
     }
 }
