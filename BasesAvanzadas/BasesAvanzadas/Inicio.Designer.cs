@@ -102,9 +102,15 @@
             this.profesionalSaludBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuHospital = new System.Windows.Forms.GroupBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.textBoxDireccionHospital = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxHospitalNombre = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.regresarMenuGeneralBoton = new System.Windows.Forms.Button();
             this.altasHospitalBoton = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.nombreHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hospitalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.proyectoDBADataSet1 = new BasesAvanzadas.ProyectoDBADataSet1();
             this.hospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -113,12 +119,6 @@
             this.hospitalTableAdapter = new BasesAvanzadas.ProyectoDBADataSet1TableAdapters.HospitalTableAdapter();
             this.nota_GenTableAdapter = new BasesAvanzadas.ProyectoDBADataSet3TableAdapters.Nota_GenTableAdapter();
             this.profesional_SaludTableAdapter = new BasesAvanzadas.ProyectoDBADataSet2TableAdapters.Profesional_SaludTableAdapter();
-            this.nombreHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxHospitalNombre = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxDireccionHospital = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Division1)).BeginInit();
             this.Division1.Panel1.SuspendLayout();
             this.Division1.Panel2.SuspendLayout();
@@ -879,6 +879,40 @@
             this.splitContainer1.SplitterDistance = 313;
             this.splitContainer1.TabIndex = 0;
             // 
+            // textBoxDireccionHospital
+            // 
+            this.textBoxDireccionHospital.Location = new System.Drawing.Point(124, 157);
+            this.textBoxDireccionHospital.Name = "textBoxDireccionHospital";
+            this.textBoxDireccionHospital.Size = new System.Drawing.Size(130, 20);
+            this.textBoxDireccionHospital.TabIndex = 6;
+            this.textBoxDireccionHospital.TextChanged += new System.EventHandler(this.textBoxDireccionHospital_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 168);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Dirección Hospital";
+            // 
+            // textBoxHospitalNombre
+            // 
+            this.textBoxHospitalNombre.Location = new System.Drawing.Point(124, 86);
+            this.textBoxHospitalNombre.Name = "textBoxHospitalNombre";
+            this.textBoxHospitalNombre.Size = new System.Drawing.Size(130, 20);
+            this.textBoxHospitalNombre.TabIndex = 4;
+            this.textBoxHospitalNombre.TextChanged += new System.EventHandler(this.textBoxHospitalNombre_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 89);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Nombre Hospital";
+            // 
             // regresarMenuGeneralBoton
             // 
             this.regresarMenuGeneralBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -914,6 +948,18 @@
             this.dataGridView4.Size = new System.Drawing.Size(249, 378);
             this.dataGridView4.TabIndex = 0;
             // 
+            // nombreHDataGridViewTextBoxColumn
+            // 
+            this.nombreHDataGridViewTextBoxColumn.DataPropertyName = "Nombre_H";
+            this.nombreHDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreHDataGridViewTextBoxColumn.Name = "nombreHDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Direccion";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
             // hospitalBindingSource1
             // 
             this.hospitalBindingSource1.DataMember = "Hospital";
@@ -940,65 +986,19 @@
             // 
             this.profesional_SaludTableAdapter.ClearBeforeFill = true;
             // 
-            // nombreHDataGridViewTextBoxColumn
-            // 
-            this.nombreHDataGridViewTextBoxColumn.DataPropertyName = "Nombre_H";
-            this.nombreHDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreHDataGridViewTextBoxColumn.Name = "nombreHDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Direccion";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Direccion";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 89);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Nombre Hospital";
-            // 
-            // textBoxHospitalNombre
-            // 
-            this.textBoxHospitalNombre.Location = new System.Drawing.Point(124, 86);
-            this.textBoxHospitalNombre.Name = "textBoxHospitalNombre";
-            this.textBoxHospitalNombre.Size = new System.Drawing.Size(130, 20);
-            this.textBoxHospitalNombre.TabIndex = 4;
-            this.textBoxHospitalNombre.TextChanged += new System.EventHandler(this.textBoxHospitalNombre_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 168);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Dirección Hospital";
-            // 
-            // textBoxDireccionHospital
-            // 
-            this.textBoxDireccionHospital.Location = new System.Drawing.Point(124, 157);
-            this.textBoxDireccionHospital.Name = "textBoxDireccionHospital";
-            this.textBoxDireccionHospital.Size = new System.Drawing.Size(130, 20);
-            this.textBoxDireccionHospital.TabIndex = 6;
-            this.textBoxDireccionHospital.TextChanged += new System.EventHandler(this.textBoxDireccionHospital_TextChanged);
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(873, 548);
+            this.Controls.Add(this.menuContextPaciente);
+            this.Controls.Add(this.menuGeneral);
+            this.Controls.Add(this.menuPersonal);
             this.Controls.Add(this.menuVerNota);
             this.Controls.Add(this.menuPaciente);
             this.Controls.Add(this.menuHospital);
             this.Controls.Add(this.menuAgregarNotas);
-            this.Controls.Add(this.menuContextPaciente);
-            this.Controls.Add(this.menuGeneral);
-            this.Controls.Add(this.menuPersonal);
             this.Name = "Inicio";
             this.Text = "Equipo Negro App";
             this.Load += new System.EventHandler(this.Inicio_Load);

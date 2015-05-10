@@ -104,9 +104,6 @@ namespace BasesAvanzadas
 
         private void verNotaBoton_Click(object sender, EventArgs e)
         {
-            menuVerNota.Visible = true;
-            menuContextPaciente.Visible = false;
-
             //
 
             SqlConnection con = new SqlConnection(conexionBase);
@@ -114,7 +111,7 @@ namespace BasesAvanzadas
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
 
-                ////-----Busquedas en Pacientes------
+                ////-----Busquedas en Notas Genericas------
 
                 cmd = new SqlCommand("SELECT * FROM Nota_Gen WHERE NumSeguroSocial = '" + SeguroContextoPaciente.Text + "';", con);
 
@@ -122,16 +119,23 @@ namespace BasesAvanzadas
                 DataTable dt = new DataTable();
                 if (reader.HasRows)
                 {
-                    dt.Columns.Add("Nombre_H", typeof(string));
-                    dt.Columns.Add("Direccion", typeof(string));
+                    dt.Columns.Add("NumSeguroSocial", typeof(string));
+                    dt.Columns.Add("Id_Profesional_Salud_MT", typeof(int));
+                    dt.Columns.Add("Id_Hospital", typeof(int));
+                    dt.Columns.Add("Clave_Diagnostico", typeof(string));
+                    dt.Columns.Add("Id_Profesional_Salud_Elab", typeof(int));
+                    dt.Columns.Add("Id_Tiempo", typeof(int));
+                    dt.Columns.Add("Tipo", typeof(string));
                     dt.Load(reader);
 
-                    dataGridView4.DataSource = dt;
+                    dataGridViewNotas.DataSource = dt;
                 }
                 con.Close();
             }
 
             //
+            menuVerNota.Visible = true;
+            menuContextPaciente.Visible = false;
         }
 
         private void datosBoton_Click(object sender, EventArgs e)
