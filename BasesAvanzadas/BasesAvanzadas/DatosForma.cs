@@ -38,7 +38,7 @@ namespace BasesAvanzadas
 
             String[] nombre = x.Split(',');
 
-            SqlConnection conn = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection conn = new SqlConnection("Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
             conn.Open();
             SqlCommand sc = new SqlCommand("SELECT * FROM Paciente WHERE Nombre_P = '" + nombre[0] + "' AND Ap_PatP = '" + nombre[1] + "' AND NumSeguroSocial = '" + y + "';", conn);
             SqlDataReader reader;
@@ -101,7 +101,7 @@ namespace BasesAvanzadas
 
         private void guardarModificadosBoton_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection conn = new SqlConnection("Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
             conn.Open();
             SqlCommand sc = new SqlCommand("UPDATE Paciente set Nombre_P = '"+textBoxNombre.Text+"', Ap_PatP = '"+
                 textBoxApellidoPaterno.Text+"', Ap_MatP = '"+textBoxApellidoMaterno.Text+"', F_Nac = '"+fechaNacimiento.Value.Date+"', Genero = '"+

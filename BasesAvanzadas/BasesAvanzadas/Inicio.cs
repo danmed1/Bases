@@ -57,7 +57,7 @@ namespace BasesAvanzadas
 
         public void filtradoPacientes()
         {
-            SqlConnection con = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection con = new SqlConnection("Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
@@ -93,6 +93,43 @@ namespace BasesAvanzadas
                 }
                 con.Close();
             }
+        }
+
+
+        private void filtradoPersonal()
+        {
+            SqlConnection con = new SqlConnection("Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                ////-----Busquedas en Personal------                
+
+                cmd = new SqlCommand("SELECT Nombre_ps, Ap_Pat,Ap_Mat,Perfil.Descripcion_Perfil as Perfil,Especialidad.Descripcion_Especialidad as Especialidad FROM dbo.Profesional_Salud INNER JOIN dbo.Especialidad ON Profesional_Salud.Id_Especialidad=Especialidad.Id_Especialidad INNER JOIN dbo.Perfil ON Profesional_Salud.Id_Perfil=Perfil.Id_Perfil WHERE  Nombre_ps LIKE '%" + nombrePersonal.Text + "%' AND Ap_Pat LIKE '%" + apellidoPersonal.Text + "%';", con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (reader.HasRows)
+                {
+                    dt.Columns.Add("Nombre_ps", typeof(string));
+                    dt.Columns.Add("Ap_Pat", typeof(string));
+                    dt.Columns.Add("Ap_Mat", typeof(string));
+                    dt.Columns.Add("Descripcion_Perfil", typeof(string));
+                    dt.Columns.Add("Descripcion_Especialidad", typeof(string));
+                    dt.Load(reader);
+
+                    dataGridView3.DataSource = dt;
+
+                    Console.Write("i have rows ");
+
+                }
+                else
+                {
+                    Console.Write("no rows");
+                }
+                con.Close();
+            }
+
         }
 
         private void agregarNotaBoton_Click(object sender, EventArgs e)
@@ -260,6 +297,16 @@ namespace BasesAvanzadas
         {
             altaPaciente.ShowDialog();
             //Hide
+        }
+
+        private void nombrePersonal_TextChanged(object sender, EventArgs e)
+        {
+            filtradoPersonal();
+        }
+
+        private void apellidoPersonal_TextChanged(object sender, EventArgs e)
+        {
+            filtradoPersonal();
         }
 
     }

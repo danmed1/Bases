@@ -39,7 +39,7 @@ namespace BasesAvanzadas
 
         private void Paciente(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection con = new SqlConnection("Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
             {
                 SqlCommand cmd = new SqlCommand("INSERT INTO Paciente (NumSeguroSocial,Nombre_P,Ap_PatP,Ap_MatP,F_Nac,Genero,Domicilio, Escolaridad, Etnia, Religion) VALUES (@Seguro,@Name,@Paterno,@Materno,@FechaNac,@Genero,@Domicilio,@Escolaridad,@Etnia,@Religion);", con);
                 cmd.Parameters.AddWithValue("@Seguro", tbSeguro.Text);
