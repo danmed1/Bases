@@ -13,6 +13,7 @@ namespace BasesAvanzadas
 {
     public partial class AltaPersonal : Form
     {
+        private string conexionBase = "Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
         public AltaPersonal()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace BasesAvanzadas
         private void mostrarPerfil()
         {
 
-            SqlConnection conn = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection conn = new SqlConnection(conexionBase);
             conn.Open();
             SqlCommand sc = new SqlCommand("SELECT * FROM Perfil", conn);
             SqlDataReader reader;
@@ -53,7 +54,7 @@ namespace BasesAvanzadas
         private void mostrarEspecialidad()
         {
 
-            SqlConnection conn = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection conn = new SqlConnection(conexionBase);
             conn.Open();
             SqlCommand sc = new SqlCommand("SELECT * FROM Especialidad", conn);
             SqlDataReader reader;
@@ -76,7 +77,7 @@ namespace BasesAvanzadas
 
         private void Profesional(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection con = new SqlConnection(conexionBase);
             {
                 SqlCommand cmd = new SqlCommand("INSERT INTO Profesional_Salud (Nombre_PS,Ap_Pat,Ap_Mat,No_Cedula,Id_Perfil,Id_Especialidad) VALUES (@Name,@Paterno,@Materno,@Cedula,@Perfil,@Especialidad);", con);               
                 cmd.Parameters.AddWithValue("@Name", tbNombre.Text);

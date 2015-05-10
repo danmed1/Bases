@@ -103,12 +103,8 @@
             this.menuHospital = new System.Windows.Forms.GroupBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.regresarMenuGeneralBoton = new System.Windows.Forms.Button();
-            this.modificarHospitalBoton = new System.Windows.Forms.Button();
             this.altasHospitalBoton = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hospitalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.proyectoDBADataSet1 = new BasesAvanzadas.ProyectoDBADataSet1();
             this.hospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -117,6 +113,12 @@
             this.hospitalTableAdapter = new BasesAvanzadas.ProyectoDBADataSet1TableAdapters.HospitalTableAdapter();
             this.nota_GenTableAdapter = new BasesAvanzadas.ProyectoDBADataSet3TableAdapters.Nota_GenTableAdapter();
             this.profesional_SaludTableAdapter = new BasesAvanzadas.ProyectoDBADataSet2TableAdapters.Profesional_SaludTableAdapter();
+            this.nombreHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxHospitalNombre = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxDireccionHospital = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Division1)).BeginInit();
             this.Division1.Panel1.SuspendLayout();
             this.Division1.Panel2.SuspendLayout();
@@ -863,8 +865,11 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.textBoxDireccionHospital);
+            this.splitContainer1.Panel1.Controls.Add(this.label7);
+            this.splitContainer1.Panel1.Controls.Add(this.textBoxHospitalNombre);
+            this.splitContainer1.Panel1.Controls.Add(this.label6);
             this.splitContainer1.Panel1.Controls.Add(this.regresarMenuGeneralBoton);
-            this.splitContainer1.Panel1.Controls.Add(this.modificarHospitalBoton);
             this.splitContainer1.Panel1.Controls.Add(this.altasHospitalBoton);
             // 
             // splitContainer1.Panel2
@@ -877,7 +882,7 @@
             // regresarMenuGeneralBoton
             // 
             this.regresarMenuGeneralBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regresarMenuGeneralBoton.Location = new System.Drawing.Point(16, 284);
+            this.regresarMenuGeneralBoton.Location = new System.Drawing.Point(16, 326);
             this.regresarMenuGeneralBoton.Name = "regresarMenuGeneralBoton";
             this.regresarMenuGeneralBoton.Size = new System.Drawing.Size(238, 44);
             this.regresarMenuGeneralBoton.TabIndex = 2;
@@ -885,21 +890,10 @@
             this.regresarMenuGeneralBoton.UseVisualStyleBackColor = true;
             this.regresarMenuGeneralBoton.Click += new System.EventHandler(this.regresarMenuGeneralBoton_Click);
             // 
-            // modificarHospitalBoton
-            // 
-            this.modificarHospitalBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificarHospitalBoton.Location = new System.Drawing.Point(19, 162);
-            this.modificarHospitalBoton.Name = "modificarHospitalBoton";
-            this.modificarHospitalBoton.Size = new System.Drawing.Size(235, 45);
-            this.modificarHospitalBoton.TabIndex = 1;
-            this.modificarHospitalBoton.Text = "Modificar";
-            this.modificarHospitalBoton.UseVisualStyleBackColor = true;
-            this.modificarHospitalBoton.Click += new System.EventHandler(this.modificarHospitalBoton_Click);
-            // 
             // altasHospitalBoton
             // 
             this.altasHospitalBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altasHospitalBoton.Location = new System.Drawing.Point(19, 55);
+            this.altasHospitalBoton.Location = new System.Drawing.Point(19, 246);
             this.altasHospitalBoton.Name = "altasHospitalBoton";
             this.altasHospitalBoton.Size = new System.Drawing.Size(235, 39);
             this.altasHospitalBoton.TabIndex = 0;
@@ -912,33 +906,13 @@
             this.dataGridView4.AutoGenerateColumns = false;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn8,
             this.nombreHDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn9});
             this.dataGridView4.DataSource = this.hospitalBindingSource1;
             this.dataGridView4.Location = new System.Drawing.Point(76, 55);
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(345, 378);
+            this.dataGridView4.Size = new System.Drawing.Size(249, 378);
             this.dataGridView4.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Id_Hospital";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Id_Hospital";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // nombreHDataGridViewTextBoxColumn
-            // 
-            this.nombreHDataGridViewTextBoxColumn.DataPropertyName = "Nombre_H";
-            this.nombreHDataGridViewTextBoxColumn.HeaderText = "Nombre_H";
-            this.nombreHDataGridViewTextBoxColumn.Name = "nombreHDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Direccion";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Direccion";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
             // hospitalBindingSource1
             // 
@@ -966,19 +940,65 @@
             // 
             this.profesional_SaludTableAdapter.ClearBeforeFill = true;
             // 
+            // nombreHDataGridViewTextBoxColumn
+            // 
+            this.nombreHDataGridViewTextBoxColumn.DataPropertyName = "Nombre_H";
+            this.nombreHDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreHDataGridViewTextBoxColumn.Name = "nombreHDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Direccion";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 89);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Nombre Hospital";
+            // 
+            // textBoxHospitalNombre
+            // 
+            this.textBoxHospitalNombre.Location = new System.Drawing.Point(124, 86);
+            this.textBoxHospitalNombre.Name = "textBoxHospitalNombre";
+            this.textBoxHospitalNombre.Size = new System.Drawing.Size(130, 20);
+            this.textBoxHospitalNombre.TabIndex = 4;
+            this.textBoxHospitalNombre.TextChanged += new System.EventHandler(this.textBoxHospitalNombre_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 168);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Dirección Hospital";
+            // 
+            // textBoxDireccionHospital
+            // 
+            this.textBoxDireccionHospital.Location = new System.Drawing.Point(124, 157);
+            this.textBoxDireccionHospital.Name = "textBoxDireccionHospital";
+            this.textBoxDireccionHospital.Size = new System.Drawing.Size(130, 20);
+            this.textBoxDireccionHospital.TabIndex = 6;
+            this.textBoxDireccionHospital.TextChanged += new System.EventHandler(this.textBoxDireccionHospital_TextChanged);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(873, 548);
+            this.Controls.Add(this.menuVerNota);
             this.Controls.Add(this.menuPaciente);
             this.Controls.Add(this.menuHospital);
             this.Controls.Add(this.menuAgregarNotas);
             this.Controls.Add(this.menuContextPaciente);
             this.Controls.Add(this.menuGeneral);
             this.Controls.Add(this.menuPersonal);
-            this.Controls.Add(this.menuVerNota);
             this.Name = "Inicio";
             this.Text = "Equipo Negro App";
             this.Load += new System.EventHandler(this.Inicio_Load);
@@ -1022,6 +1042,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource)).EndInit();
             this.menuHospital.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -1079,7 +1100,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button altasHospitalBoton;
         private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.Button modificarHospitalBoton;
         private System.Windows.Forms.Button regresarMenuGeneralBoton;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource profesionalSaludBindingSource;
@@ -1128,9 +1148,6 @@
         private ProyectoDBADataSet1 proyectoDBADataSet1;
         private System.Windows.Forms.BindingSource hospitalBindingSource1;
         private ProyectoDBADataSet1TableAdapters.HospitalTableAdapter hospitalTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreHDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private ProyectoDBADataSet2 proyectoDBADataSet2;
         private System.Windows.Forms.BindingSource profesionalSaludBindingSource2;
         private ProyectoDBADataSet2TableAdapters.Profesional_SaludTableAdapter profesional_SaludTableAdapter;
@@ -1152,6 +1169,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.TextBox textBoxDireccionHospital;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxHospitalNombre;
+        private System.Windows.Forms.Label label6;
     }
 }
 
