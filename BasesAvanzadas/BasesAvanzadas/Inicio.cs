@@ -65,8 +65,8 @@ namespace BasesAvanzadas
                 SqlCommand cmd = new SqlCommand();
 
                 ////-----Busquedas en Pacientes------
-                
-                    cmd = new SqlCommand("SELECT * FROM Paciente WHERE NumSeguroSocial LIKE '%" + segurosocialPaciente.Text + "%' and Nombre_P LIKE '%" + nombrePaciente.Text + "%' and Ap_PatP LIKE '%" + apellidoPaciente.Text + "%';", con);
+
+                cmd = new SqlCommand("SELECT * FROM Paciente WHERE NumSeguroSocial LIKE '%" + segurosocialPaciente.Text + "%' and Nombre_P LIKE '%" + nombrePaciente.Text + "%' and (Ap_PatP LIKE '%" + apellidoPaciente.Text + "%' or Ap_MatP LIKE '%" + apellidoPaciente.Text + "%');", con);
                 
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
@@ -91,7 +91,7 @@ namespace BasesAvanzadas
                 }
                 else
                 {
-                    Console.Write("no rows");
+                    dataGridView2.DataSource = dt;
                 }
                 con.Close();
             }
@@ -107,7 +107,7 @@ namespace BasesAvanzadas
 
                 ////-----Busquedas en Personal------                
 
-                cmd = new SqlCommand("SELECT Nombre_ps, Ap_Pat,Ap_Mat,Perfil.Descripcion_Perfil as Perfil,Especialidad.Descripcion_Especialidad as Especialidad FROM dbo.Profesional_Salud INNER JOIN dbo.Especialidad ON Profesional_Salud.Id_Especialidad=Especialidad.Id_Especialidad INNER JOIN dbo.Perfil ON Profesional_Salud.Id_Perfil=Perfil.Id_Perfil WHERE  Nombre_ps LIKE '%" + nombrePersonal.Text + "%' AND Ap_Pat LIKE '%" + apellidoPersonal.Text + "%';", con);
+                cmd = new SqlCommand("SELECT Nombre_ps, Ap_Pat,Ap_Mat,Perfil.Descripcion_Perfil as Perfil,Especialidad.Descripcion_Especialidad as Especialidad FROM dbo.Profesional_Salud INNER JOIN dbo.Especialidad ON Profesional_Salud.Id_Especialidad=Especialidad.Id_Especialidad INNER JOIN dbo.Perfil ON Profesional_Salud.Id_Perfil=Perfil.Id_Perfil WHERE  Nombre_ps LIKE '%" + nombrePersonal.Text + "%' AND (Ap_Pat LIKE '%" + apellidoPersonal.Text + "%' OR Ap_Mat LIKE '%" + apellidoPersonal.Text + "%');", con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
@@ -127,7 +127,7 @@ namespace BasesAvanzadas
                 }
                 else
                 {
-                    Console.Write("no rows");
+                    dataGridView3.DataSource = dt;
                 }
                 con.Close();
             }
@@ -166,6 +166,7 @@ namespace BasesAvanzadas
 
                     dataGridView4.DataSource = dt;
                 }
+                else dataGridView4.DataSource = dt;
                 con.Close();
             }
 
@@ -343,9 +344,8 @@ namespace BasesAvanzadas
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
 
-                ////-----Busquedas en Pacientes------
-
-                cmd = new SqlCommand("SELECT * FROM Hospital WHERE Nombre_H LIKE '%" + textBoxHospitalNombre.Text + "%' and Direccion LIKE '%" + textBoxDireccionHospital.Text + "%';", con);
+                ////-----Busquedas en Pacientes------                
+                cmd = new SqlCommand("SELECT * FROM Hospital WHERE Nombre_H LIKE '%" + textBoxHospitalNombre.Text + "%' and Direccion LIKE '%" + textBoxDireccionHospital.Text + "%';", con);                
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
@@ -357,6 +357,7 @@ namespace BasesAvanzadas
 
                     dataGridView4.DataSource = dt;
                 }
+                else dataGridView4.DataSource = dt;
                 con.Close();
             }
         }
