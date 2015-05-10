@@ -11,6 +11,7 @@ namespace BasesAvanzadas
 {
     public partial class HospitalForma : Form
     {
+        private string conexionBase = "Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
         public HospitalForma()
         {
             InitializeComponent();
@@ -25,6 +26,11 @@ namespace BasesAvanzadas
         private void regresarMenuHospitalBoton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void guardarHospitalBoton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

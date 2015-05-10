@@ -14,6 +14,7 @@ namespace BasesAvanzadas
     public partial class Inicio : Form
     {
         public string mandarDato;
+        private string conexionBase = "Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
         private string SeguroSocialPacientePS;
         private int idProfSalLogIn;
         private int idMedicTratante;
@@ -57,7 +58,8 @@ namespace BasesAvanzadas
 
         public void filtradoPacientes()
         {
-            SqlConnection con = new SqlConnection("Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+
+            SqlConnection con = new SqlConnection(conexionBase);
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
@@ -98,7 +100,7 @@ namespace BasesAvanzadas
 
         private void filtradoPersonal()
         {
-            SqlConnection con = new SqlConnection("Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection con = new SqlConnection(conexionBase);
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
@@ -142,6 +144,32 @@ namespace BasesAvanzadas
         {
             menuVerNota.Visible = true;
             menuContextPaciente.Visible = false;
+
+            //
+
+            SqlConnection con = new SqlConnection(conexionBase);
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                ////-----Busquedas en Pacientes------
+
+                cmd = new SqlCommand("SELECT * FROM Nota_Gen WHERE NumSeguroSocial = '" + SeguroContextoPaciente.Text + "';", con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (reader.HasRows)
+                {
+                    dt.Columns.Add("Nombre_H", typeof(string));
+                    dt.Columns.Add("Direccion", typeof(string));
+                    dt.Load(reader);
+
+                    dataGridView4.DataSource = dt;
+                }
+                con.Close();
+            }
+
+            //
         }
 
         private void datosBoton_Click(object sender, EventArgs e)
@@ -297,6 +325,40 @@ namespace BasesAvanzadas
         {
             altaPaciente.ShowDialog();
             //Hide
+        }
+
+        private void textBoxHospitalNombre_TextChanged(object sender, EventArgs e)
+        {
+            filtrarHospital();
+        }
+
+        private void textBoxDireccionHospital_TextChanged(object sender, EventArgs e)
+        {
+            filtrarHospital();
+        }
+
+        public void filtrarHospital() {
+            SqlConnection con = new SqlConnection(conexionBase);
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                ////-----Busquedas en Pacientes------
+
+                cmd = new SqlCommand("SELECT * FROM Hospital WHERE Nombre_H LIKE '%" + textBoxHospitalNombre.Text + "%' and Direccion LIKE '%" + textBoxDireccionHospital.Text + "%';", con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (reader.HasRows)
+                {
+                    dt.Columns.Add("Nombre_H", typeof(string));
+                    dt.Columns.Add("Direccion", typeof(string));
+                    dt.Load(reader);
+
+                    dataGridView4.DataSource = dt;
+                }
+                con.Close();
+            }
         }
 
         private void nombrePersonal_TextChanged(object sender, EventArgs e)

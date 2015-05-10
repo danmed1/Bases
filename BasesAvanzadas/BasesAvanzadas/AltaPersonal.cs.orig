@@ -29,8 +29,12 @@ namespace BasesAvanzadas
 
         private void mostrarPerfil()
         {
-            
+
+<<<<<<< HEAD
+            SqlConnection conn = new SqlConnection("Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+=======
             SqlConnection conn = new SqlConnection(conexionBase);
+>>>>>>> c51de1cdca9335f67d5582f0ec485d4f2f5eea9b
             conn.Open();
             SqlCommand sc = new SqlCommand("SELECT * FROM Perfil", conn);
             SqlDataReader reader;
@@ -53,8 +57,12 @@ namespace BasesAvanzadas
        
         private void mostrarEspecialidad()
         {
-            
+
+<<<<<<< HEAD
+            SqlConnection conn = new SqlConnection("Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+=======
             SqlConnection conn = new SqlConnection(conexionBase);
+>>>>>>> c51de1cdca9335f67d5582f0ec485d4f2f5eea9b
             conn.Open();
             SqlCommand sc = new SqlCommand("SELECT * FROM Especialidad", conn);
             SqlDataReader reader;
@@ -76,8 +84,12 @@ namespace BasesAvanzadas
         }
 
         private void Profesional(object sender, EventArgs e)
-        {            
+        {
+<<<<<<< HEAD
+            SqlConnection con = new SqlConnection("Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+=======
             SqlConnection con = new SqlConnection(conexionBase);
+>>>>>>> c51de1cdca9335f67d5582f0ec485d4f2f5eea9b
             {
                 SqlCommand cmd = new SqlCommand("INSERT INTO Profesional_Salud (Nombre_PS,Ap_Pat,Ap_Mat,No_Cedula,Id_Perfil,Id_Especialidad) VALUES (@Name,@Paterno,@Materno,@Cedula,@Perfil,@Especialidad);", con);               
                 cmd.Parameters.AddWithValue("@Name", tbNombre.Text);
