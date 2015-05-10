@@ -102,19 +102,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ThisDocument.resx">
-      <DependentUpon>ThisDocument.cs</DependentUpon>
+    <EmbeddedResource Include="Nota_Actualizacion.resx">
+      <DependentUpon>Nota_Actualizacion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Nota_Actualizacion.dotx" />
-    <Compile Include="ThisDocument.cs">
+    <Compile Include="Nota_Actualizacion.cs">
       <DependentUpon>Nota_Actualizacion.dotx</DependentUpon>
     </Compile>
     <None Include="Nota_Actualizacion_TemporaryKey.pfx" />
-    <None Include="ThisDocument.Designer.xml">
-      <DependentUpon>ThisDocument.cs</DependentUpon>
+    <None Include="Nota_Actualizacion.Designer.xml">
+      <DependentUpon>Nota_Actualizacion.cs</DependentUpon>
     </None>
-    <Compile Include="ThisDocument.Designer.cs">
-      <DependentUpon>ThisDocument.Designer.xml</DependentUpon>
+    <Compile Include="Nota_Actualizacion.Designer.cs">
+      <DependentUpon>Nota_Actualizacion.Designer.xml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -156,7 +156,7 @@
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="Nota_Actualizacion.dotx" HostPackage="{763FDC83-64E5-4651-AC9B-28C4FEB985A1}" OfficeVersion="14.0" VstxVersion="4.0" ApplicationType="DOT" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files (x86)\Microsoft Office\Office14\WINWORD.EXE" DebugInfoCommandLine="/w /z&quot;[$OUTPUT]Nota_Actualizacion.dotx&quot;" />
         <Host Name="Word Document" Path=".\Nota_Actualizacion.dotx" GeneratedCodeNamespace="Nota_Actualizacion">
-          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" />
+          <HostItem Name="ThisDocument" Code="Nota_Actualizacion.cs" CanonicalName="ThisDocument" Blueprint="Nota_Actualizacion.Designer.xml" GeneratedCode="Nota_Actualizacion.Designer.cs" />
         </Host>
       </FlavorProperties>
     </VisualStudio>

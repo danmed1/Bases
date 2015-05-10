@@ -15,7 +15,7 @@ namespace Nota_Actualizacion {
     /// 
     [Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute(0)]
     [global::System.Security.Permissions.PermissionSetAttribute(global::System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
-    public sealed partial class ThisDocument : Microsoft.Office.Tools.Word.DocumentBase {
+    public sealed partial class Nota_Actualizacion : Microsoft.Office.Tools.Word.DocumentBase {
         
         internal Microsoft.Office.Tools.ActionsPane ActionsPane;
         
@@ -78,7 +78,7 @@ namespace Nota_Actualizacion {
         /// 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public ThisDocument(global::Microsoft.Office.Tools.Word.Factory factory, global::System.IServiceProvider serviceProvider) : 
+        public Nota_Actualizacion(global::Microsoft.Office.Tools.Word.Factory factory, global::System.IServiceProvider serviceProvider) : 
                 base(factory, serviceProvider, "ThisDocument", "ThisDocument") {
             Globals.Factory = factory;
         }
@@ -90,7 +90,7 @@ namespace Nota_Actualizacion {
         protected override void Initialize() {
             base.Initialize();
             this.ThisApplication = this.GetHostItem<Microsoft.Office.Interop.Word.Application>(typeof(Microsoft.Office.Interop.Word.Application), "Application");
-            Globals.ThisDocument = this;
+            Globals.Nota_Actualizacion = this;
             global::System.Windows.Forms.Application.EnableVisualStyles();
             this.InitializeCachedData();
             this.InitializeControls();
@@ -432,19 +432,19 @@ namespace Nota_Actualizacion {
         private Globals() {
         }
         
-        private static ThisDocument _ThisDocument;
+        private static Nota_Actualizacion _Nota_Actualizacion;
         
         private static global::Microsoft.Office.Tools.Word.Factory _factory;
         
         private static ThisRibbonCollection _ThisRibbonCollection;
         
-        internal static ThisDocument ThisDocument {
+        internal static Nota_Actualizacion Nota_Actualizacion {
             get {
-                return _ThisDocument;
+                return _Nota_Actualizacion;
             }
             set {
-                if ((_ThisDocument == null)) {
-                    _ThisDocument = value;
+                if ((_Nota_Actualizacion == null)) {
+                    _Nota_Actualizacion = value;
                 }
                 else {
                     throw new System.NotSupportedException();
