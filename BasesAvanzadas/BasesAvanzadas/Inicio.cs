@@ -12,6 +12,8 @@ namespace BasesAvanzadas
 {
     public partial class Inicio : Form
     {
+        private static Object oMissing = System.Reflection.Missing.Value;
+        private static Object oTemplatePath = "E:\\Users\\Alejandro\\Desktop\\templateTest\\Nota_Ingreso.dotx";
 
         AltaPersonal altaProfesional = new AltaPersonal();
         FormHospital altaHospital = new FormHospital();
@@ -168,6 +170,19 @@ namespace BasesAvanzadas
             {
                 
             }
+        }
+
+        private void notaAltaboton_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
+            Microsoft.Office.Interop.Word.Document wordDoc = new Microsoft.Office.Interop.Word.Document();
+            wordDoc = wordApp.Documents.Add(ref oTemplatePath, ref oMissing, ref oMissing, ref oMissing);
+            wordApp.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
 
 

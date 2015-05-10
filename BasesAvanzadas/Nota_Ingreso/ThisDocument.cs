@@ -31,7 +31,8 @@ namespace Nota_Ingreso
         /// </summary>
         private void InternalStartup()
         {
-            this.comboMtrat.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.ComboBoxContentControl_Entering);
+            this.fechaElabNI.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.fechaElab_Entering);
+            this.txtDomPNI.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.txtDomPNI_Entering);
             this.Startup += new System.EventHandler(this.ThisDocument_Startup);
             this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
 
@@ -43,7 +44,22 @@ namespace Nota_Ingreso
 
         private void ComboBoxContentControl_Entering(object sender, ContentControlEnteringEventArgs e)
         {
-            
+            MessageBox.Show(sender.GetType().ToString());   
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fechaElab_Entering(object sender, ContentControlEnteringEventArgs e)
+        {
+
+        }
+
+        private void txtDomPNI_Entering(object sender, ContentControlEnteringEventArgs e)
+        {
+
         }
        
     }
