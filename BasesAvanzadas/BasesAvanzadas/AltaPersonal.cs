@@ -11,11 +11,11 @@ using System.Data.SqlClient;
 
 namespace BasesAvanzadas
 {
-    public partial class Form4 : Form
+    public partial class AltaPersonal : Form
     {
-        public Form4()
+        public AltaPersonal()
         {
-            InitializeComponent(); 
+            InitializeComponent();
             mostrarPerfil();            
             mostrarEspecialidad();        
         }
@@ -29,7 +29,7 @@ namespace BasesAvanzadas
         private void mostrarPerfil()
         {
 
-            SqlConnection conn = new SqlConnection("Data Source=192.168.100.106;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection conn = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
             conn.Open();
             SqlCommand sc = new SqlCommand("SELECT * FROM Perfil", conn);
             SqlDataReader reader;
@@ -38,11 +38,11 @@ namespace BasesAvanzadas
             DataTable dt = new DataTable();
 
             dt.Columns.Add("Id_Perfil", typeof(string));
-            dt.Columns.Add("Descripcion", typeof(string));
+            dt.Columns.Add("Descripcion_Perfil", typeof(string));
             dt.Load(reader);
 
             cbPerfil.ValueMember = "Id_Perfil";
-            cbPerfil.DisplayMember = "Descripcion";
+            cbPerfil.DisplayMember = "Descripcion_Perfil";
             cbPerfil.DataSource = dt;
 
             conn.Close();
@@ -53,7 +53,7 @@ namespace BasesAvanzadas
         private void mostrarEspecialidad()
         {
 
-            SqlConnection conn = new SqlConnection("Data Source=192.168.100.106;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection conn = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
             conn.Open();
             SqlCommand sc = new SqlCommand("SELECT * FROM Especialidad", conn);
             SqlDataReader reader;
@@ -62,11 +62,11 @@ namespace BasesAvanzadas
             DataTable dt = new DataTable();
 
             dt.Columns.Add("Id_Especialidad", typeof(string));
-            dt.Columns.Add("Descripcion", typeof(string));
+            dt.Columns.Add("Descripcion_Especialidad", typeof(string));
             dt.Load(reader);
 
             cbEspecialidad.ValueMember = "Id_Especialidad";
-            cbEspecialidad.DisplayMember = "Descripcion";
+            cbEspecialidad.DisplayMember = "Descripcion_Especialidad";
             cbEspecialidad.DataSource = dt;
 
             conn.Close();
@@ -76,9 +76,9 @@ namespace BasesAvanzadas
 
         private void Profesional(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=192.168.100.106;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection con = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO Profesional_Salud (Nombre,Ap_Pat,Ap_Mat,No_Cedula,Id_Perfil,Id_Especialidad) VALUES (@Name,@Paterno,@Materno,@Cedula,@Perfil,@Especialidad);", con);               
+                SqlCommand cmd = new SqlCommand("INSERT INTO Profesional_Salud (Nombre_PS,Ap_Pat,Ap_Mat,No_Cedula,Id_Perfil,Id_Especialidad) VALUES (@Name,@Paterno,@Materno,@Cedula,@Perfil,@Especialidad);", con);               
                 cmd.Parameters.AddWithValue("@Name", tbNombre.Text);
                 cmd.Parameters.AddWithValue("@Paterno", tbApPat.Text);
                 cmd.Parameters.AddWithValue("@Materno", tbApMat.Text);
@@ -96,6 +96,11 @@ namespace BasesAvanzadas
         private void tbApMat_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void regresarMenuPaciente_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

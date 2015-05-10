@@ -81,11 +81,17 @@
     <Compile Include="FormHospital.Designer.cs">
       <DependentUpon>FormHospital.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="AltaPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="AltaPersonal.Designer.cs">
+      <DependentUpon>AltaPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalForma.Designer.cs">
+      <DependentUpon>PersonalForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +110,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoDBADataSet11.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProyectoDBADataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoDBADataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoDBADataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoDBADataSet3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DatosForma.resx">
       <DependentUpon>DatosForma.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,8 +135,11 @@
     <EmbeddedResource Include="FormHospital.resx">
       <DependentUpon>FormHospital.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="AltaPersonal.resx">
+      <DependentUpon>AltaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalForma.resx">
+      <DependentUpon>PersonalForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,6 +179,28 @@
     </None>
     <None Include="ProyectoDBADataSet11.xss">
       <DependentUpon>ProyectoDBADataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet2.xsc">
+      <DependentUpon>ProyectoDBADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProyectoDBADataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectoDBADataSet2.xss">
+      <DependentUpon>ProyectoDBADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet3.xsc">
+      <DependentUpon>ProyectoDBADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProyectoDBADataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectoDBADataSet3.xss">
+      <DependentUpon>ProyectoDBADataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

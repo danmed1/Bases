@@ -33,6 +33,7 @@
             this.tbHospital = new System.Windows.Forms.TextBox();
             this.tbDireccion = new System.Windows.Forms.TextBox();
             this.bGuardar = new System.Windows.Forms.Button();
+            this.regresar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -77,11 +78,22 @@
             this.bGuardar.UseVisualStyleBackColor = true;
             this.bGuardar.Click += new System.EventHandler(this.Hospital);
             // 
+            // regresar
+            // 
+            this.regresar.Location = new System.Drawing.Point(169, 197);
+            this.regresar.Name = "regresar";
+            this.regresar.Size = new System.Drawing.Size(75, 23);
+            this.regresar.TabIndex = 5;
+            this.regresar.Text = "Regresar";
+            this.regresar.UseVisualStyleBackColor = true;
+            this.regresar.Click += new System.EventHandler(this.regresar_Click);
+            // 
             // FormHospital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 323);
+            this.Controls.Add(this.regresar);
             this.Controls.Add(this.bGuardar);
             this.Controls.Add(this.tbDireccion);
             this.Controls.Add(this.tbHospital);
@@ -101,5 +113,6 @@
         private System.Windows.Forms.TextBox tbHospital;
         private System.Windows.Forms.TextBox tbDireccion;
         private System.Windows.Forms.Button bGuardar;
+        private System.Windows.Forms.Button regresar;
     }
 }

@@ -20,9 +20,9 @@ namespace BasesAvanzadas
 
         private void Hospital(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=192.168.100.106;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection con = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO Hospital (Nombre,Direccion) VALUES (@Nombre,@Direccion);", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO Hospital (Nombre_H,Direccion) VALUES (@Nombre,@Direccion);", con);
                 cmd.Parameters.AddWithValue("@Nombre", tbHospital.Text);
                 cmd.Parameters.AddWithValue("@Direccion", tbDireccion.Text);                
 
@@ -31,6 +31,11 @@ namespace BasesAvanzadas
                 con.Close();
             }
             this.Close();
+        }
+
+        private void regresar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
