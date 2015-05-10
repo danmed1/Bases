@@ -19,6 +19,7 @@ namespace BasesAvanzadas
         private int idMedicTratante;
         AltaPersonal altaProfesional = new AltaPersonal();
         FormHospital altaHospital = new FormHospital();
+        AltaPaciente altaPaciente = new AltaPaciente();
         public Inicio()
         {
             InitializeComponent();
@@ -200,7 +201,7 @@ namespace BasesAvanzadas
         private void altaDatosPersonal_Click(object sender, EventArgs e)
         {
             AltaPersonal altaPersonal = new AltaPersonal();
-            altaPersonal.Show();
+            altaPersonal.ShowDialog();
         }
 
         private void buscarDetallesPersonalBoton_Click(object sender, EventArgs e)
@@ -253,6 +254,12 @@ namespace BasesAvanzadas
         private void segurosocialPaciente_TextChanged(object sender, EventArgs e)
         {
             filtradoPacientes();
+        }
+
+        private void botonAltaPaciente_Click(object sender, EventArgs e)
+        {
+            altaPaciente.ShowDialog();
+            //Hide
         }
 
     }

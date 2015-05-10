@@ -54,6 +54,12 @@
     <Compile Include="DatosForma.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AltaPaciente.Designer.cs">
+      <DependentUpon>AltaPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DatosForma.Designer.cs">
       <DependentUpon>DatosForma.cs</DependentUpon>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HospitalForma.resx">
       <DependentUpon>HospitalForma.cs</DependentUpon>
+    </EmbeddedResource>
+        <EmbeddedResource Include="AltaPaciente.resx">
+      <DependentUpon>AltaPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

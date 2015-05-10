@@ -77,17 +77,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.notaAltaboton = new System.Windows.Forms.Button();
             this.menuVerNota = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewNotas = new System.Windows.Forms.DataGridView();
+            this.regresarMenuNotaBoton = new System.Windows.Forms.Button();
             this.notaGenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.proyectoDBADataSet3 = new BasesAvanzadas.ProyectoDBADataSet3();
-            this.regresarMenuNotaBoton = new System.Windows.Forms.Button();
             this.notaGenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuPersonal = new System.Windows.Forms.GroupBox();
             this.vistaDetallesPersonal = new System.Windows.Forms.SplitContainer();
@@ -145,7 +138,7 @@
             this.ContextPacienteVista.SuspendLayout();
             this.menuAgregarNotas.SuspendLayout();
             this.menuVerNota.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notaGenBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proyectoDBADataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notaGenBindingSource)).BeginInit();
@@ -349,6 +342,7 @@
             this.botonAltaPaciente.TabIndex = 4;
             this.botonAltaPaciente.Text = "Altas";
             this.botonAltaPaciente.UseVisualStyleBackColor = true;
+            this.botonAltaPaciente.Click += new System.EventHandler(this.botonAltaPaciente_Click);
             // 
             // botonBuscarPaciente
             // 
@@ -657,7 +651,7 @@
             // 
             // menuVerNota
             // 
-            this.menuVerNota.Controls.Add(this.dataGridView1);
+            this.menuVerNota.Controls.Add(this.dataGridViewNotas);
             this.menuVerNota.Controls.Add(this.regresarMenuNotaBoton);
             this.menuVerNota.Location = new System.Drawing.Point(0, 0);
             this.menuVerNota.MinimumSize = new System.Drawing.Size(800, 600);
@@ -667,75 +661,13 @@
             this.menuVerNota.TabStop = false;
             this.menuVerNota.Enter += new System.EventHandler(this.menuVerNota_Enter);
             // 
-            // dataGridView1
+            // dataGridViewNotas
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20});
-            this.dataGridView1.DataSource = this.notaGenBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(127, 33);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(593, 334);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "NumSeguroSocial";
-            this.dataGridViewTextBoxColumn14.HeaderText = "NumSeguroSocial";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "Id_Profesional_Salud_MT";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Id_Profesional_Salud_MT";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "Id_Hospital";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Id_Hospital";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Clave_Diagnostico";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Clave_Diagnostico";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Doc";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Doc";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "Id_Profesional_Salud_Elab";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Id_Profesional_Salud_Elab";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "Id_Tiempo";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Id_Tiempo";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // notaGenBindingSource1
-            // 
-            this.notaGenBindingSource1.DataMember = "Nota_Gen";
-            this.notaGenBindingSource1.DataSource = this.proyectoDBADataSet3;
-            // 
-            // proyectoDBADataSet3
-            // 
-            this.proyectoDBADataSet3.DataSetName = "ProyectoDBADataSet3";
-            this.proyectoDBADataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridViewNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNotas.Location = new System.Drawing.Point(127, 33);
+            this.dataGridViewNotas.Name = "dataGridViewNotas";
+            this.dataGridViewNotas.Size = new System.Drawing.Size(593, 334);
+            this.dataGridViewNotas.TabIndex = 1;
             // 
             // regresarMenuNotaBoton
             // 
@@ -747,6 +679,16 @@
             this.regresarMenuNotaBoton.Text = "Regresar";
             this.regresarMenuNotaBoton.UseVisualStyleBackColor = true;
             this.regresarMenuNotaBoton.Click += new System.EventHandler(this.regresarMenuNotaBoton_Click);
+            // 
+            // notaGenBindingSource1
+            // 
+            this.notaGenBindingSource1.DataMember = "Nota_Gen";
+            this.notaGenBindingSource1.DataSource = this.proyectoDBADataSet3;
+            // 
+            // proyectoDBADataSet3
+            // 
+            this.proyectoDBADataSet3.DataSetName = "ProyectoDBADataSet3";
+            this.proyectoDBADataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // menuPersonal
             // 
@@ -1063,7 +1005,7 @@
             this.ContextPacienteVista.ResumeLayout(false);
             this.menuAgregarNotas.ResumeLayout(false);
             this.menuVerNota.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notaGenBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proyectoDBADataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notaGenBindingSource)).EndInit();
@@ -1123,7 +1065,7 @@
         private System.Windows.Forms.Button notaAltaboton;
         private System.Windows.Forms.GroupBox menuVerNota;
         private System.Windows.Forms.Button regresarMenuNotaBoton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewNotas;
         private System.Windows.Forms.GroupBox menuPersonal;
         private System.Windows.Forms.SplitContainer vistaDetallesPersonal;
         private System.Windows.Forms.Button regresarMenuPrincipalBoton;
@@ -1195,13 +1137,6 @@
         private ProyectoDBADataSet3 proyectoDBADataSet3;
         private System.Windows.Forms.BindingSource notaGenBindingSource1;
         private ProyectoDBADataSet3TableAdapters.Nota_GenTableAdapter nota_GenTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
