@@ -54,7 +54,7 @@ namespace test
         private const String txtCedElabNI = "1935319829";//20
 
         private int newNoteId;
-
+        // Manejo de documento word
         private Microsoft.Office.Interop.Word.Application wordApp;
         private Microsoft.Office.Interop.Word.Document wordDoc;
 
@@ -81,7 +81,7 @@ namespace test
             wordApp.DefaultSaveFormat = "";
 
             contentControlsNI = new ContentControl[23];
-            SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            SqlConnection connection = new SqlConnection(Properties.Settings.Default.ConexionBase.ToString());
 
             connection.Open();
             fillContentControlsNI(wordDoc);
@@ -91,6 +91,9 @@ namespace test
             fillHospCombo(connection);
             connection.Close();
             wordApp.Visible = true;
+            //String [] data=StringToDate(contentControlsNI[1].Range.Text);
+            //System.Windows.Forms.MessageBox.Show("0="+data[0]+";1="+data[1]+";2="+data[2]);
+
             //wordApp.Application.Quit();
 
 
@@ -100,19 +103,74 @@ namespace test
         void wordApp_DocumentBeforeSave(Document Doc, ref bool SaveAsUI, ref bool Cancel)
         {
             int idTiempo = 0;
-            SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
-            SqlCommand getIDTiempo = new SqlCommand("Select Id_Tiempo from Tiempo where Anio=@Anio and Mes=@Mes and Dia=@Dia");
+            SqlConnection connection = new SqlConnection(Properties.Settings.Default.ConexionBase);
+            connection.Open();
+            SqlCommand getIDTiempo = new SqlCommand("Select Id_Tiempo from Tiempo where Anio= @Anio and Mes= @Mes and Dia= @Dia",connection);
+            String[] data = StringToDate(contentControlsNI[1].Range.Text);
+            getIDTiempo.Parameters.AddWithValue("Dia",Int32.Parse(data[1]) );
+            getIDTiempo.Parameters.AddWithValue("Mes",Int32.Parse( data[0]));
+            getIDTiempo.Parameters.AddWithValue("Anio",Int32.Parse(data[2]) );
             SqlDataReader reader = getIDTiempo.ExecuteReader();
             if (reader.Read())
             {
                 idTiempo = reader.GetInt32(0);
             }
+            else
+            {
+                reader.Close();
+                SqlCommand InsertToTiempo = new SqlCommand("Insert INTO TIEMPO (Anio,Mes,Dia,Mes_N) output INSERTED.Id_Tiempo Values (@Anio,@Mes,@Dia,@Mes_N)", connection);
+                InsertToTiempo.Parameters.AddWithValue("Anio", data[2]);
+                InsertToTiempo.Parameters.AddWithValue("Mes", data[0]);
+                InsertToTiempo.Parameters.AddWithValue("Dia", data[1]);
+                switch (data[0])
+                {
+                    case "1":
+                        InsertToTiempo.Parameters.AddWithValue("Mes_N", "Enero");
+                        break;
+                    case "2":
+                        InsertToTiempo.Parameters.AddWithValue("Mes_N", "Febrero");
+                        break;
+                    case "3":
+                        InsertToTiempo.Parameters.AddWithValue("Mes_N", "Marzo");
+                        break;
+                    case "4":
+                        InsertToTiempo.Parameters.AddWithValue("Mes_N", "Abril");
+                        break;
+                    case "5":
+                        InsertToTiempo.Parameters.AddWithValue("Mes_N", "Mayo");
+                        break;
+                    case "6":
+                        InsertToTiempo.Parameters.AddWithValue("Mes_N", "Junio");
+                        break;
+                    case "7":
+                        InsertToTiempo.Parameters.AddWithValue("Mes_N", "Julio");
+                        break;
+                    case "8":
+                        InsertToTiempo.Parameters.AddWithValue("Mes_N", "Agosto");
+                        break;
+                    case "9":
+                        InsertToTiempo.Parameters.AddWithValue("Mes_N", "Septiembre");
+                        break;
+                    case "10":
+                        InsertToTiempo.Parameters.AddWithValue("Mes_N", "Octubre");
+                        break;
+                    case "11":
+                        InsertToTiempo.Parameters.AddWithValue("Mes_N", "Noviembe");
+                        break;
+                    case "12":
+                        InsertToTiempo.Parameters.AddWithValue("Mes_N", "Diciembre");
+                        break;
+                    
+                }
+                idTiempo =(int) InsertToTiempo.ExecuteScalar();
+            }
+
             reader.Close();
-            SqlCommand cmd = new SqlCommand("INSERT INTO Nota_Gen  (NumSeguroSocial,Id_Profesional_Salud_MT,Id_Hospital,Clave_Diagnostico,Id_Profesional_Salud_Elab,Id_Tiempo,tipo)VALUES (@NumSeguroSocial,@Id_Profesional_Salud_MT,@Id_Hospital,@Clave_Diagnostico,@Id_Profesional_Salud_Elab,@Id_Tiempo,@tipo);SELECT CAST(scope_identity() AS int)", connection);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Nota_Gen  (NumSeguroSocial,Id_Profesional_Salud_MT,Id_Hospital,Clave_Diagnostico,Id_Profesional_Salud_Elab,Id_Tiempo,tipo) output INSERTED.Id_Nota_Gen VALUES (@NumSeguroSocial,@Id_Profesional_Salud_MT,@Id_Hospital,@Clave_Diagnostico,@Id_Profesional_Salud_Elab,@Id_Tiempo,@tipo)", connection);
             cmd.Parameters.AddWithValue("NumSeguroSocial", SeguroSocialPacientePS);
             cmd.Parameters.AddWithValue("Id_Profesional_Salud_MT", idMedicTratante);
-            cmd.Parameters.AddWithValue("Id_Hospital", null);
-            cmd.Parameters.AddWithValue("Clave_Diagnostico", null);
+            cmd.Parameters.AddWithValue("Id_Hospital", );
+            cmd.Parameters.AddWithValue("Clave_Diagnostico", );
             cmd.Parameters.AddWithValue("Id_Profesional_Salud_Elab", null);
             cmd.Parameters.AddWithValue("Id_Tiempo", idTiempo);
             cmd.Parameters.AddWithValue("tipo", "Ingreso");
@@ -126,6 +184,15 @@ namespace test
             }
 
             //wordApp.Application.Quit();
+            connection.Close();
+        }
+
+        private String[] StringToDate(String text)
+        {
+            string[] data;
+            data = text.Split(new string[] { "/" }, StringSplitOptions.None);
+            return data;
+
         }
 
         private void fillContentControlsNI(Document wordDoc)
@@ -325,6 +392,12 @@ namespace test
             contentControlsNI[16].LockContentControl = true;
 
 
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+            wordApp.Quit();
         }
 
     }

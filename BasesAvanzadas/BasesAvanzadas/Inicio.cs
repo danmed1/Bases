@@ -7,16 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace BasesAvanzadas
 {
     public partial class Inicio : Form
     {
+<<<<<<< HEAD
         private static Object oMissing = System.Reflection.Missing.Value;
         private static Object oTemplatePath = "E:\\Users\\Alejandro\\Desktop\\templateTest\\Nota_Ingreso.dotx";
 
+=======
+        public string mandarDato;
+        private string conexionBase = "Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
+        private string SeguroSocialPacientePS;
+        private int idProfSalLogIn;
+        private int idMedicTratante;
+>>>>>>> 6d8a36fdf537b9704f3bcd3ee74579fca55f6209
         AltaPersonal altaProfesional = new AltaPersonal();
         FormHospital altaHospital = new FormHospital();
+        AltaPaciente altaPaciente = new AltaPaciente();
         public Inicio()
         {
             InitializeComponent();
@@ -49,8 +59,85 @@ namespace BasesAvanzadas
         }
         private void botonBuscarPaciente_Click(object sender, EventArgs e)
         {
-            menuContextPaciente.Visible = true;
-            menuPaciente.Visible = false;
+            filtradoPacientes();
+        }
+
+        public void filtradoPacientes()
+        {
+
+            SqlConnection con = new SqlConnection(conexionBase);
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                ////-----Busquedas en Pacientes------
+
+                cmd = new SqlCommand("SELECT * FROM Paciente WHERE NumSeguroSocial LIKE '%" + segurosocialPaciente.Text + "%' and Nombre_P LIKE '%" + nombrePaciente.Text + "%' and (Ap_PatP LIKE '%" + apellidoPaciente.Text + "%' or Ap_MatP LIKE '%" + apellidoPaciente.Text + "%');", con);
+                
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (reader.HasRows)
+                {
+                    dt.Columns.Add("NumSeguroSocial", typeof(string));
+                    dt.Columns.Add("Nombre_P", typeof(string));
+                    dt.Columns.Add("Ap_PatP", typeof(string));
+                    dt.Columns.Add("Ap_Mat", typeof(string));
+                    dt.Columns.Add("F_Nac", typeof(DateTime));
+                    dt.Columns.Add("Genero", typeof(char));
+                    dt.Columns.Add("Domicilio", typeof(string));
+                    dt.Columns.Add("Escolaridad", typeof(string));
+                    dt.Columns.Add("Etnia", typeof(string));
+                    dt.Columns.Add("Religion", typeof(string));
+                    dt.Load(reader);
+
+                    dataGridView2.DataSource = dt;
+
+                    Console.Write("i have rows");
+
+                }
+                else
+                {
+                    dataGridView2.DataSource = dt;
+                }
+                con.Close();
+            }
+        }
+
+
+        private void filtradoPersonal()
+        {
+            SqlConnection con = new SqlConnection(conexionBase);
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                ////-----Busquedas en Personal------                
+
+                cmd = new SqlCommand("SELECT Nombre_ps, Ap_Pat,Ap_Mat,Perfil.Descripcion_Perfil as Perfil,Especialidad.Descripcion_Especialidad as Especialidad FROM dbo.Profesional_Salud INNER JOIN dbo.Especialidad ON Profesional_Salud.Id_Especialidad=Especialidad.Id_Especialidad INNER JOIN dbo.Perfil ON Profesional_Salud.Id_Perfil=Perfil.Id_Perfil WHERE  Nombre_ps LIKE '%" + nombrePersonal.Text + "%' AND (Ap_Pat LIKE '%" + apellidoPersonal.Text + "%' OR Ap_Mat LIKE '%" + apellidoPersonal.Text + "%');", con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (reader.HasRows)
+                {
+                    dt.Columns.Add("Nombre_ps", typeof(string));
+                    dt.Columns.Add("Ap_Pat", typeof(string));
+                    dt.Columns.Add("Ap_Mat", typeof(string));
+                    dt.Columns.Add("Descripcion_Perfil", typeof(string));
+                    dt.Columns.Add("Descripcion_Especialidad", typeof(string));
+                    dt.Load(reader);
+
+                    dataGridView3.DataSource = dt;
+
+                    Console.Write("i have rows ");
+
+                }
+                else
+                {
+                    dataGridView3.DataSource = dt;
+                }
+                con.Close();
+            }
+
         }
 
         private void agregarNotaBoton_Click(object sender, EventArgs e)
@@ -63,11 +150,38 @@ namespace BasesAvanzadas
         {
             menuVerNota.Visible = true;
             menuContextPaciente.Visible = false;
+
+            //
+
+            SqlConnection con = new SqlConnection(conexionBase);
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                ////-----Busquedas en Pacientes------
+
+                cmd = new SqlCommand("SELECT * FROM Nota_Gen WHERE NumSeguroSocial = '" + SeguroContextoPaciente.Text + "';", con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (reader.HasRows)
+                {
+                    dt.Columns.Add("Nombre_H", typeof(string));
+                    dt.Columns.Add("Direccion", typeof(string));
+                    dt.Load(reader);
+
+                    dataGridView4.DataSource = dt;
+                }
+                else dataGridView4.DataSource = dt;
+                con.Close();
+            }
+
+            //
         }
 
         private void datosBoton_Click(object sender, EventArgs e)
         {
-            DatosForma datosForma = new DatosForma();
+            DatosForma datosForma = new DatosForma(mandarDato, SeguroContextoPaciente.Text);
             datosForma.Show();
         }
 
@@ -109,15 +223,16 @@ namespace BasesAvanzadas
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'proyectoDBADataSet1.Hospital' table. You can move, or remove it, as needed.
+            // TODO: esta línea de código carga datos en la tabla 'proyectoDBADataSet3.Nota_Gen' Puede moverla o quitarla según sea necesario.
+            this.nota_GenTableAdapter.Fill(this.proyectoDBADataSet3.Nota_Gen);
+            // TODO: esta línea de código carga datos en la tabla 'proyectoDBADataSet2.Profesional_Salud' Puede moverla o quitarla según sea necesario.
+            this.profesional_SaludTableAdapter.Fill(this.proyectoDBADataSet2.Profesional_Salud);
+            // TODO: esta línea de código carga datos en la tabla 'proyectoDBADataSet1.Hospital' Puede moverla o quitarla según sea necesario.
             this.hospitalTableAdapter.Fill(this.proyectoDBADataSet1.Hospital);
-            // TODO: This line of code loads data into the 'proyectoDBADataSet1.Paciente' table. You can move, or remove it, as needed.
-            this.pacienteTableAdapter.Fill(this.proyectoDBADataSet1.Paciente);
-            // TODO: This line of code loads data into the 'proyectoDBADataSet1.Nota_Gen' table. You can move, or remove it, as needed.
-            this.nota_GenTableAdapter.Fill(this.proyectoDBADataSet1.Nota_Gen);
-            // TODO: This line of code loads data into the 'proyectoDBADataSet.Profesional_Salud' table. You can move, or remove it, as needed.
-            this.profesional_SaludTableAdapter.Fill(this.proyectoDBADataSet.Profesional_Salud);
+            // TODO: esta línea de código carga datos en la tabla 'proyectoDBADataSet.Paciente' Puede moverla o quitarla según sea necesario.
+            this.pacienteTableAdapter.Fill(this.proyectoDBADataSet.Paciente);
 
+            VerMasBoton.Hide();
         }
 
         private void regresarMenuPrincipalBoton_Click(object sender, EventArgs e)
@@ -158,7 +273,7 @@ namespace BasesAvanzadas
         private void altaDatosPersonal_Click(object sender, EventArgs e)
         {
             AltaPersonal altaPersonal = new AltaPersonal();
-            altaPersonal.Show();
+            altaPersonal.ShowDialog();
         }
 
         private void buscarDetallesPersonalBoton_Click(object sender, EventArgs e)
@@ -172,6 +287,7 @@ namespace BasesAvanzadas
             }
         }
 
+<<<<<<< HEAD
         private void notaAltaboton_Click(object sender, EventArgs e)
         {
             Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
@@ -185,6 +301,98 @@ namespace BasesAvanzadas
 
         }
 
+=======
+        private void menuVerNota_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VerMasBoton_Click(object sender, EventArgs e)
+        {
+                menuContextPaciente.Visible = true;
+                menuPaciente.Visible = false;
+                nombreContextoPaciente.Text = nombrePaciente.Text + " " + apellidoPaciente.Text;
+                mandarDato = nombrePaciente.Text + "," + apellidoPaciente.Text;
+                SeguroContextoPaciente.Text = segurosocialPaciente.Text;
+            
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            nombrePaciente.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+            apellidoPaciente.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
+            SeguroSocialPacientePS = segurosocialPaciente.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            nombrePaciente.Show();
+            apellidoPaciente.Show();
+            segurosocialPaciente.Show();
+            VerMasBoton.Show();
+        }
+
+        private void nombrePaciente_TextChanged(object sender, EventArgs e)
+        {
+            filtradoPacientes();
+        }
+
+        private void apellidoPaciente_TextChanged(object sender, EventArgs e)
+        {
+            filtradoPacientes();
+        }
+
+        private void segurosocialPaciente_TextChanged(object sender, EventArgs e)
+        {
+            filtradoPacientes();
+        }
+
+        private void botonAltaPaciente_Click(object sender, EventArgs e)
+        {
+            altaPaciente.ShowDialog();
+            //Hide
+        }
+
+        private void textBoxHospitalNombre_TextChanged(object sender, EventArgs e)
+        {
+            filtrarHospital();
+        }
+
+        private void textBoxDireccionHospital_TextChanged(object sender, EventArgs e)
+        {
+            filtrarHospital();
+        }
+
+        public void filtrarHospital() {
+            SqlConnection con = new SqlConnection(conexionBase);
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                ////-----Busquedas en Pacientes------                
+                cmd = new SqlCommand("SELECT * FROM Hospital WHERE Nombre_H LIKE '%" + textBoxHospitalNombre.Text + "%' and Direccion LIKE '%" + textBoxDireccionHospital.Text + "%';", con);                
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (reader.HasRows)
+                {
+                    dt.Columns.Add("Nombre_H", typeof(string));
+                    dt.Columns.Add("Direccion", typeof(string));
+                    dt.Load(reader);
+
+                    dataGridView4.DataSource = dt;
+                }
+                else dataGridView4.DataSource = dt;
+                con.Close();
+            }
+        }
+
+        private void nombrePersonal_TextChanged(object sender, EventArgs e)
+        {
+            filtradoPersonal();
+        }
+
+        private void apellidoPersonal_TextChanged(object sender, EventArgs e)
+        {
+            filtradoPersonal();
+        }
+>>>>>>> 6d8a36fdf537b9704f3bcd3ee74579fca55f6209
 
     }
 }

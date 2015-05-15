@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.modificarHospitalesBoton = new System.Windows.Forms.Button();
-            this.guardarHospitalBoton = new System.Windows.Forms.Button();
             this.regresarMenuHospitalBoton = new System.Windows.Forms.Button();
+            this.guardarHospitalBoton = new System.Windows.Forms.Button();
+            this.modificarHospitalesBoton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -59,27 +59,6 @@
             this.splitContainer1.SplitterDistance = 251;
             this.splitContainer1.TabIndex = 0;
             // 
-            // modificarHospitalesBoton
-            // 
-            this.modificarHospitalesBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificarHospitalesBoton.Location = new System.Drawing.Point(65, 112);
-            this.modificarHospitalesBoton.Name = "modificarHospitalesBoton";
-            this.modificarHospitalesBoton.Size = new System.Drawing.Size(130, 42);
-            this.modificarHospitalesBoton.TabIndex = 0;
-            this.modificarHospitalesBoton.Text = "Modificar";
-            this.modificarHospitalesBoton.UseVisualStyleBackColor = true;
-            this.modificarHospitalesBoton.Click += new System.EventHandler(this.modificarHospitalesBoton_Click);
-            // 
-            // guardarHospitalBoton
-            // 
-            this.guardarHospitalBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guardarHospitalBoton.Location = new System.Drawing.Point(65, 247);
-            this.guardarHospitalBoton.Name = "guardarHospitalBoton";
-            this.guardarHospitalBoton.Size = new System.Drawing.Size(130, 45);
-            this.guardarHospitalBoton.TabIndex = 1;
-            this.guardarHospitalBoton.Text = "Guardar";
-            this.guardarHospitalBoton.UseVisualStyleBackColor = true;
-            // 
             // regresarMenuHospitalBoton
             // 
             this.regresarMenuHospitalBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,6 +69,28 @@
             this.regresarMenuHospitalBoton.Text = "Regresar";
             this.regresarMenuHospitalBoton.UseVisualStyleBackColor = true;
             this.regresarMenuHospitalBoton.Click += new System.EventHandler(this.regresarMenuHospitalBoton_Click);
+            // 
+            // guardarHospitalBoton
+            // 
+            this.guardarHospitalBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guardarHospitalBoton.Location = new System.Drawing.Point(65, 247);
+            this.guardarHospitalBoton.Name = "guardarHospitalBoton";
+            this.guardarHospitalBoton.Size = new System.Drawing.Size(130, 45);
+            this.guardarHospitalBoton.TabIndex = 1;
+            this.guardarHospitalBoton.Text = "Guardar";
+            this.guardarHospitalBoton.UseVisualStyleBackColor = true;
+            this.guardarHospitalBoton.Click += new System.EventHandler(this.guardarHospitalBoton_Click);
+            // 
+            // modificarHospitalesBoton
+            // 
+            this.modificarHospitalesBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modificarHospitalesBoton.Location = new System.Drawing.Point(65, 112);
+            this.modificarHospitalesBoton.Name = "modificarHospitalesBoton";
+            this.modificarHospitalesBoton.Size = new System.Drawing.Size(130, 42);
+            this.modificarHospitalesBoton.TabIndex = 0;
+            this.modificarHospitalesBoton.Text = "Modificar";
+            this.modificarHospitalesBoton.UseVisualStyleBackColor = true;
+            this.modificarHospitalesBoton.Click += new System.EventHandler(this.modificarHospitalesBoton_Click);
             // 
             // dataGridView1
             // 

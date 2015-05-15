@@ -54,6 +54,12 @@
     <Compile Include="DatosForma.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AltaPaciente.Designer.cs">
+      <DependentUpon>AltaPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DatosForma.Designer.cs">
       <DependentUpon>DatosForma.cs</DependentUpon>
     </Compile>
@@ -110,11 +116,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoDBADataSet11.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProyectoDBADataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoDBADataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoDBADataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoDBADataSet3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DatosForma.resx">
       <DependentUpon>DatosForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HospitalForma.resx">
       <DependentUpon>HospitalForma.cs</DependentUpon>
+    </EmbeddedResource>
+        <EmbeddedResource Include="AltaPaciente.resx">
+      <DependentUpon>AltaPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -169,6 +188,28 @@
     </None>
     <None Include="ProyectoDBADataSet11.xss">
       <DependentUpon>ProyectoDBADataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet2.xsc">
+      <DependentUpon>ProyectoDBADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProyectoDBADataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectoDBADataSet2.xss">
+      <DependentUpon>ProyectoDBADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet3.xsc">
+      <DependentUpon>ProyectoDBADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProyectoDBADataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectoDBADataSet3.xss">
+      <DependentUpon>ProyectoDBADataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
