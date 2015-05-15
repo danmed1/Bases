@@ -33,7 +33,54 @@ namespace BasesAvanzadas
 
         private void entrar_Click(object sender, EventArgs e)
         {
-
+            SqlConnection conn = new SqlConnection(conexionBase);
+            conn.Open();
+            SqlCommand sc = new SqlCommand("SELECT Id_Perfil FROM VistaPerfilTodos WHERE Username = '" + textBoxUsername.Text + "' AND Password = '" + textBoxPassword.Text + "';", conn);
+            sc.ExecuteNonQuery();
+            SqlDataReader dReader = sc.ExecuteReader();
+            int perfil = 0;
+            while (dReader.Read())
+            {
+                perfil = dReader.GetInt32(0);
+            }
+            conn.Close();
+            if (perfil == 0)
+            {
+                labelResultadoErroneo.Text = "Usuario o contraseña incorrectos";
+            }
+            //----------------------------------------------------------------------------
+            //---------------------Descomentar cuando este lo de memo---------------------
+            //----------------------------------------------------------------------------
+            //else
+            //{
+            //    switch (perfil)
+            //    {
+            //        case 1:
+            //            this.Hide();
+            //            InicioDoctor inicioDoc = new InicioDoctor();
+            //            inicioDoc.Closed += (s, args) => this.Close();
+            //            inicioDoc.Show();
+            //            break;
+            //        case 2:
+            //            this.Hide();
+            //            InicioDoctor inicioDoc = new InicioDoctor();
+            //            inicioDoc.Closed += (s, args) => this.Close();
+            //            inicioDoc.Show();
+            //            break;
+            //        case 3:
+            //            this.Hide();
+            //            InicioAdminH inAH = new InicioAdminH();
+            //            inaH.Closed += (s, args) => this.Close();
+            //            inAH.show();
+            //            break;
+            //        case 4:
+            //            this.Hide();
+            //            InicioAdminG inAG = new InicioAdminG();
+            //            inAG.Closed += (s, args) => this.Close();
+            //            inAG.show();
+            //            break;
+            //    }
+            //}
         }
     }
 }
