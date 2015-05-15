@@ -12,7 +12,7 @@ namespace BasesAvanzadas
 {
     public partial class AltaPaciente : Form
     {
-        private string conexionBase = "Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
+        private string conexionBase = "Data Source=wc064g5hsn.database.windows.net;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Alejandro;Password=Guanabana1";
         public AltaPaciente()
         {
             InitializeComponent();

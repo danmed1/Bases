@@ -14,7 +14,7 @@ namespace BasesAvanzadas
     public partial class Inicio : Form
     {
         public string mandarDato;
-        private string conexionBase = "Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
+        private string conexionBase = "Data Source=192.168.100.107;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
         private string SeguroSocialPacientePS;
         private int idProfSalLogIn;
         private int idMedicTratante;
@@ -142,6 +142,9 @@ namespace BasesAvanzadas
 
         private void verNotaBoton_Click(object sender, EventArgs e)
         {
+            menuVerNota.Visible = true;
+            menuContextPaciente.Visible = false;
+
             //
 
             SqlConnection con = new SqlConnection(conexionBase);
@@ -149,7 +152,7 @@ namespace BasesAvanzadas
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
 
-                ////-----Busquedas en Notas Genericas------
+                ////-----Busquedas en Pacientes------
 
                 cmd = new SqlCommand("SELECT * FROM Nota_Gen WHERE NumSeguroSocial = '" + SeguroContextoPaciente.Text + "';", con);
 
@@ -157,24 +160,17 @@ namespace BasesAvanzadas
                 DataTable dt = new DataTable();
                 if (reader.HasRows)
                 {
-                    dt.Columns.Add("NumSeguroSocial", typeof(string));
-                    dt.Columns.Add("Id_Profesional_Salud_MT", typeof(int));
-                    dt.Columns.Add("Id_Hospital", typeof(int));
-                    dt.Columns.Add("Clave_Diagnostico", typeof(string));
-                    dt.Columns.Add("Id_Profesional_Salud_Elab", typeof(int));
-                    dt.Columns.Add("Id_Tiempo", typeof(int));
-                    dt.Columns.Add("Tipo", typeof(string));
+                    dt.Columns.Add("Nombre_H", typeof(string));
+                    dt.Columns.Add("Direccion", typeof(string));
                     dt.Load(reader);
 
-                    dataGridViewNotas.DataSource = dt;
+                    dataGridView4.DataSource = dt;
                 }
                 else dataGridView4.DataSource = dt;
                 con.Close();
             }
 
             //
-            menuVerNota.Visible = true;
-            menuContextPaciente.Visible = false;
         }
 
         private void datosBoton_Click(object sender, EventArgs e)
@@ -375,6 +371,7 @@ namespace BasesAvanzadas
         {
             filtradoPersonal();
         }
+        
 
     }
 }
