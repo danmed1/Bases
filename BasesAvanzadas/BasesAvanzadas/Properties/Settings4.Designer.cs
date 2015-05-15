@@ -37,8 +37,8 @@ namespace BasesAvanzadas.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;User ID=Admin;Password=passw" +
-            "ord")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.100.107;Initial Catalog=ProyectoDBA;User ID=Admin;Password=pa" +
+            "ssword")]
         public string ProyectoDBAConnectionString1 {
             get {
                 return ((string)(this["ProyectoDBAConnectionString1"]));

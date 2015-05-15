@@ -69,6 +69,24 @@
     <Compile Include="HospitalForma.Designer.cs">
       <DependentUpon>HospitalForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="InicioAdminH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioAdminH.Designer.cs">
+      <DependentUpon>InicioAdminH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioAdminG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioAdminG.Designer.cs">
+      <DependentUpon>InicioAdminG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioDoctor.Designer.cs">
+      <DependentUpon>InicioDoctor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,8 +150,17 @@
     <EmbeddedResource Include="HospitalForma.resx">
       <DependentUpon>HospitalForma.cs</DependentUpon>
     </EmbeddedResource>
-        <EmbeddedResource Include="AltaPaciente.resx">
+    <EmbeddedResource Include="AltaPaciente.resx">
       <DependentUpon>AltaPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioAdminH.resx">
+      <DependentUpon>InicioAdminH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioAdminG.resx">
+      <DependentUpon>InicioAdminG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioDoctor.resx">
+      <DependentUpon>InicioDoctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

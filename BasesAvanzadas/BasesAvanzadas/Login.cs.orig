@@ -1,0 +1,96 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace BasesAvanzadas
+{
+    public partial class Login : Form
+    {
+
+<<<<<<< HEAD
+        private string conexionBase = "Data Source=wc064g5hsn.database.windows.net;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Alejandro;Password=Guanabana1";
+=======
+        private string conexionBase = "Data Source=192.168.100.107;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
+>>>>>>> 071909598ba31b89b01b8e86aff0943f61864a77
+        public Login()
+        {
+            InitializeComponent();
+            textBoxPassword.PasswordChar = '*';
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void entrar_Click(object sender, EventArgs e)
+        {
+<<<<<<< HEAD
+
+            //
+            //SqlConnection con = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Alejandro;Password=Guanabana1");
+=======
+            SqlConnection conn = new SqlConnection(conexionBase);
+            conn.Open();
+            SqlCommand sc = new SqlCommand("SELECT Id_Perfil FROM VistaPerfilTodos WHERE Username = '" + textBoxUsername.Text + "' AND Password = '" + textBoxPassword.Text + "';", conn);
+            sc.ExecuteNonQuery();
+            SqlDataReader dReader = sc.ExecuteReader();
+            int perfil = 0;
+            while (dReader.Read())
+            {
+                perfil = dReader.GetInt32(0);
+            }
+            conn.Close();
+            if (perfil == 0)
+            {
+                labelResultadoErroneo.Text = "Usuario o contraseña incorrectos";
+            }
+            //----------------------------------------------------------------------------
+            //---------------------Descomentar cuando este lo de memo---------------------
+            //----------------------------------------------------------------------------
+            //else
+>>>>>>> 071909598ba31b89b01b8e86aff0943f61864a77
+            //{
+            //    switch (perfil)
+            //    {
+            //        case 1:
+            //            this.Hide();
+            //            InicioDoctor inicioDoc = new InicioDoctor();
+            //            inicioDoc.Closed += (s, args) => this.Close();
+            //            inicioDoc.Show();
+            //            break;
+            //        case 2:
+            //            this.Hide();
+            //            InicioDoctor inicioDoc = new InicioDoctor();
+            //            inicioDoc.Closed += (s, args) => this.Close();
+            //            inicioDoc.Show();
+            //            break;
+            //        case 3:
+            //            this.Hide();
+            //            InicioAdminH inAH = new InicioAdminH();
+            //            inaH.Closed += (s, args) => this.Close();
+            //            inAH.show();
+            //            break;
+            //        case 4:
+            //            this.Hide();
+            //            InicioAdminG inAG = new InicioAdminG();
+            //            inAG.Closed += (s, args) => this.Close();
+            //            inAG.show();
+            //            break;
+            //    }
+            //}
+        }
+    }
+}

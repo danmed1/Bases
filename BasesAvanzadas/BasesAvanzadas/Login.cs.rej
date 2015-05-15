@@ -1,0 +1,10 @@
+diff a/BasesAvanzadas/BasesAvanzadas/Login.cs b/BasesAvanzadas/BasesAvanzadas/Login.cs	(rejected hunks)
+@@ -35,7 +35,7 @@
+         {
+ 
+             //
+-            //SqlConnection con = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
++            //SqlConnection con = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Alejandro;Password=Guanabana1");
+             //{
+             //    con.Open();
+             //    SqlCommand cmd = new SqlCommand();

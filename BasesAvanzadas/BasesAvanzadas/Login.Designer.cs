@@ -33,6 +33,7 @@
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.entrar = new System.Windows.Forms.Button();
+            this.labelResultadoErroneo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // username
@@ -81,11 +82,20 @@
             this.entrar.UseVisualStyleBackColor = true;
             this.entrar.Click += new System.EventHandler(this.entrar_Click);
             // 
+            // labelResultadoErroneo
+            // 
+            this.labelResultadoErroneo.AutoSize = true;
+            this.labelResultadoErroneo.Location = new System.Drawing.Point(276, 319);
+            this.labelResultadoErroneo.Name = "labelResultadoErroneo";
+            this.labelResultadoErroneo.Size = new System.Drawing.Size(0, 13);
+            this.labelResultadoErroneo.TabIndex = 5;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 444);
+            this.Controls.Add(this.labelResultadoErroneo);
             this.Controls.Add(this.entrar);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
@@ -106,5 +116,6 @@
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button entrar;
+        private System.Windows.Forms.Label labelResultadoErroneo;
     }
 }
