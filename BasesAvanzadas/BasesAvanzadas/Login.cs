@@ -14,7 +14,7 @@ namespace BasesAvanzadas
     public partial class Login : Form
     {
 
-        private string conexionBase = "Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
+        private string conexionBase = "Data Source=wc064g5hsn.database.windows.net;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Alejandro;Password=Guanabana1";
         public Login()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace BasesAvanzadas
         {
 
             //
-            //SqlConnection con = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password");
+            //SqlConnection con = new SqlConnection("Data Source=192.168.0.12;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Alejandro;Password=Guanabana1");
             //{
             //    con.Open();
             //    SqlCommand cmd = new SqlCommand();

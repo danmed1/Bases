@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace BasesAvanzadas
 {
-    public partial class Inicio : Form
+    public partial class InicioDoctor : Form
     {
         public string mandarDato;
         private string conexionBase = "Data Source=192.168.100.107;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
@@ -21,14 +21,13 @@ namespace BasesAvanzadas
         AltaPersonal altaProfesional = new AltaPersonal();
         FormHospital altaHospital = new FormHospital();
         AltaPaciente altaPaciente = new AltaPaciente();
-        public Inicio()
+        public InicioDoctor()
         {
             InitializeComponent();
             menuPaciente.Visible = false;
             menuContextPaciente.Visible = false;
             menuAgregarNotas.Visible = false;
-            menuVerNota.Visible = false;
-            menuHospital.Visible = false;
+            menuVerNota.Visible = false;            
             menuPersonal.Visible = false;
         }
 
@@ -147,28 +146,7 @@ namespace BasesAvanzadas
 
             //
 
-            SqlConnection con = new SqlConnection(conexionBase);
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand();
-
-                ////-----Busquedas en Pacientes------
-
-                cmd = new SqlCommand("SELECT * FROM Nota_Gen WHERE NumSeguroSocial = '" + SeguroContextoPaciente.Text + "';", con);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                DataTable dt = new DataTable();
-                if (reader.HasRows)
-                {
-                    dt.Columns.Add("Nombre_H", typeof(string));
-                    dt.Columns.Add("Direccion", typeof(string));
-                    dt.Load(reader);
-
-                    dataGridView4.DataSource = dt;
-                }
-                else dataGridView4.DataSource = dt;
-                con.Close();
-            }
+            
 
             //
         }
@@ -185,18 +163,7 @@ namespace BasesAvanzadas
             FormHospital fomraprueba = new FormHospital();
             fomraprueba.Show();
         }
-
-        private void modificarHospitalBoton_Click(object sender, EventArgs e)
-        {
-            HospitalForma hospitalforma = new HospitalForma();
-            hospitalBoton.Show();
-        }
-
-        private void hospitalBoton_Click(object sender, EventArgs e)
-        {
-            menuHospital.Visible = true;
-            menuGeneral.Visible = false;
-        }
+                
 
         private void regresarPacienteMenuBoton_Click(object sender, EventArgs e)
         {
@@ -246,13 +213,7 @@ namespace BasesAvanzadas
             menuPaciente.Visible = false;
             menuGeneral.Visible = true;
         }
-
-        private void regresarMenuGeneralBoton_Click(object sender, EventArgs e)
-        {
-            menuHospital.Visible = false;
-            menuGeneral.Visible = true;
-        }
-
+        
         private void regresarMenuContexPacienteBoton_Click(object sender, EventArgs e)
         {
             menuAgregarNotas.Visible = false;
@@ -327,41 +288,7 @@ namespace BasesAvanzadas
             altaPaciente.ShowDialog();
             //Hide
         }
-
-        private void textBoxHospitalNombre_TextChanged(object sender, EventArgs e)
-        {
-            filtrarHospital();
-        }
-
-        private void textBoxDireccionHospital_TextChanged(object sender, EventArgs e)
-        {
-            filtrarHospital();
-        }
-
-        public void filtrarHospital() {
-            SqlConnection con = new SqlConnection(conexionBase);
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand();
-
-                ////-----Busquedas en Pacientes------                
-                cmd = new SqlCommand("SELECT * FROM Hospital WHERE Nombre_H LIKE '%" + textBoxHospitalNombre.Text + "%' and Direccion LIKE '%" + textBoxDireccionHospital.Text + "%';", con);                
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                DataTable dt = new DataTable();
-                if (reader.HasRows)
-                {
-                    dt.Columns.Add("Nombre_H", typeof(string));
-                    dt.Columns.Add("Direccion", typeof(string));
-                    dt.Load(reader);
-
-                    dataGridView4.DataSource = dt;
-                }
-                else dataGridView4.DataSource = dt;
-                con.Close();
-            }
-        }
-
+                
         private void nombrePersonal_TextChanged(object sender, EventArgs e)
         {
             filtradoPersonal();
