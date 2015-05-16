@@ -222,7 +222,7 @@ namespace BasesAvanzadas
             // TODO: esta línea de código carga datos en la tabla 'proyectoDBADataSet3.Nota_Gen' Puede moverla o quitarla según sea necesario.
             this.nota_GenTableAdapter.Fill(this.proyectoDBADataSet3.Nota_Gen);
             // TODO: esta línea de código carga datos en la tabla 'proyectoDBADataSet2.Profesional_Salud' Puede moverla o quitarla según sea necesario.
-            this.profesional_SaludTableAdapter.Fill(this.proyectoDBADataSet2.Profesional_Salud);
+            //this.profesional_SaludTableAdapter.Fill(this.proyectoDBADataSet2.Profesional_Salud);
             // TODO: esta línea de código carga datos en la tabla 'proyectoDBADataSet1.Hospital' Puede moverla o quitarla según sea necesario.
             this.hospitalTableAdapter.Fill(this.proyectoDBADataSet1.Hospital);
             // TODO: esta línea de código carga datos en la tabla 'proyectoDBADataSet.Paciente' Puede moverla o quitarla según sea necesario.

@@ -49,14 +49,14 @@
               <w:gridCol w:w="98" />
               <w:gridCol w:w="1596" />
             </w:tblGrid>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="9844" w:type="dxa" />
                   <w:gridSpan w:val="12" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:jc w:val="center" />
@@ -65,7 +65,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:sz w:val="28" />
@@ -76,20 +76,20 @@
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="1596" w:type="dxa" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -103,7 +103,7 @@
                   <w:gridSpan w:val="7" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -111,7 +111,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -125,21 +125,21 @@
                   <w:gridSpan w:val="2" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Fecha</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -153,7 +153,7 @@
                   <w:gridSpan w:val="2" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -161,7 +161,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -170,27 +170,27 @@
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="1596" w:type="dxa" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Dirección</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -204,7 +204,7 @@
                   <w:gridSpan w:val="11" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -212,7 +212,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -221,14 +221,14 @@
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="9844" w:type="dxa" />
                   <w:gridSpan w:val="12" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:jc w:val="center" />
@@ -237,7 +237,7 @@
                       <w:sz w:val="28" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:sz w:val="28" />
@@ -245,14 +245,14 @@
                     </w:rPr>
                     <w:t>Datos</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:sz w:val="28" />
                     </w:rPr>
                     <w:t xml:space="preserve"> </w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:sz w:val="28" />
@@ -260,14 +260,14 @@
                     </w:rPr>
                     <w:t>Médico</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:sz w:val="28" />
                     </w:rPr>
                     <w:t xml:space="preserve"> </w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:sz w:val="28" />
@@ -278,28 +278,28 @@
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="2394" w:type="dxa" />
                   <w:gridSpan w:val="2" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Nombre</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -313,7 +313,7 @@
                   <w:gridSpan w:val="10" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -321,7 +321,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -330,28 +330,28 @@
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="2394" w:type="dxa" />
                   <w:gridSpan w:val="2" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Especialidad</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -365,7 +365,7 @@
                   <w:gridSpan w:val="4" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -373,7 +373,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -387,27 +387,27 @@
                   <w:gridSpan w:val="3" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                     <w:t xml:space="preserve">No </w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Cédula</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -421,7 +421,7 @@
                   <w:gridSpan w:val="3" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -429,23 +429,23 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
-                    <w:t xml:space="preserve">        </w:t>
+                    <w:t xml:space="preserve">1234567 </w:t>
                   </w:r>
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="6652" w:type="dxa" />
                   <w:gridSpan w:val="7" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:jc w:val="center" />
@@ -454,7 +454,7 @@
                       <w:sz w:val="32" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:sz w:val="32" />
@@ -462,14 +462,14 @@
                     </w:rPr>
                     <w:t>Datos</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:sz w:val="32" />
                     </w:rPr>
                     <w:t xml:space="preserve"> </w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:sz w:val="32" />
@@ -485,14 +485,14 @@
                   <w:gridSpan w:val="4" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
@@ -506,7 +506,7 @@
                   <w:tcW w:w="1596" w:type="dxa" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -514,7 +514,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -523,27 +523,27 @@
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="1596" w:type="dxa" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Nombre</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -557,7 +557,7 @@
                   <w:gridSpan w:val="2" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -565,7 +565,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -579,27 +579,27 @@
                   <w:gridSpan w:val="2" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Apellido</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                     <w:t xml:space="preserve"> </w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
@@ -614,7 +614,7 @@
                   <w:gridSpan w:val="2" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -622,7 +622,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -636,27 +636,27 @@
                   <w:gridSpan w:val="4" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Apellido</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                     <w:t xml:space="preserve"> </w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
@@ -670,7 +670,7 @@
                   <w:tcW w:w="1596" w:type="dxa" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -678,7 +678,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -687,21 +687,21 @@
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="2394" w:type="dxa" />
                   <w:gridSpan w:val="2" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
@@ -716,7 +716,7 @@
                   <w:gridSpan w:val="3" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -724,7 +724,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -738,27 +738,27 @@
                   <w:gridSpan w:val="4" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Fecha</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                     <w:t xml:space="preserve"> </w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
@@ -773,7 +773,7 @@
                   <w:gridSpan w:val="3" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -781,7 +781,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -790,21 +790,21 @@
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="2394" w:type="dxa" />
                   <w:gridSpan w:val="2" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
@@ -819,7 +819,7 @@
                   <w:gridSpan w:val="3" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -827,7 +827,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -841,14 +841,14 @@
                   <w:gridSpan w:val="4" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -862,7 +862,7 @@
                   <w:gridSpan w:val="3" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -870,7 +870,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -879,21 +879,21 @@
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="2394" w:type="dxa" />
                   <w:gridSpan w:val="2" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -907,7 +907,7 @@
                   <w:gridSpan w:val="3" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -915,7 +915,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -929,14 +929,14 @@
                   <w:gridSpan w:val="4" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -950,7 +950,7 @@
                   <w:gridSpan w:val="3" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -958,7 +958,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -967,21 +967,21 @@
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="4922" w:type="dxa" />
                   <w:gridSpan w:val="4" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -995,14 +995,14 @@
                   <w:gridSpan w:val="8" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:rStyle w:val="PlaceholderText" />
                     </w:rPr>
@@ -1011,27 +1011,27 @@
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="2394" w:type="dxa" />
                   <w:gridSpan w:val="2" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                     <w:t xml:space="preserve">Hospital de </w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
@@ -1046,7 +1046,7 @@
                   <w:gridSpan w:val="3" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -1054,12 +1054,12 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
-                    <w:t>Hospital Materno Infantil Iniguarán</w:t>
+                    <w:t>memo</w:t>
                   </w:r>
                 </w:p>
               </w:tc>
@@ -1069,27 +1069,27 @@
                   <w:gridSpan w:val="4" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Motivo</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                     <w:t xml:space="preserve"> de </w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
@@ -1104,7 +1104,7 @@
                   <w:gridSpan w:val="3" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -1112,37 +1112,37 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
-                    <w:t>Aguacate</w:t>
+                    <w:t>Daniel Se quedo dormido</w:t>
                   </w:r>
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="9844" w:type="dxa" />
                   <w:gridSpan w:val="12" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Observaciones</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -1151,7 +1151,7 @@
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:trPr>
                 <w:trHeight w:val="2015" />
               </w:trPr>
@@ -1161,57 +1161,57 @@
                   <w:gridSpan w:val="12" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
-                    <w:t>Se atraganto con Aguacates</w:t>
+                    <w:t>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</w:t>
                   </w:r>
                 </w:p>
               </w:tc>
             </w:tr>
-            <w:tr w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidTr="00920108">
+            <w:tr w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidTr="00B4382F">
               <w:tc>
                 <w:tcPr>
                   <w:tcW w:w="2394" w:type="dxa" />
                   <w:gridSpan w:val="2" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Elaborada</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                     <w:t xml:space="preserve"> </w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>por</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -1225,7 +1225,7 @@
                   <w:gridSpan w:val="3" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -1233,7 +1233,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -1247,27 +1247,27 @@
                   <w:gridSpan w:val="4" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
                     <w:t xml:space="preserve">No </w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                     <w:t>Cedula</w:t>
                   </w:r>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -1281,7 +1281,7 @@
                   <w:gridSpan w:val="3" />
                   <w:shd w:val="clear" w:color="auto" w:fill="auto" />
                 </w:tcPr>
-                <w:p w:rsidR="00516FDA" w:rsidRPr="00FB68FB" w:rsidRDefault="00516FDA" w:rsidP="00920108">
+                <w:p w:rsidR="00AF722C" w:rsidRPr="00064E55" w:rsidRDefault="00AF722C" w:rsidP="00B4382F">
                   <w:pPr>
                     <w:spacing w:after="0" w:line="240" w:lineRule="auto" />
                     <w:rPr>
@@ -1289,7 +1289,7 @@
                       <w:lang w:val="es-MX" />
                     </w:rPr>
                   </w:pPr>
-                  <w:r w:rsidRPr="00FB68FB">
+                  <w:r w:rsidRPr="00064E55">
                     <w:rPr>
                       <w:b />
                     </w:rPr>
@@ -1299,14 +1299,14 @@
               </w:tc>
             </w:tr>
           </w:tbl>
-          <w:p w:rsidR="00000000" w:rsidRPr="00516FDA" w:rsidRDefault="00516FDA">
+          <w:p w:rsidR="00000000" w:rsidRPr="00AF722C" w:rsidRDefault="00AF722C">
             <w:pPr>
               <w:rPr>
                 <w:lang w:val="es-MX" />
               </w:rPr>
             </w:pPr>
           </w:p>
-          <w:sectPr w:rsidR="00000000" w:rsidRPr="00516FDA">
+          <w:sectPr w:rsidR="00000000" w:rsidRPr="00AF722C">
             <w:pgSz w:w="12240" w:h="15840" />
             <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0" />
             <w:cols w:space="720" />
@@ -1628,22 +1628,22 @@
           <w:compatSetting w:name="compatibilityMode" w:uri="http://schemas.microsoft.com/office/word" w:val="11" />
         </w:compat>
         <w:rsids>
-          <w:rsidRoot w:val="005371B4" />
+          <w:rsidRoot w:val="002444C6" />
+          <w:rsid w:val="00064E55" />
           <w:rsid w:val="000D3FD4" />
           <w:rsid w:val="001B1EB1" />
-          <w:rsid w:val="00204A17" />
+          <w:rsid w:val="002444C6" />
           <w:rsid w:val="00451162" />
-          <w:rsid w:val="00516FDA" />
-          <w:rsid w:val="005371B4" />
           <w:rsid w:val="005838EB" />
           <w:rsid w:val="00886AD1" />
+          <w:rsid w:val="00AF722C" />
           <w:rsid w:val="00B4415D" />
           <w:rsid w:val="00CA428C" />
           <w:rsid w:val="00CD3EFB" />
           <w:rsid w:val="00CE4870" />
           <w:rsid w:val="00E51D1A" />
+          <w:rsid w:val="00E635D9" />
           <w:rsid w:val="00EE6F6C" />
-          <w:rsid w:val="00FB68FB" />
           <w:rsid w:val="00FF3741" />
         </w:rsids>
         <m:mathPr>

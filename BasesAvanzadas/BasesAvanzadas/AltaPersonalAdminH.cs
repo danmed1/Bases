@@ -14,6 +14,7 @@ namespace BasesAvanzadas
     public partial class AltaPersonalAdminH : Form
     {
         private string conexionBase = "Data Source=192.168.100.107;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
+        int hospital = Login.hospitalUsuario;
         public AltaPersonalAdminH()
         {
             InitializeComponent();
@@ -95,7 +96,7 @@ namespace BasesAvanzadas
                 cmd2.Parameters.AddWithValue("@Perfil", cbPerfil.SelectedValue);
                 cmd2.Parameters.AddWithValue("@Usuario", tbUsuario.Text);
                 cmd2.Parameters.AddWithValue("@Password", tbPassword.Text);
-                cmd2.Parameters.AddWithValue("@Hospital", 5);                               
+                cmd2.Parameters.AddWithValue("@Hospital", hospital);                               
                                 
                 cmd2.ExecuteNonQuery();
                 con.Close();
@@ -111,6 +112,11 @@ namespace BasesAvanzadas
         private void regresarMenuPaciente_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cbEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
         
     }
