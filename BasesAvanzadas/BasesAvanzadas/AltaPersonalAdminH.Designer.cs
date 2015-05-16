@@ -1,6 +1,6 @@
 ﻿namespace BasesAvanzadas
 {
-    partial class AltaPersonal
+    partial class AltaPersonalAdminH
     {
         /// <summary>
         /// Required designer variable.
@@ -147,6 +147,7 @@
             this.cbEspecialidad.Name = "cbEspecialidad";
             this.cbEspecialidad.Size = new System.Drawing.Size(191, 21);
             this.cbEspecialidad.TabIndex = 11;
+            this.cbEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cbEspecialidad_SelectedIndexChanged);
             // 
             // bGuardar
             // 
@@ -175,7 +176,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 14;
-            this.label7.Text = "Username";            
+            this.label7.Text = "Username";
             // 
             // label8
             // 
@@ -200,7 +201,7 @@
             this.tbPassword.Size = new System.Drawing.Size(191, 20);
             this.tbPassword.TabIndex = 17;
             // 
-            // AltaPersonal
+            // AltaPersonalAdminH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,7 +224,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AltaPersonal";
+            this.Name = "AltaPersonalAdminH";
             this.Text = "Alta Personal";
             this.ResumeLayout(false);
             this.PerformLayout();

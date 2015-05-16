@@ -9,14 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
+using System.IO;
+using System.Xml;
+using System.Xml.XPath;
+using System.Xml.Xsl;
+
 namespace BasesAvanzadas
 {
+
     public partial class InicioAdminH : Form
     {
         public string mandarDato;
-        private string conexionBase = "Data Source=192.168.100.107;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";                
-        private int idPerteneceHospital;
-        AltaPersonal altaProfesional = new AltaPersonal();
+        private string conexionBase = "Data Source=192.168.100.107;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";                        
+        int hospital = Login.hospitalUsuario;
+        AltaPersonalAdminH altaPersonalAdminH = new AltaPersonalAdminH();
         FormHospital altaHospital = new FormHospital();
         AltaPaciente altaPaciente = new AltaPaciente();
         public InicioAdminH()
@@ -42,11 +49,10 @@ namespace BasesAvanzadas
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
-
-                idPerteneceHospital = 3;
+                
                 ////-----Busquedas en Personal------                
 
-                cmd = new SqlCommand("SELECT Id_Profesional_Salud,Nombre_PS,Ap_Pat,Ap_Mat,No_Cedula,Descripcion_Perfil,Descripcion_Especialidad,Id_Hospital FROM VistaMaestra WHERE Nombre_ps LIKE '%" + nombrePersonal.Text + "%' AND (Ap_Pat LIKE '%" + apellidoPersonal.Text + "%' OR Ap_Mat LIKE '%" + apellidoPersonal.Text + "%');", con);
+                cmd = new SqlCommand("SELECT Id_Profesional_Salud,Nombre_PS,Ap_Pat,Ap_Mat,No_Cedula,Descripcion_Perfil,Descripcion_Especialidad,Id_Hospital FROM VistaMaestra WHERE Id_Hospital="+hospital +" AND Nombre_PS LIKE '%" + nombrePersonal.Text + "%' AND (Ap_Pat LIKE '%" + apellidoPersonal.Text + "%' OR Ap_Mat LIKE '%" + apellidoPersonal.Text + "%');", con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
@@ -86,7 +92,7 @@ namespace BasesAvanzadas
         {
             menuPersonal.Visible = false;
             menuGeneral.Visible = true;
-        }
+        }        
 
         private void modicarDatosPersonalBoton_Click(object sender, EventArgs e)
         {
@@ -94,9 +100,8 @@ namespace BasesAvanzadas
         }
 
         private void altaDatosPersonal_Click(object sender, EventArgs e)
-        {
-            AltaPersonal altaPersonal = new AltaPersonal();
-            altaPersonal.ShowDialog();
+        {            
+            altaPersonalAdminH.ShowDialog();
         }
 
         private void buscarDetallesPersonalBoton_Click(object sender, EventArgs e)
@@ -123,7 +128,7 @@ namespace BasesAvanzadas
         private void InicioAdminH_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'proyectoDBADataSet21.Profesional_Salud' table. You can move, or remove it, as needed.
-            this.profesional_SaludTableAdapter.Fill(this.proyectoDBADataSet21.Profesional_Salud);
+            this.profesional_SaludTableAdapter.Fill(this.proyectoDBADataSet21.Profesional_Salud,hospital);
 
         }
 
