@@ -15,13 +15,12 @@ namespace BasesAvanzadas
     {
         private static Object oMissing = System.Reflection.Missing.Value;
         private static Object oTemplatePath = "E:\\Users\\Alejandro\\Desktop\\templateTest\\Nota_Ingreso.dotx";
-
         public string mandarDato;
         private string conexionBase = "Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
         private string SeguroSocialPacientePS;
         private int idProfSalLogIn;
         private int idMedicTratante;
-        AltaPersonal altaProfesional = new AltaPersonal();
+        AltaPersonalAdminG altaPersonalAdminG = new AltaPersonalAdminG();
         FormHospital altaHospital = new FormHospital();
         AltaPaciente altaPaciente = new AltaPaciente();
         public Inicio()
@@ -268,9 +267,8 @@ namespace BasesAvanzadas
         }
 
         private void altaDatosPersonal_Click(object sender, EventArgs e)
-        {
-            AltaPersonal altaPersonal = new AltaPersonal();
-            altaPersonal.ShowDialog();
+        {            
+            altaPersonalAdminG.ShowDialog();
         }
 
         private void buscarDetallesPersonalBoton_Click(object sender, EventArgs e)
@@ -283,7 +281,6 @@ namespace BasesAvanzadas
                 
             }
         }
-
         private void notaAltaboton_Click(object sender, EventArgs e)
         {
             Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();

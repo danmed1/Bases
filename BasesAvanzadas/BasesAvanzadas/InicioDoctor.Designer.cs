@@ -75,6 +75,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.notaAltaboton = new System.Windows.Forms.Button();
             this.menuVerNota = new System.Windows.Forms.GroupBox();
+            this.comboBoxIDNotas = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewNotas = new System.Windows.Forms.DataGridView();
             this.regresarMenuNotaBoton = new System.Windows.Forms.Button();
             this.notaGenBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -84,7 +87,6 @@
             this.label8N = new System.Windows.Forms.Label();
             this.modicarDatosPersonalBoton = new System.Windows.Forms.Button();
             this.regresarMenuPrincipalBoton = new System.Windows.Forms.Button();
-            this.altaDatosPersonal = new System.Windows.Forms.Button();
             this.buscarDetallesPersonalBoton = new System.Windows.Forms.Button();
             this.apellidoPersonal = new System.Windows.Forms.TextBox();
             this.nombrePersonal = new System.Windows.Forms.TextBox();
@@ -102,12 +104,12 @@
             this.proyectoDBADataSet1 = new BasesAvanzadas.ProyectoDBADataSet1();
             this.hospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.notaGenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.proyectoDBADataSet3 = new BasesAvanzadas.ProyectoDBADataSet3();
             this.pacienteTableAdapter = new BasesAvanzadas.ProyectoDBADataSetTableAdapters.PacienteTableAdapter();
             this.hospitalTableAdapter = new BasesAvanzadas.ProyectoDBADataSet1TableAdapters.HospitalTableAdapter();
-            this.nota_GenTableAdapter = new BasesAvanzadas.ProyectoDBADataSet3TableAdapters.Nota_GenTableAdapter();
             this.profesional_SaludTableAdapter = new BasesAvanzadas.ProyectoDBADataSet2TableAdapters.Profesional_SaludTableAdapter();
+            this.notaGenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.proyectoDBADataSet3 = new BasesAvanzadas.ProyectoDBADataSet3();
+            this.nota_GenTableAdapter = new BasesAvanzadas.ProyectoDBADataSet3TableAdapters.Nota_GenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Division1)).BeginInit();
             this.Division1.Panel1.SuspendLayout();
             this.Division1.Panel2.SuspendLayout();
@@ -611,6 +613,9 @@
             // 
             // menuVerNota
             // 
+            this.menuVerNota.Controls.Add(this.comboBoxIDNotas);
+            this.menuVerNota.Controls.Add(this.label6);
+            this.menuVerNota.Controls.Add(this.button1);
             this.menuVerNota.Controls.Add(this.dataGridViewNotas);
             this.menuVerNota.Controls.Add(this.regresarMenuNotaBoton);
             this.menuVerNota.Location = new System.Drawing.Point(0, 0);
@@ -621,18 +626,48 @@
             this.menuVerNota.TabStop = false;
             this.menuVerNota.Enter += new System.EventHandler(this.menuVerNota_Enter);
             // 
+            // comboBoxIDNotas
+            // 
+            this.comboBoxIDNotas.FormattingEnabled = true;
+            this.comboBoxIDNotas.Location = new System.Drawing.Point(22, 126);
+            this.comboBoxIDNotas.Name = "comboBoxIDNotas";
+            this.comboBoxIDNotas.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxIDNotas.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(50, 85);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 18);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Id Nota";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(24, 200);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 34);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Ver Nota";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // dataGridViewNotas
             // 
             this.dataGridViewNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNotas.Location = new System.Drawing.Point(127, 33);
+            this.dataGridViewNotas.Location = new System.Drawing.Point(171, 37);
             this.dataGridViewNotas.Name = "dataGridViewNotas";
-            this.dataGridViewNotas.Size = new System.Drawing.Size(593, 334);
+            this.dataGridViewNotas.Size = new System.Drawing.Size(621, 334);
             this.dataGridViewNotas.TabIndex = 1;
+            this.dataGridViewNotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNotas_CellContentClick);
             // 
             // regresarMenuNotaBoton
             // 
             this.regresarMenuNotaBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regresarMenuNotaBoton.Location = new System.Drawing.Point(332, 406);
+            this.regresarMenuNotaBoton.Location = new System.Drawing.Point(435, 444);
             this.regresarMenuNotaBoton.Name = "regresarMenuNotaBoton";
             this.regresarMenuNotaBoton.Size = new System.Drawing.Size(91, 29);
             this.regresarMenuNotaBoton.TabIndex = 0;
@@ -663,7 +698,6 @@
             this.vistaDetallesPersonal.Panel1.Controls.Add(this.label8N);
             this.vistaDetallesPersonal.Panel1.Controls.Add(this.modicarDatosPersonalBoton);
             this.vistaDetallesPersonal.Panel1.Controls.Add(this.regresarMenuPrincipalBoton);
-            this.vistaDetallesPersonal.Panel1.Controls.Add(this.altaDatosPersonal);
             this.vistaDetallesPersonal.Panel1.Controls.Add(this.buscarDetallesPersonalBoton);
             this.vistaDetallesPersonal.Panel1.Controls.Add(this.apellidoPersonal);
             this.vistaDetallesPersonal.Panel1.Controls.Add(this.nombrePersonal);
@@ -716,17 +750,6 @@
             this.regresarMenuPrincipalBoton.Text = "Regresar";
             this.regresarMenuPrincipalBoton.UseVisualStyleBackColor = true;
             this.regresarMenuPrincipalBoton.Click += new System.EventHandler(this.regresarMenuPrincipalBoton_Click);
-            // 
-            // altaDatosPersonal
-            // 
-            this.altaDatosPersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.altaDatosPersonal.Location = new System.Drawing.Point(3, 223);
-            this.altaDatosPersonal.Name = "altaDatosPersonal";
-            this.altaDatosPersonal.Size = new System.Drawing.Size(265, 36);
-            this.altaDatosPersonal.TabIndex = 3;
-            this.altaDatosPersonal.Text = "Altas";
-            this.altaDatosPersonal.UseVisualStyleBackColor = true;
-            this.altaDatosPersonal.Click += new System.EventHandler(this.altaDatosPersonal_Click);
             // 
             // buscarDetallesPersonalBoton
             // 
@@ -827,6 +850,18 @@
             this.proyectoDBADataSet1.DataSetName = "ProyectoDBADataSet1";
             this.proyectoDBADataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // pacienteTableAdapter
+            // 
+            this.pacienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // hospitalTableAdapter
+            // 
+            this.hospitalTableAdapter.ClearBeforeFill = true;
+            // 
+            // profesional_SaludTableAdapter
+            // 
+            this.profesional_SaludTableAdapter.ClearBeforeFill = true;
+            // 
             // notaGenBindingSource1
             // 
             this.notaGenBindingSource1.DataMember = "Nota_Gen";
@@ -837,21 +872,9 @@
             this.proyectoDBADataSet3.DataSetName = "ProyectoDBADataSet3";
             this.proyectoDBADataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pacienteTableAdapter
-            // 
-            this.pacienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // hospitalTableAdapter
-            // 
-            this.hospitalTableAdapter.ClearBeforeFill = true;
-            // 
             // nota_GenTableAdapter
             // 
             this.nota_GenTableAdapter.ClearBeforeFill = true;
-            // 
-            // profesional_SaludTableAdapter
-            // 
-            this.profesional_SaludTableAdapter.ClearBeforeFill = true;
             // 
             // InicioDoctor
             // 
@@ -859,12 +882,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(873, 548);
-            this.Controls.Add(this.menuPersonal);
             this.Controls.Add(this.menuVerNota);
             this.Controls.Add(this.menuPaciente);
             this.Controls.Add(this.menuAgregarNotas);
             this.Controls.Add(this.menuContextPaciente);
             this.Controls.Add(this.menuGeneral);
+            this.Controls.Add(this.menuPersonal);
             this.Name = "InicioDoctor";
             this.Text = "Equipo Negro App";
             this.Load += new System.EventHandler(this.Inicio_Load);
@@ -891,6 +914,7 @@
             this.ContextPacienteVista.ResumeLayout(false);
             this.menuAgregarNotas.ResumeLayout(false);
             this.menuVerNota.ResumeLayout(false);
+            this.menuVerNota.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notaGenBindingSource)).EndInit();
             this.menuPersonal.ResumeLayout(false);
@@ -946,8 +970,7 @@
         private System.Windows.Forms.DataGridView dataGridViewNotas;
         private System.Windows.Forms.GroupBox menuPersonal;
         private System.Windows.Forms.SplitContainer vistaDetallesPersonal;
-        private System.Windows.Forms.Button regresarMenuPrincipalBoton;
-        private System.Windows.Forms.Button altaDatosPersonal;
+        private System.Windows.Forms.Button regresarMenuPrincipalBoton;        
         private System.Windows.Forms.Button buscarDetallesPersonalBoton;
         private System.Windows.Forms.TextBox apellidoPersonal;
         private System.Windows.Forms.TextBox nombrePersonal;
@@ -1022,7 +1045,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.Label label8A;
-        private System.Windows.Forms.Label label8N;        
+        private System.Windows.Forms.Label label8N;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBoxIDNotas;        
     }
 }
 

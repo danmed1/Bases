@@ -36,6 +36,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -49,8 +50,15 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaPersonalAdminG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaPersonalAdminG.Designer.cs">
+      <DependentUpon>AltaPersonalAdminG.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatosForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,11 +113,11 @@
     <Compile Include="FormHospital.Designer.cs">
       <DependentUpon>FormHospital.cs</DependentUpon>
     </Compile>
-    <Compile Include="AltaPersonal.cs">
+    <Compile Include="AltaPersonalAdminH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltaPersonal.Designer.cs">
-      <DependentUpon>AltaPersonal.cs</DependentUpon>
+    <Compile Include="AltaPersonalAdminH.Designer.cs">
+      <DependentUpon>AltaPersonalAdminH.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonalForma.cs">
       <SubType>Form</SubType>
@@ -126,7 +134,6 @@
     </Compile>
     <Compile Include="ProyectoDBADataSet1.cs">
       <DependentUpon>ProyectoDBADataSet1.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ProyectoDBADataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -137,6 +144,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoDBADataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoDBADataSet2.cs">
+      <DependentUpon>ProyectoDBADataSet2.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ProyectoDBADataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -158,6 +169,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoDBADataSet5.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AltaPersonalAdminG.resx">
+      <DependentUpon>AltaPersonalAdminG.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatosForma.resx">
       <DependentUpon>DatosForma.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,8 +199,8 @@
     <EmbeddedResource Include="FormHospital.resx">
       <DependentUpon>FormHospital.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AltaPersonal.resx">
-      <DependentUpon>AltaPersonal.cs</DependentUpon>
+    <EmbeddedResource Include="AltaPersonalAdminH.resx">
+      <DependentUpon>AltaPersonalAdminH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonalForma.resx">
       <DependentUpon>PersonalForma.cs</DependentUpon>
@@ -274,6 +288,29 @@
     <None Include="ProyectoDBADataSet5.xss">
       <DependentUpon>ProyectoDBADataSet5.xsd</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ArchivosXml\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

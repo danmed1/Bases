@@ -68,8 +68,6 @@
             this.regresarMenuGeneralBoton = new System.Windows.Forms.Button();
             this.altasHospitalBoton = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.nombreHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hospitalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.proyectoDBADataSet1 = new BasesAvanzadas.ProyectoDBADataSet1();
             this.hospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -84,6 +82,8 @@
             this.proyectoDBADataSet4 = new BasesAvanzadas.ProyectoDBADataSet4();
             this.vistaMaestraTableAdapter = new BasesAvanzadas.ProyectoDBADataSet4TableAdapters.VistaMaestraTableAdapter();
             this.vistaMaestraTableAdapter1 = new BasesAvanzadas.ProyectoDBADataSet5TableAdapters.VistaMaestraTableAdapter();
+            this.nombreHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Division1)).BeginInit();
             this.Division1.Panel1.SuspendLayout();
             this.Division1.Panel2.SuspendLayout();
@@ -313,7 +313,7 @@
             this.dataGridView1.DataSource = this.vistaMaestraBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(11, 21);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(546, 551);
+            this.dataGridView1.Size = new System.Drawing.Size(546, 116);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -472,20 +472,6 @@
             this.dataGridView4.Size = new System.Drawing.Size(493, 378);
             this.dataGridView4.TabIndex = 0;
             // 
-            // nombreHDataGridViewTextBoxColumn
-            // 
-            this.nombreHDataGridViewTextBoxColumn.DataPropertyName = "Nombre_H";
-            this.nombreHDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreHDataGridViewTextBoxColumn.Name = "nombreHDataGridViewTextBoxColumn";
-            this.nombreHDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Direccion";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Direccion";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 250;
-            // 
             // hospitalBindingSource1
             // 
             this.hospitalBindingSource1.DataMember = "Hospital";
@@ -522,6 +508,8 @@
             // 
             this.profesional_SaludTableAdapter.ClearBeforeFill = true;
             // 
+<<<<<<< HEAD
+=======
             // vistaMaestraBindingSource
             // 
             this.vistaMaestraBindingSource.DataMember = "VistaMaestra";
@@ -540,18 +528,42 @@
             // 
             this.vistaMaestraTableAdapter1.ClearBeforeFill = true;
             // 
+            // nombreHDataGridViewTextBoxColumn
+            // 
+            this.nombreHDataGridViewTextBoxColumn.DataPropertyName = "Nombre_H";
+            this.nombreHDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreHDataGridViewTextBoxColumn.Name = "nombreHDataGridViewTextBoxColumn";
+            this.nombreHDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Direccion";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 250;
+            // 
+>>>>>>> 46e07c60331b11cca3f52518b133304935b644aa
             // InicioAdminG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(873, 600);
+<<<<<<< HEAD
+            this.ClientSize = new System.Drawing.Size(873, 548);
+            this.Controls.Add(this.menuGeneral);
             this.Controls.Add(this.menuPersonal);
             this.Controls.Add(this.menuHospital);
+            this.Name = "InicioAdminG";
+            this.Text = "Equipo Negro App";
+=======
+            this.ClientSize = new System.Drawing.Size(873, 600);
+            this.Controls.Add(this.menuHospital);
             this.Controls.Add(this.menuGeneral);
+            this.Controls.Add(this.menuPersonal);
             this.Name = "InicioAdminG";
             this.Text = "Equipo Negro App";
             this.Load += new System.EventHandler(this.InicioAdminG_Load);
+>>>>>>> 46e07c60331b11cca3f52518b133304935b644aa
             this.Division1.Panel1.ResumeLayout(false);
             this.Division1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Division1)).EndInit();

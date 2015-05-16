@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Microsoft.Office.Core;
+using System.Xml;
+using System.Xml.XPath;
+using System.Xml.Xsl;
 
 namespace BasesAvanzadas
 {
@@ -17,8 +21,7 @@ namespace BasesAvanzadas
         private string conexionBase = "Data Source=192.168.100.107;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
         private string SeguroSocialPacientePS;
         private int idProfSalLogIn;
-        private int idMedicTratante;
-        AltaPersonal altaProfesional = new AltaPersonal();
+        private int idMedicTratante;        
         FormHospital altaHospital = new FormHospital();
         AltaPaciente altaPaciente = new AltaPaciente();
         public InicioDoctor()
@@ -43,7 +46,7 @@ namespace BasesAvanzadas
 
         private void Salir(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
         private void Hospital(object sender, EventArgs e)
         {
@@ -68,7 +71,7 @@ namespace BasesAvanzadas
                 cmd = new SqlCommand("SELECT * FROM Paciente WHERE NumSeguroSocial LIKE '%" + segurosocialPaciente.Text + "%' and Nombre_P LIKE '%" + nombrePaciente.Text + "%' and (Ap_PatP LIKE '%" + apellidoPaciente.Text + "%' or Ap_MatP LIKE '%" + apellidoPaciente.Text + "%');", con);
                 
                 SqlDataReader reader = cmd.ExecuteReader();
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 if (reader.HasRows)
                 {
                     dt.Columns.Add("NumSeguroSocial", typeof(string));
@@ -109,7 +112,7 @@ namespace BasesAvanzadas
                 cmd = new SqlCommand("SELECT Nombre_ps, Ap_Pat,Ap_Mat,Perfil.Descripcion_Perfil as Perfil,Especialidad.Descripcion_Especialidad as Especialidad FROM dbo.Profesional_Salud INNER JOIN dbo.Especialidad ON Profesional_Salud.Id_Especialidad=Especialidad.Id_Especialidad INNER JOIN dbo.Perfil ON Profesional_Salud.Id_Perfil=Perfil.Id_Perfil WHERE  Nombre_ps LIKE '%" + nombrePersonal.Text + "%' AND (Ap_Pat LIKE '%" + apellidoPersonal.Text + "%' OR Ap_Mat LIKE '%" + apellidoPersonal.Text + "%');", con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 if (reader.HasRows)
                 {
                     dt.Columns.Add("Nombre_ps", typeof(string));
@@ -120,9 +123,6 @@ namespace BasesAvanzadas
                     dt.Load(reader);
 
                     dataGridView3.DataSource = dt;
-
-                    Console.Write("i have rows ");
-
                 }
                 else
                 {
@@ -144,9 +144,34 @@ namespace BasesAvanzadas
             menuVerNota.Visible = true;
             menuContextPaciente.Visible = false;
 
-            //
+            SqlConnection con = new SqlConnection(conexionBase);
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
 
-            
+
+                cmd = new SqlCommand("select Id_Nota_Gen,tipo,Dia,Mes,Anio from Nota_Gen as ng inner join Tiempo as t on ng.Id_Tiempo = t.Id_Tiempo where NumSeguroSocial ='"+segurosocialPaciente.Text+"';", con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                System.Data.DataTable dt = new System.Data.DataTable();
+                if (reader.HasRows)
+                {
+                    dt.Columns.Add("Id_Nota_Gen", typeof(string));
+                    dt.Columns.Add("tipo", typeof(string));
+                    dt.Columns.Add("Dia", typeof(int));
+                    dt.Columns.Add("Mes", typeof(int));
+                    dt.Columns.Add("Anio", typeof(int));
+                    dt.Load(reader);
+
+                    dataGridViewNotas.DataSource = dt;
+
+                }
+                else
+                {
+                    dataGridViewNotas.DataSource = dt;
+                }
+                con.Close();
+            }
+            mostrarIdNotas();
 
             //
         }
@@ -224,13 +249,7 @@ namespace BasesAvanzadas
         {
 
         }
-
-        private void altaDatosPersonal_Click(object sender, EventArgs e)
-        {
-            AltaPersonal altaPersonal = new AltaPersonal();
-            altaPersonal.ShowDialog();
-        }
-
+        
         private void buscarDetallesPersonalBoton_Click(object sender, EventArgs e)
         {
             String apellidoP = apellidoPersonal.Text;
@@ -298,7 +317,72 @@ namespace BasesAvanzadas
         {
             filtradoPersonal();
         }
-        
 
+        private void dataGridViewNotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void verWord() {
+
+            XmlDocument xdoc = new XmlDocument();
+
+            SqlConnection con = new SqlConnection(conexionBase);
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                ////-----Busquedas en Personal------                
+
+                cmd = new SqlCommand("select Doc from Nota_Gen as ng inner join Tiempo as t on ng.Id_Tiempo = t.Id_Tiempo where NumSeguroSocial ="+segurosocialPaciente.Text+" AND Id_Nota_Gen ="+comboBoxIDNotas.SelectedValue+";", con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    using (XmlReader xml = reader.GetSqlXml(0).CreateReader())
+                    {
+                        xdoc.Load(xml);
+                    }
+
+                }
+                con.Close();
+            }
+            xdoc.Save("C:\\Users\\moises\\Documents\\escuela\\8 sem\\bases\\Prueba1\\BasesAvanzadas\\BasesAvanzadas\\ArchivosXml\\intento.xml");
+
+            var applicationWord = new Microsoft.Office.Interop.Word.Application();
+
+            
+            string ruta = "C:\\Users\\moises\\Documents\\escuela\\8 sem\\bases\\Prueba1\\BasesAvanzadas\\BasesAvanzadas\\ArchivosXml\\intento.xml";                        
+
+            applicationWord.Documents.Open(ruta);
+            applicationWord.Visible = true;
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            verWord();
+        }
+
+        private void mostrarIdNotas() {
+
+            SqlConnection conn = new SqlConnection(conexionBase);
+            conn.Open();
+            SqlCommand sc = new SqlCommand("select Id_Nota_Gen from Nota_Gen as ng inner join Tiempo as t on ng.Id_Tiempo = t.Id_Tiempo where NumSeguroSocial =" + segurosocialPaciente.Text + ";", conn);
+            //SqlDataReader reader = sc.ExecuteReader();
+            SqlDataReader r = sc.ExecuteReader();
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("Id_Nota_Gen", typeof(string));
+            dt.Load(r);
+
+            comboBoxIDNotas.ValueMember = "Id_Nota_Gen";
+            comboBoxIDNotas.DisplayMember = "Id_Nota_Gen";
+            comboBoxIDNotas.DataSource = dt;
+
+            conn.Close();
+
+        }
     }
 }

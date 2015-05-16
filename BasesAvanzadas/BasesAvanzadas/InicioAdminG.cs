@@ -18,7 +18,7 @@ namespace BasesAvanzadas
         private string SeguroSocialPacientePS;
         private int idProfSalLogIn;
         private int idMedicTratante;
-        AltaPersonal altaProfesional = new AltaPersonal();
+        AltaPersonalAdminG altaPersonalAdminG = new AltaPersonalAdminG();
         FormHospital altaHospital = new FormHospital();
         AltaPaciente altaPaciente = new AltaPaciente();
         public InicioAdminG()
@@ -51,7 +51,8 @@ namespace BasesAvanzadas
 
                 ////-----Busquedas en Personal------                
 
-                cmd = new SqlCommand("select Nombre_PS as Nombre, Ap_Pat as Apellido_P , Ap_Mat as Apellido_M, Descripcion_Especialidad as Especialidad ,Nombre_H as Hospital from VistaMaestra where Id_Perfil = 3", con);
+                cmd = new SqlCommand("SELECT Nombre_PS as Nombre, Ap_Pat as Apellido_P , Ap_Mat as Apellido_M , Descripcion_Especialidad as Especialidad ,Nombre_H as Hospital FROM VistaMaestra WHERE Id_Perfil = 3 AND Nombre_ps LIKE '%" + nombrePersonal.Text + "%' AND (Ap_Pat LIKE '%" + apellidoPersonal.Text + "%' OR Ap_Mat LIKE '%" + apellidoPersonal.Text + "%');", con);
+               //cmd = new SqlCommand("SELECT Id_Profesional_Salud,Nombre_PS,Ap_Pat,Ap_Mat,No_Cedula,Descripcion_Perfil,Descripcion_Especialidad,Id_Hospital FROM VistaMaestra WHERE Nombre_ps LIKE '%" + nombrePersonal.Text + "%' AND (Ap_Pat LIKE '%" + apellidoPersonal.Text + "%' OR Ap_Mat LIKE '%" + apellidoPersonal.Text + "%');", con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
@@ -117,9 +118,8 @@ namespace BasesAvanzadas
         }
 
         private void altaDatosPersonal_Click(object sender, EventArgs e)
-        {
-            AltaPersonal altaPersonal = new AltaPersonal();
-            altaPersonal.ShowDialog();
+        {            
+            altaPersonalAdminG.ShowDialog();
         }
 
         private void buscarDetallesPersonalBoton_Click(object sender, EventArgs e)
