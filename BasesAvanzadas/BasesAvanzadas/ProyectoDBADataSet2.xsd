@@ -9,13 +9,11 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Profesional_SaludTableAdapter" GeneratorDataComponentClassName="Profesional_SaludTableAdapter" Name="Profesional_Salud" UserDataComponentName="Profesional_SaludTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ProyectoDBAConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ProyectoDBAConnectionString1 (Settings)" DbObjectName="ProyectoDBA.dbo.VistaMaestra" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Profesional_Salud.Nombre_PS, Profesional_Salud.Ap_Pat, Profesional_Salud.Ap_Mat, Perfil.Descripcion_Perfil AS Perfil, Especialidad.Descripcion_Especialidad AS Especialidad
-FROM            Profesional_Salud INNER JOIN
-                         Especialidad ON Profesional_Salud.Id_Especialidad = Especialidad.Id_Especialidad INNER JOIN
-                         Perfil ON Profesional_Salud.Id_Perfil = Perfil.Id_Perfil</CommandText>
+                    <CommandText>SELECT        Id_Profesional_Salud, Nombre_PS, Ap_Pat, Ap_Mat, No_Cedula, Descripcion_Perfil, Descripcion_Especialidad, Id_Hospital
+FROM            VistaMaestra</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -25,8 +23,11 @@ FROM            Profesional_Salud INNER JOIN
               <Mapping SourceColumn="Nombre_PS" DataSetColumn="Nombre_PS" />
               <Mapping SourceColumn="Ap_Pat" DataSetColumn="Ap_Pat" />
               <Mapping SourceColumn="Ap_Mat" DataSetColumn="Ap_Mat" />
-              <Mapping SourceColumn="Perfil" DataSetColumn="Perfil" />
-              <Mapping SourceColumn="Especialidad" DataSetColumn="Especialidad" />
+              <Mapping SourceColumn="No_Cedula" DataSetColumn="No_Cedula" />
+              <Mapping SourceColumn="Descripcion_Perfil" DataSetColumn="Descripcion_Perfil" />
+              <Mapping SourceColumn="Descripcion_Especialidad" DataSetColumn="Descripcion_Especialidad" />
+              <Mapping SourceColumn="Id_Hospital" DataSetColumn="Id_Hospital" />
+              <Mapping SourceColumn="Id_Profesional_Salud" DataSetColumn="Id_Profesional_Salud" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -62,24 +63,37 @@ FROM            Profesional_Salud INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Perfil" msprop:Generator_ColumnVarNameInTable="columnPerfil" msprop:Generator_ColumnPropNameInRow="Perfil" msprop:Generator_ColumnPropNameInTable="PerfilColumn" msprop:Generator_UserColumnName="Perfil">
+              <xs:element name="No_Cedula" msprop:Generator_ColumnVarNameInTable="columnNo_Cedula" msprop:Generator_ColumnPropNameInRow="No_Cedula" msprop:Generator_ColumnPropNameInTable="No_CedulaColumn" msprop:Generator_UserColumnName="No_Cedula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descripcion_Perfil" msprop:Generator_ColumnVarNameInTable="columnDescripcion_Perfil" msprop:Generator_ColumnPropNameInRow="Descripcion_Perfil" msprop:Generator_ColumnPropNameInTable="Descripcion_PerfilColumn" msprop:Generator_UserColumnName="Descripcion_Perfil">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Especialidad" msprop:Generator_ColumnVarNameInTable="columnEspecialidad" msprop:Generator_ColumnPropNameInRow="Especialidad" msprop:Generator_ColumnPropNameInTable="EspecialidadColumn" msprop:Generator_UserColumnName="Especialidad">
+              <xs:element name="Descripcion_Especialidad" msprop:Generator_ColumnVarNameInTable="columnDescripcion_Especialidad" msprop:Generator_ColumnPropNameInRow="Descripcion_Especialidad" msprop:Generator_ColumnPropNameInTable="Descripcion_EspecialidadColumn" msprop:Generator_UserColumnName="Descripcion_Especialidad">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Id_Hospital" msprop:Generator_ColumnVarNameInTable="columnId_Hospital" msprop:Generator_ColumnPropNameInRow="Id_Hospital" msprop:Generator_ColumnPropNameInTable="Id_HospitalColumn" msprop:Generator_UserColumnName="Id_Hospital" type="xs:int" />
+              <xs:element name="Id_Profesional_Salud" msprop:Generator_ColumnVarNameInTable="columnId_Profesional_Salud" msprop:Generator_ColumnPropNameInRow="Id_Profesional_Salud" msprop:Generator_ColumnPropNameInTable="Id_Profesional_SaludColumn" msprop:Generator_UserColumnName="Id_Profesional_Salud" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Profesional_Salud" />
+      <xs:field xpath="mstns:Id_Profesional_Salud" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

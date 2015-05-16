@@ -105,11 +105,11 @@
     <Compile Include="FormHospital.Designer.cs">
       <DependentUpon>FormHospital.cs</DependentUpon>
     </Compile>
-    <Compile Include="AltaPersonal.cs">
+    <Compile Include="AltaPersonalAdminH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltaPersonal.Designer.cs">
-      <DependentUpon>AltaPersonal.cs</DependentUpon>
+    <Compile Include="AltaPersonalAdminH.Designer.cs">
+      <DependentUpon>AltaPersonalAdminH.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonalForma.cs">
       <SubType>Form</SubType>
@@ -133,6 +133,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoDBADataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoDBADataSet2.cs">
+      <DependentUpon>ProyectoDBADataSet2.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ProyectoDBADataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -171,8 +175,8 @@
     <EmbeddedResource Include="FormHospital.resx">
       <DependentUpon>FormHospital.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AltaPersonal.resx">
-      <DependentUpon>AltaPersonal.cs</DependentUpon>
+    <EmbeddedResource Include="AltaPersonalAdminH.resx">
+      <DependentUpon>AltaPersonalAdminH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonalForma.resx">
       <DependentUpon>PersonalForma.cs</DependentUpon>

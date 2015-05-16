@@ -518,17 +518,17 @@
             // 
             this.profesional_SaludTableAdapter.ClearBeforeFill = true;
             // 
-            // Inicio
+            // InicioAdminG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(873, 548);
-            this.Controls.Add(this.menuHospital);
             this.Controls.Add(this.menuGeneral);
             this.Controls.Add(this.menuPersonal);
-            this.Name = "Inicio";
-            this.Text = "Equipo Negro App";            
+            this.Controls.Add(this.menuHospital);
+            this.Name = "InicioAdminG";
+            this.Text = "Equipo Negro App";
             this.Division1.Panel1.ResumeLayout(false);
             this.Division1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Division1)).EndInit();
