@@ -14,22 +14,22 @@
     <DefineConstants>VSTO40</DefineConstants>
     <OfficeApplication>Word</OfficeApplication>
     <ProjectGuid>{950AB2F7-D106-4CA7-A35E-778D8F893E02}</ProjectGuid>
+    <IsWebBootstrapper>False</IsWebBootstrapper>
+    <SolutionID>4b89daae-79cb-47fc-86a7-2c3b9a2cfca6</SolutionID>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>E:\Users\Alejandro\Desktop\templateTest\</PublishUrl>
     <InstallUrl />
     <TargetCulture>es</TargetCulture>
-    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <ApplicationVersion>1.0.0.1</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>days</UpdateIntervalUnits>
-    <IsWebBootstrapper>False</IsWebBootstrapper>
     <ProductName>Nota_Ingreso</ProductName>
     <PublisherName />
     <SupportUrl />
     <FriendlyName>Nota_Ingreso</FriendlyName>
     <OfficeApplicationDescription />
-    <SolutionID>4b89daae-79cb-47fc-86a7-2c3b9a2cfca6</SolutionID>
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -178,8 +178,8 @@
     <VisualStudio>
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="Nota_Ingreso.dotx" HostPackage="{763FDC83-64E5-4651-AC9B-28C4FEB985A1}" OfficeVersion="14.0" VstxVersion="4.0" ApplicationType="DOT" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files (x86)\Microsoft Office\Office14\WINWORD.EXE" DebugInfoCommandLine="/w /z&quot;[$OUTPUT]Nota_Ingreso.dotx&quot;" />
-        <Host Name="Word Document" Path=".\Nota_Ingreso.dotx" GeneratedCodeNamespace="Nota_Ingreso">
-          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" />
+        <Host Name="Word Document" Path=".\Nota_Ingreso.dotx" GeneratedCodeNamespace="Nota_Ingreso" PublishedHash="CFECFF3FB805E9A295392C4C85A42160CA201773">
+          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" PublishedHash="2C1B81A4B90A76C6C9ABD7808861286CA15F3D28" />
         </Host>
       </FlavorProperties>
     </VisualStudio>

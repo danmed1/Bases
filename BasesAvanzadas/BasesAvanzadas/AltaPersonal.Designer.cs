@@ -38,10 +38,14 @@
             this.tbApPat = new System.Windows.Forms.TextBox();
             this.tbApMat = new System.Windows.Forms.TextBox();
             this.tbCedula = new System.Windows.Forms.TextBox();
-            this.cbPerfil = new System.Windows.Forms.ComboBox();
             this.cbEspecialidad = new System.Windows.Forms.ComboBox();
             this.bGuardar = new System.Windows.Forms.Button();
             this.regresarMenuPaciente = new System.Windows.Forms.Button();
+            this.cbPerfil = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -86,9 +90,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(83, 205);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Perfil";
+            this.label5.Text = "Hospital";
             // 
             // label6
             // 
@@ -128,14 +132,6 @@
             this.tbCedula.Size = new System.Drawing.Size(191, 20);
             this.tbCedula.TabIndex = 9;
             // 
-            // cbPerfil
-            // 
-            this.cbPerfil.FormattingEnabled = true;
-            this.cbPerfil.Location = new System.Drawing.Point(270, 196);
-            this.cbPerfil.Name = "cbPerfil";
-            this.cbPerfil.Size = new System.Drawing.Size(191, 21);
-            this.cbPerfil.TabIndex = 10;
-            // 
             // cbEspecialidad
             // 
             this.cbEspecialidad.FormattingEnabled = true;
@@ -146,7 +142,7 @@
             // 
             // bGuardar
             // 
-            this.bGuardar.Location = new System.Drawing.Point(270, 283);
+            this.bGuardar.Location = new System.Drawing.Point(270, 417);
             this.bGuardar.Name = "bGuardar";
             this.bGuardar.Size = new System.Drawing.Size(75, 23);
             this.bGuardar.TabIndex = 12;
@@ -156,7 +152,7 @@
             // 
             // regresarMenuPaciente
             // 
-            this.regresarMenuPaciente.Location = new System.Drawing.Point(86, 282);
+            this.regresarMenuPaciente.Location = new System.Drawing.Point(86, 417);
             this.regresarMenuPaciente.Name = "regresarMenuPaciente";
             this.regresarMenuPaciente.Size = new System.Drawing.Size(75, 23);
             this.regresarMenuPaciente.TabIndex = 13;
@@ -164,11 +160,55 @@
             this.regresarMenuPaciente.UseVisualStyleBackColor = true;
             this.regresarMenuPaciente.Click += new System.EventHandler(this.regresarMenuPaciente_Click);
             // 
+            // cbPerfil
+            // 
+            this.cbPerfil.FormattingEnabled = true;
+            this.cbPerfil.Location = new System.Drawing.Point(270, 196);
+            this.cbPerfil.Name = "cbPerfil";
+            this.cbPerfil.Size = new System.Drawing.Size(191, 21);
+            this.cbPerfil.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(86, 293);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Nombre Usuario";
+            // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Location = new System.Drawing.Point(270, 285);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(191, 20);
+            this.textBoxUsername.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(86, 351);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Password";
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Location = new System.Drawing.Point(270, 351);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(191, 20);
+            this.textBoxPassword.TabIndex = 17;
+            // 
             // AltaPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 336);
+            this.ClientSize = new System.Drawing.Size(567, 484);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.regresarMenuPaciente);
             this.Controls.Add(this.bGuardar);
             this.Controls.Add(this.cbEspecialidad);
@@ -202,9 +242,13 @@
         private System.Windows.Forms.TextBox tbApPat;
         private System.Windows.Forms.TextBox tbApMat;
         private System.Windows.Forms.TextBox tbCedula;
-        private System.Windows.Forms.ComboBox cbPerfil;
         private System.Windows.Forms.ComboBox cbEspecialidad;
         private System.Windows.Forms.Button bGuardar;
         private System.Windows.Forms.Button regresarMenuPaciente;
+        private System.Windows.Forms.ComboBox cbPerfil;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxPassword;
     }
 }

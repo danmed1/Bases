@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProyectoDBADataSet4" targetNamespace="http://tempuri.org/ProyectoDBADataSet4.xsd" xmlns:mstns="http://tempuri.org/ProyectoDBADataSet4.xsd" xmlns="http://tempuri.org/ProyectoDBADataSet4.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ProyectoDBAConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProyectoDBAConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BasesAvanzadas.Properties.Settings.GlobalReference.Default.ProyectoDBAConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VistaMaestraTableAdapter" GeneratorDataComponentClassName="VistaMaestraTableAdapter" Name="VistaMaestra" UserDataComponentName="VistaMaestraTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProyectoDBAConnectionString1 (Settings)" DbObjectName="ProyectoDBA.dbo.VistaMaestra" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Nombre_PS, Ap_Pat, Ap_Mat, No_Cedula, Id_Especialidad, Nombre_H, Id_Perfil, Id_Hospital, Descripcion_Especialidad, Id_Profesional_Salud FROM dbo.VistaMaestra</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nombre_PS" DataSetColumn="Nombre_PS" />
+              <Mapping SourceColumn="Ap_Pat" DataSetColumn="Ap_Pat" />
+              <Mapping SourceColumn="Ap_Mat" DataSetColumn="Ap_Mat" />
+              <Mapping SourceColumn="No_Cedula" DataSetColumn="No_Cedula" />
+              <Mapping SourceColumn="Id_Especialidad" DataSetColumn="Id_Especialidad" />
+              <Mapping SourceColumn="Nombre_H" DataSetColumn="Nombre_H" />
+              <Mapping SourceColumn="Id_Perfil" DataSetColumn="Id_Perfil" />
+              <Mapping SourceColumn="Id_Hospital" DataSetColumn="Id_Hospital" />
+              <Mapping SourceColumn="Descripcion_Especialidad" DataSetColumn="Descripcion_Especialidad" />
+              <Mapping SourceColumn="Id_Profesional_Salud" DataSetColumn="Id_Profesional_Salud" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ProyectoDBAConnectionString1 (Settings)" DbObjectName="ProyectoDBA.dbo.VistaMaestra" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Nombre_PS, Ap_Pat, Ap_Mat, No_Cedula, Id_Especialidad, Nombre_H, Id_Perfil, Id_Hospital, Descripcion_Especialidad, Id_Profesional_Salud
+FROM            VistaMaestra
+WHERE        (Id_Perfil = 3)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProyectoDBADataSet4" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProyectoDBADataSet4" msprop:Generator_UserDSName="ProyectoDBADataSet4">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VistaMaestra" msprop:Generator_TableClassName="VistaMaestraDataTable" msprop:Generator_TableVarName="tableVistaMaestra" msprop:Generator_RowChangedName="VistaMaestraRowChanged" msprop:Generator_TablePropName="VistaMaestra" msprop:Generator_RowDeletingName="VistaMaestraRowDeleting" msprop:Generator_RowChangingName="VistaMaestraRowChanging" msprop:Generator_RowEvHandlerName="VistaMaestraRowChangeEventHandler" msprop:Generator_RowDeletedName="VistaMaestraRowDeleted" msprop:Generator_RowClassName="VistaMaestraRow" msprop:Generator_UserTableName="VistaMaestra" msprop:Generator_RowEvArgName="VistaMaestraRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nombre_PS" msprop:Generator_ColumnVarNameInTable="columnNombre_PS" msprop:Generator_ColumnPropNameInRow="Nombre_PS" msprop:Generator_ColumnPropNameInTable="Nombre_PSColumn" msprop:Generator_UserColumnName="Nombre_PS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ap_Pat" msprop:Generator_ColumnVarNameInTable="columnAp_Pat" msprop:Generator_ColumnPropNameInRow="Ap_Pat" msprop:Generator_ColumnPropNameInTable="Ap_PatColumn" msprop:Generator_UserColumnName="Ap_Pat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ap_Mat" msprop:Generator_ColumnVarNameInTable="columnAp_Mat" msprop:Generator_ColumnPropNameInRow="Ap_Mat" msprop:Generator_ColumnPropNameInTable="Ap_MatColumn" msprop:Generator_UserColumnName="Ap_Mat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="No_Cedula" msprop:Generator_ColumnVarNameInTable="columnNo_Cedula" msprop:Generator_ColumnPropNameInRow="No_Cedula" msprop:Generator_ColumnPropNameInTable="No_CedulaColumn" msprop:Generator_UserColumnName="No_Cedula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id_Especialidad" msprop:Generator_ColumnVarNameInTable="columnId_Especialidad" msprop:Generator_ColumnPropNameInRow="Id_Especialidad" msprop:Generator_ColumnPropNameInTable="Id_EspecialidadColumn" msprop:Generator_UserColumnName="Id_Especialidad" type="xs:int" minOccurs="0" />
+              <xs:element name="Nombre_H" msprop:Generator_ColumnVarNameInTable="columnNombre_H" msprop:Generator_ColumnPropNameInRow="Nombre_H" msprop:Generator_ColumnPropNameInTable="Nombre_HColumn" msprop:Generator_UserColumnName="Nombre_H">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id_Perfil" msprop:Generator_ColumnVarNameInTable="columnId_Perfil" msprop:Generator_ColumnPropNameInRow="Id_Perfil" msprop:Generator_ColumnPropNameInTable="Id_PerfilColumn" msprop:Generator_UserColumnName="Id_Perfil" type="xs:int" />
+              <xs:element name="Id_Hospital" msprop:Generator_ColumnVarNameInTable="columnId_Hospital" msprop:Generator_ColumnPropNameInRow="Id_Hospital" msprop:Generator_ColumnPropNameInTable="Id_HospitalColumn" msprop:Generator_UserColumnName="Id_Hospital" type="xs:int" />
+              <xs:element name="Descripcion_Especialidad" msprop:Generator_ColumnVarNameInTable="columnDescripcion_Especialidad" msprop:Generator_ColumnPropNameInRow="Descripcion_Especialidad" msprop:Generator_ColumnPropNameInTable="Descripcion_EspecialidadColumn" msprop:Generator_UserColumnName="Descripcion_Especialidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id_Profesional_Salud" msprop:Generator_ColumnVarNameInTable="columnId_Profesional_Salud" msprop:Generator_ColumnPropNameInRow="Id_Profesional_Salud" msprop:Generator_ColumnPropNameInTable="Id_Profesional_SaludColumn" msprop:Generator_UserColumnName="Id_Profesional_Salud" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

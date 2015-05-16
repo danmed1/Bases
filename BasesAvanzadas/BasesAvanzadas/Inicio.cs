@@ -13,8 +13,10 @@ namespace BasesAvanzadas
 {
     public partial class Inicio : Form
     {
+        private static Object oMissing = System.Reflection.Missing.Value;
+        private static Object oTemplatePath = "E:\\Users\\Alejandro\\Desktop\\templateTest\\Nota_Ingreso.dotx";
         public string mandarDato;
-        private string conexionBase = "Data Source=192.168.100.107;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
+        private string conexionBase = "Data Source=192.168.1.84;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
         private string SeguroSocialPacientePS;
         private int idProfSalLogIn;
         private int idMedicTratante;
@@ -280,6 +282,18 @@ namespace BasesAvanzadas
                 
             }
         }
+        private void notaAltaboton_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
+            Microsoft.Office.Interop.Word.Document wordDoc = new Microsoft.Office.Interop.Word.Document();
+            wordDoc = wordApp.Documents.Add(ref oTemplatePath, ref oMissing, ref oMissing, ref oMissing);
+            wordApp.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void menuVerNota_Enter(object sender, EventArgs e)
         {
@@ -371,7 +385,6 @@ namespace BasesAvanzadas
         {
             filtradoPersonal();
         }
-        
 
     }
 }

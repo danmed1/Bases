@@ -508,6 +508,8 @@
             // 
             this.profesional_SaludTableAdapter.ClearBeforeFill = true;
             // 
+<<<<<<< HEAD
+=======
             // vistaMaestraBindingSource
             // 
             this.vistaMaestraBindingSource.DataMember = "VistaMaestra";
@@ -540,17 +542,28 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 250;
             // 
+>>>>>>> 46e07c60331b11cca3f52518b133304935b644aa
             // InicioAdminG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
+<<<<<<< HEAD
+            this.ClientSize = new System.Drawing.Size(873, 548);
+            this.Controls.Add(this.menuGeneral);
+            this.Controls.Add(this.menuPersonal);
+            this.Controls.Add(this.menuHospital);
+            this.Name = "InicioAdminG";
+            this.Text = "Equipo Negro App";
+=======
             this.ClientSize = new System.Drawing.Size(873, 600);
+            this.Controls.Add(this.menuHospital);
             this.Controls.Add(this.menuGeneral);
             this.Controls.Add(this.menuPersonal);
             this.Name = "InicioAdminG";
             this.Text = "Equipo Negro App";
             this.Load += new System.EventHandler(this.InicioAdminG_Load);
+>>>>>>> 46e07c60331b11cca3f52518b133304935b644aa
             this.Division1.Panel1.ResumeLayout(false);
             this.Division1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Division1)).EndInit();

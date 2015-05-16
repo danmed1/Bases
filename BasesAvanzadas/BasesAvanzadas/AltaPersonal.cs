@@ -17,7 +17,7 @@ namespace BasesAvanzadas
         public AltaPersonal()
         {
             InitializeComponent();
-            mostrarPerfil();            
+            mostrarHospital();            
             mostrarEspecialidad();        
         }
 
@@ -27,23 +27,23 @@ namespace BasesAvanzadas
         }
 
 
-        private void mostrarPerfil()
+        private void mostrarHospital()
         {
             
             SqlConnection conn = new SqlConnection(conexionBase);
             conn.Open();
-            SqlCommand sc = new SqlCommand("SELECT * FROM Perfil", conn);
+            SqlCommand sc = new SqlCommand("SELECT Id_Hospital as IDH,Nombre_H AS Hospital FROM VistaMaestra", conn);
             SqlDataReader reader;
 
             reader = sc.ExecuteReader();
             DataTable dt = new DataTable();
 
-            dt.Columns.Add("Id_Perfil", typeof(string));
-            dt.Columns.Add("Descripcion_Perfil", typeof(string));
+            dt.Columns.Add("IDH", typeof(string));
+            dt.Columns.Add("Hospital", typeof(string));
             dt.Load(reader);
 
-            cbPerfil.ValueMember = "Id_Perfil";
-            cbPerfil.DisplayMember = "Descripcion_Perfil";
+            cbPerfil.ValueMember = "IDH";
+            cbPerfil.DisplayMember = "Hospital";
             cbPerfil.DataSource = dt;
 
             conn.Close();
@@ -79,16 +79,22 @@ namespace BasesAvanzadas
         {            
             SqlConnection con = new SqlConnection(conexionBase);
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO Profesional_Salud (Nombre_PS,Ap_Pat,Ap_Mat,No_Cedula,Id_Perfil,Id_Especialidad) VALUES (@Name,@Paterno,@Materno,@Cedula,@Perfil,@Especialidad);", con);               
+                SqlCommand cmd = new SqlCommand("INSERT INTO Profesional_Salud (Nombre_PS,Ap_Pat,Ap_Mat,No_Cedula,Id_Especialidad)  OUTPUT INSERTED.Id_Profesional_Salud VALUES (@Name,@Paterno,@Materno,@Cedula,@Especialidad);", con);               
                 cmd.Parameters.AddWithValue("@Name", tbNombre.Text);
                 cmd.Parameters.AddWithValue("@Paterno", tbApPat.Text);
                 cmd.Parameters.AddWithValue("@Materno", tbApMat.Text);
                 cmd.Parameters.AddWithValue("@Cedula", tbCedula.Text);
-                cmd.Parameters.AddWithValue("@Perfil", cbPerfil.SelectedValue);
                 cmd.Parameters.AddWithValue("@Especialidad", cbEspecialidad.SelectedValue);
 
                 con.Open();
-                cmd.ExecuteNonQuery();
+                int x = (int)cmd.ExecuteScalar();
+
+                SqlCommand cmd1 = new SqlCommand("INSERT INTO Hospital_Profesional_Salud (Id_Profesional_Salud,Id_Hospital,Username,Password,Id_Perfil) VALUES ("+x+",@Hospital,@Username,@Password,3);", con);
+                cmd1.Parameters.AddWithValue("@Hospital", cbPerfil.SelectedValue);
+                cmd1.Parameters.AddWithValue("@Username", textBoxUsername.Text);
+                cmd1.Parameters.AddWithValue("@Password", textBoxPassword.Text);
+
+                cmd1.ExecuteNonQuery();
                 con.Close();
             }
             this.Close();

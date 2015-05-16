@@ -25,8 +25,6 @@ namespace Nota_Ingreso {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl lb_Fecha;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl lb_Folio;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl lbDirH;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl lbDatMT;
@@ -69,53 +67,47 @@ namespace Nota_Ingreso {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl lbCedElab;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtxtNHospital;
+        public Microsoft.Office.Tools.Word.RichTextContentControl txtNHospitalNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtFolio;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtDirHNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtDirH;
+        internal Microsoft.Office.Tools.Word.DatePickerContentControl fechaElabNI;
         
-        internal Microsoft.Office.Tools.Word.DatePickerContentControl fechaElab;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtEspeNI;
         
-        internal Microsoft.Office.Tools.Word.ComboBoxContentControl comboMtrat;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtNSSNI;
         
-        internal Microsoft.Office.Tools.Word.ComboBoxContentControl comboCedula;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtApMatPNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtEspe;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtApPatPNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtNSS;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtNomPNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtApPat;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtGenPNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtApPatP;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtDomPNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtNomP;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtEscPNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtGenP;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtEtnPNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtFNacP;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtRelPNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtDomP;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtMotIngreNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtEscP;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtObservNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtEtnP;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtMedElabNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtRelP;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtCedElabNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtMotIngre;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtNMTratNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl21;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl txtNCedMTratNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtMedElab;
+        internal Microsoft.Office.Tools.Word.DatePickerContentControl fNacPNI;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl txtCedElab;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl1;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl22;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl23;
+        internal Microsoft.Office.Tools.Word.ComboBoxContentControl cmbHosProcNI;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -223,7 +215,6 @@ namespace Nota_Ingreso {
             this.lbTitle.BeginInit();
             this.lbHosp.BeginInit();
             this.lb_Fecha.BeginInit();
-            this.lb_Folio.BeginInit();
             this.lbDirH.BeginInit();
             this.lbDatMT.BeginInit();
             this.lbNomMT.BeginInit();
@@ -245,30 +236,27 @@ namespace Nota_Ingreso {
             this.lbObs.BeginInit();
             this.lbElab.BeginInit();
             this.lbCedElab.BeginInit();
-            this.rtxtNHospital.BeginInit();
-            this.txtFolio.BeginInit();
-            this.txtDirH.BeginInit();
-            this.fechaElab.BeginInit();
-            this.comboMtrat.BeginInit();
-            this.comboCedula.BeginInit();
-            this.txtEspe.BeginInit();
-            this.txtNSS.BeginInit();
-            this.txtApPat.BeginInit();
-            this.txtApPatP.BeginInit();
-            this.txtNomP.BeginInit();
-            this.txtGenP.BeginInit();
-            this.txtFNacP.BeginInit();
-            this.txtDomP.BeginInit();
-            this.txtEscP.BeginInit();
-            this.txtEtnP.BeginInit();
-            this.txtRelP.BeginInit();
-            this.txtMotIngre.BeginInit();
-            this.richTextContentControl21.BeginInit();
-            this.txtMedElab.BeginInit();
-            this.txtCedElab.BeginInit();
-            this.richTextContentControl1.BeginInit();
-            this.richTextContentControl22.BeginInit();
-            this.richTextContentControl23.BeginInit();
+            this.txtNHospitalNI.BeginInit();
+            this.txtDirHNI.BeginInit();
+            this.fechaElabNI.BeginInit();
+            this.txtEspeNI.BeginInit();
+            this.txtNSSNI.BeginInit();
+            this.txtApMatPNI.BeginInit();
+            this.txtApPatPNI.BeginInit();
+            this.txtNomPNI.BeginInit();
+            this.txtGenPNI.BeginInit();
+            this.txtDomPNI.BeginInit();
+            this.txtEscPNI.BeginInit();
+            this.txtEtnPNI.BeginInit();
+            this.txtRelPNI.BeginInit();
+            this.txtMotIngreNI.BeginInit();
+            this.txtObservNI.BeginInit();
+            this.txtMedElabNI.BeginInit();
+            this.txtCedElabNI.BeginInit();
+            this.txtNMTratNI.BeginInit();
+            this.txtNCedMTratNI.BeginInit();
+            this.fNacPNI.BeginInit();
+            this.cmbHosProcNI.BeginInit();
         }
         
         /// 
@@ -276,30 +264,27 @@ namespace Nota_Ingreso {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
-            this.richTextContentControl23.EndInit();
-            this.richTextContentControl22.EndInit();
-            this.richTextContentControl1.EndInit();
-            this.txtCedElab.EndInit();
-            this.txtMedElab.EndInit();
-            this.richTextContentControl21.EndInit();
-            this.txtMotIngre.EndInit();
-            this.txtRelP.EndInit();
-            this.txtEtnP.EndInit();
-            this.txtEscP.EndInit();
-            this.txtDomP.EndInit();
-            this.txtFNacP.EndInit();
-            this.txtGenP.EndInit();
-            this.txtNomP.EndInit();
-            this.txtApPatP.EndInit();
-            this.txtApPat.EndInit();
-            this.txtNSS.EndInit();
-            this.txtEspe.EndInit();
-            this.comboCedula.EndInit();
-            this.comboMtrat.EndInit();
-            this.fechaElab.EndInit();
-            this.txtDirH.EndInit();
-            this.txtFolio.EndInit();
-            this.rtxtNHospital.EndInit();
+            this.cmbHosProcNI.EndInit();
+            this.fNacPNI.EndInit();
+            this.txtNCedMTratNI.EndInit();
+            this.txtNMTratNI.EndInit();
+            this.txtCedElabNI.EndInit();
+            this.txtMedElabNI.EndInit();
+            this.txtObservNI.EndInit();
+            this.txtMotIngreNI.EndInit();
+            this.txtRelPNI.EndInit();
+            this.txtEtnPNI.EndInit();
+            this.txtEscPNI.EndInit();
+            this.txtDomPNI.EndInit();
+            this.txtGenPNI.EndInit();
+            this.txtNomPNI.EndInit();
+            this.txtApPatPNI.EndInit();
+            this.txtApMatPNI.EndInit();
+            this.txtNSSNI.EndInit();
+            this.txtEspeNI.EndInit();
+            this.fechaElabNI.EndInit();
+            this.txtDirHNI.EndInit();
+            this.txtNHospitalNI.EndInit();
             this.lbCedElab.EndInit();
             this.lbElab.EndInit();
             this.lbObs.EndInit();
@@ -321,7 +306,6 @@ namespace Nota_Ingreso {
             this.lbNomMT.EndInit();
             this.lbDatMT.EndInit();
             this.lbDirH.EndInit();
-            this.lb_Folio.EndInit();
             this.lb_Fecha.EndInit();
             this.lbHosp.EndInit();
             this.lbTitle.EndInit();
@@ -338,7 +322,6 @@ namespace Nota_Ingreso {
             this.lbTitle = Globals.Factory.CreateRichTextContentControl(null, null, "2336095911", "lbTitle", this);
             this.lbHosp = Globals.Factory.CreateRichTextContentControl(null, null, "1112870767", "lbHosp", this);
             this.lb_Fecha = Globals.Factory.CreateRichTextContentControl(null, null, "1007090284", "lb_Fecha", this);
-            this.lb_Folio = Globals.Factory.CreateRichTextContentControl(null, null, "1670899283", "lb_Folio", this);
             this.lbDirH = Globals.Factory.CreateRichTextContentControl(null, null, "1900930751", "lbDirH", this);
             this.lbDatMT = Globals.Factory.CreateRichTextContentControl(null, null, "3966988095", "lbDatMT", this);
             this.lbNomMT = Globals.Factory.CreateRichTextContentControl(null, null, "3769097416", "lbNomMT", this);
@@ -360,30 +343,27 @@ namespace Nota_Ingreso {
             this.lbObs = Globals.Factory.CreateRichTextContentControl(null, null, "3298618429", "lbObs", this);
             this.lbElab = Globals.Factory.CreateRichTextContentControl(null, null, "1189869004", "lbElab", this);
             this.lbCedElab = Globals.Factory.CreateRichTextContentControl(null, null, "2977167431", "lbCedElab", this);
-            this.rtxtNHospital = Globals.Factory.CreateRichTextContentControl(null, null, "1726178585", "rtxtNHospital", this);
-            this.txtFolio = Globals.Factory.CreateRichTextContentControl(null, null, "2474707464", "txtFolio", this);
-            this.txtDirH = Globals.Factory.CreateRichTextContentControl(null, null, "378211563", "txtDirH", this);
-            this.fechaElab = Globals.Factory.CreateDatePickerContentControl(null, null, "1001166377", "fechaElab", this);
-            this.comboMtrat = Globals.Factory.CreateComboBoxContentControl(null, null, "975728911", "comboMtrat", this);
-            this.comboCedula = Globals.Factory.CreateComboBoxContentControl(null, null, "2053575138", "comboCedula", this);
-            this.txtEspe = Globals.Factory.CreateRichTextContentControl(null, null, "485905416", "txtEspe", this);
-            this.txtNSS = Globals.Factory.CreateRichTextContentControl(null, null, "575868325", "txtNSS", this);
-            this.txtApPat = Globals.Factory.CreateRichTextContentControl(null, null, "3027040718", "txtApPat", this);
-            this.txtApPatP = Globals.Factory.CreateRichTextContentControl(null, null, "2411188545", "txtApPatP", this);
-            this.txtNomP = Globals.Factory.CreateRichTextContentControl(null, null, "1701207138", "txtNomP", this);
-            this.txtGenP = Globals.Factory.CreateRichTextContentControl(null, null, "1462076139", "txtGenP", this);
-            this.txtFNacP = Globals.Factory.CreateRichTextContentControl(null, null, "2985573284", "txtFNacP", this);
-            this.txtDomP = Globals.Factory.CreateRichTextContentControl(null, null, "2559662763", "txtDomP", this);
-            this.txtEscP = Globals.Factory.CreateRichTextContentControl(null, null, "3347958648", "txtEscP", this);
-            this.txtEtnP = Globals.Factory.CreateRichTextContentControl(null, null, "825245716", "txtEtnP", this);
-            this.txtRelP = Globals.Factory.CreateRichTextContentControl(null, null, "251392476", "txtRelP", this);
-            this.txtMotIngre = Globals.Factory.CreateRichTextContentControl(null, null, "2318756361", "txtMotIngre", this);
-            this.richTextContentControl21 = Globals.Factory.CreateRichTextContentControl(null, null, "3527728851", "richTextContentControl21", this);
-            this.txtMedElab = Globals.Factory.CreateRichTextContentControl(null, null, "1129599720", "txtMedElab", this);
-            this.txtCedElab = Globals.Factory.CreateRichTextContentControl(null, null, "1935319829", "txtCedElab", this);
-            this.richTextContentControl1 = Globals.Factory.CreateRichTextContentControl(null, null, "584200044", "richTextContentControl1", this);
-            this.richTextContentControl22 = Globals.Factory.CreateRichTextContentControl(null, null, "1408962549", "richTextContentControl22", this);
-            this.richTextContentControl23 = Globals.Factory.CreateRichTextContentControl(null, null, "1028603888", "richTextContentControl23", this);
+            this.txtNHospitalNI = Globals.Factory.CreateRichTextContentControl(null, null, "1726178585", "txtNHospitalNI", this);
+            this.txtDirHNI = Globals.Factory.CreateRichTextContentControl(null, null, "378211563", "txtDirHNI", this);
+            this.fechaElabNI = Globals.Factory.CreateDatePickerContentControl(null, null, "1001166377", "fechaElabNI", this);
+            this.txtEspeNI = Globals.Factory.CreateRichTextContentControl(null, null, "485905416", "txtEspeNI", this);
+            this.txtNSSNI = Globals.Factory.CreateRichTextContentControl(null, null, "575868325", "txtNSSNI", this);
+            this.txtApMatPNI = Globals.Factory.CreateRichTextContentControl(null, null, "3027040718", "txtApMatPNI", this);
+            this.txtApPatPNI = Globals.Factory.CreateRichTextContentControl(null, null, "2411188545", "txtApPatPNI", this);
+            this.txtNomPNI = Globals.Factory.CreateRichTextContentControl(null, null, "1701207138", "txtNomPNI", this);
+            this.txtGenPNI = Globals.Factory.CreateRichTextContentControl(null, null, "1462076139", "txtGenPNI", this);
+            this.txtDomPNI = Globals.Factory.CreateRichTextContentControl(null, null, "2559662763", "txtDomPNI", this);
+            this.txtEscPNI = Globals.Factory.CreateRichTextContentControl(null, null, "3347958648", "txtEscPNI", this);
+            this.txtEtnPNI = Globals.Factory.CreateRichTextContentControl(null, null, "825245716", "txtEtnPNI", this);
+            this.txtRelPNI = Globals.Factory.CreateRichTextContentControl(null, null, "251392476", "txtRelPNI", this);
+            this.txtMotIngreNI = Globals.Factory.CreateRichTextContentControl(null, null, "2318756361", "txtMotIngreNI", this);
+            this.txtObservNI = Globals.Factory.CreateRichTextContentControl(null, null, "3527728851", "txtObservNI", this);
+            this.txtMedElabNI = Globals.Factory.CreateRichTextContentControl(null, null, "1129599720", "txtMedElabNI", this);
+            this.txtCedElabNI = Globals.Factory.CreateRichTextContentControl(null, null, "1935319829", "txtCedElabNI", this);
+            this.txtNMTratNI = Globals.Factory.CreateRichTextContentControl(null, null, "1372887101", "txtNMTratNI", this);
+            this.txtNCedMTratNI = Globals.Factory.CreateRichTextContentControl(null, null, "3321671902", "txtNCedMTratNI", this);
+            this.fNacPNI = Globals.Factory.CreateDatePickerContentControl(null, null, "2900150605", "fNacPNI", this);
+            this.cmbHosProcNI = Globals.Factory.CreateComboBoxContentControl(null, null, "635688600", "cmbHosProcNI", this);
         }
         
         /// 
@@ -408,10 +388,6 @@ namespace Nota_Ingreso {
             // lb_Fecha
             // 
             this.lb_Fecha.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // lb_Folio
-            // 
-            this.lb_Folio.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // lbDirH
             // 
@@ -497,101 +473,89 @@ namespace Nota_Ingreso {
             // 
             this.lbCedElab.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // rtxtNHospital
+            // txtNHospitalNI
             // 
-            this.rtxtNHospital.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtNHospitalNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtFolio
+            // txtDirHNI
             // 
-            this.txtFolio.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtDirHNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtDirH
+            // fechaElabNI
             // 
-            this.txtDirH.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.fechaElabNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // fechaElab
+            // txtEspeNI
             // 
-            this.fechaElab.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtEspeNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // comboMtrat
+            // txtNSSNI
             // 
-            this.comboMtrat.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtNSSNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // comboCedula
+            // txtApMatPNI
             // 
-            this.comboCedula.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtApMatPNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtEspe
+            // txtApPatPNI
             // 
-            this.txtEspe.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtApPatPNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtNSS
+            // txtNomPNI
             // 
-            this.txtNSS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtNomPNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtApPat
+            // txtGenPNI
             // 
-            this.txtApPat.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtGenPNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtApPatP
+            // txtDomPNI
             // 
-            this.txtApPatP.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtDomPNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtNomP
+            // txtEscPNI
             // 
-            this.txtNomP.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtEscPNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtGenP
+            // txtEtnPNI
             // 
-            this.txtGenP.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtEtnPNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtFNacP
+            // txtRelPNI
             // 
-            this.txtFNacP.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtRelPNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtDomP
+            // txtMotIngreNI
             // 
-            this.txtDomP.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtMotIngreNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtEscP
+            // txtObservNI
             // 
-            this.txtEscP.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtObservNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtEtnP
+            // txtMedElabNI
             // 
-            this.txtEtnP.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtMedElabNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtRelP
+            // txtCedElabNI
             // 
-            this.txtRelP.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtCedElabNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtMotIngre
+            // txtNMTratNI
             // 
-            this.txtMotIngre.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtNMTratNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl21
+            // txtNCedMTratNI
             // 
-            this.richTextContentControl21.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.txtNCedMTratNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtMedElab
+            // fNacPNI
             // 
-            this.txtMedElab.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.fNacPNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // txtCedElab
+            // cmbHosProcNI
             // 
-            this.txtCedElab.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl1
-            // 
-            this.richTextContentControl1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl22
-            // 
-            this.richTextContentControl22.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl23
-            // 
-            this.richTextContentControl23.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.cmbHosProcNI.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // ThisDocument
             // 
@@ -609,30 +573,27 @@ namespace Nota_Ingreso {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
-            this.richTextContentControl23.Dispose();
-            this.richTextContentControl22.Dispose();
-            this.richTextContentControl1.Dispose();
-            this.txtCedElab.Dispose();
-            this.txtMedElab.Dispose();
-            this.richTextContentControl21.Dispose();
-            this.txtMotIngre.Dispose();
-            this.txtRelP.Dispose();
-            this.txtEtnP.Dispose();
-            this.txtEscP.Dispose();
-            this.txtDomP.Dispose();
-            this.txtFNacP.Dispose();
-            this.txtGenP.Dispose();
-            this.txtNomP.Dispose();
-            this.txtApPatP.Dispose();
-            this.txtApPat.Dispose();
-            this.txtNSS.Dispose();
-            this.txtEspe.Dispose();
-            this.comboCedula.Dispose();
-            this.comboMtrat.Dispose();
-            this.fechaElab.Dispose();
-            this.txtDirH.Dispose();
-            this.txtFolio.Dispose();
-            this.rtxtNHospital.Dispose();
+            this.cmbHosProcNI.Dispose();
+            this.fNacPNI.Dispose();
+            this.txtNCedMTratNI.Dispose();
+            this.txtNMTratNI.Dispose();
+            this.txtCedElabNI.Dispose();
+            this.txtMedElabNI.Dispose();
+            this.txtObservNI.Dispose();
+            this.txtMotIngreNI.Dispose();
+            this.txtRelPNI.Dispose();
+            this.txtEtnPNI.Dispose();
+            this.txtEscPNI.Dispose();
+            this.txtDomPNI.Dispose();
+            this.txtGenPNI.Dispose();
+            this.txtNomPNI.Dispose();
+            this.txtApPatPNI.Dispose();
+            this.txtApMatPNI.Dispose();
+            this.txtNSSNI.Dispose();
+            this.txtEspeNI.Dispose();
+            this.fechaElabNI.Dispose();
+            this.txtDirHNI.Dispose();
+            this.txtNHospitalNI.Dispose();
             this.lbCedElab.Dispose();
             this.lbElab.Dispose();
             this.lbObs.Dispose();
@@ -654,7 +615,6 @@ namespace Nota_Ingreso {
             this.lbNomMT.Dispose();
             this.lbDatMT.Dispose();
             this.lbDirH.Dispose();
-            this.lb_Folio.Dispose();
             this.lb_Fecha.Dispose();
             this.lbHosp.Dispose();
             this.lbTitle.Dispose();
