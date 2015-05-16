@@ -124,6 +124,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ProyectoDBADataSet1.cs">
+      <DependentUpon>ProyectoDBADataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ProyectoDBADataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +147,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoDBADataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoDBADataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoDBADataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoDBADataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoDBADataSet5.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DatosForma.resx">
       <DependentUpon>DatosForma.cs</DependentUpon>
@@ -237,6 +251,28 @@
     </None>
     <None Include="ProyectoDBADataSet3.xss">
       <DependentUpon>ProyectoDBADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet4.xsc">
+      <DependentUpon>ProyectoDBADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProyectoDBADataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectoDBADataSet4.xss">
+      <DependentUpon>ProyectoDBADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet5.xsc">
+      <DependentUpon>ProyectoDBADataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoDBADataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProyectoDBADataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectoDBADataSet5.xss">
+      <DependentUpon>ProyectoDBADataSet5.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

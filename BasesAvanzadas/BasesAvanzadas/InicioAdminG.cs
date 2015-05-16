@@ -51,27 +51,24 @@ namespace BasesAvanzadas
 
                 ////-----Busquedas en Personal------                
 
-                cmd = new SqlCommand("SELECT Nombre_ps, Ap_Pat,Ap_Mat,Perfil.Descripcion_Perfil as Perfil,Especialidad.Descripcion_Especialidad as Especialidad FROM dbo.Profesional_Salud INNER JOIN dbo.Especialidad ON Profesional_Salud.Id_Especialidad=Especialidad.Id_Especialidad INNER JOIN dbo.Perfil ON Profesional_Salud.Id_Perfil=Perfil.Id_Perfil WHERE  Nombre_ps LIKE '%" + nombrePersonal.Text + "%' AND (Ap_Pat LIKE '%" + apellidoPersonal.Text + "%' OR Ap_Mat LIKE '%" + apellidoPersonal.Text + "%');", con);
+                cmd = new SqlCommand("select Nombre_PS as Nombre, Ap_Pat as Apellido_P , Ap_Mat as Apellido_M, Descripcion_Especialidad as Especialidad ,Nombre_H as Hospital from VistaMaestra where Id_Perfil = 3", con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 if (reader.HasRows)
                 {
-                    dt.Columns.Add("Nombre_ps", typeof(string));
-                    dt.Columns.Add("Ap_Pat", typeof(string));
-                    dt.Columns.Add("Ap_Mat", typeof(string));
-                    dt.Columns.Add("Descripcion_Perfil", typeof(string));
-                    dt.Columns.Add("Descripcion_Especialidad", typeof(string));
+                    dt.Columns.Add("Nombre", typeof(string));
+                    dt.Columns.Add("Apellido_P", typeof(string));
+                    dt.Columns.Add("Apellido_M", typeof(string));
+                    dt.Columns.Add("Especialidad", typeof(string));
+                    dt.Columns.Add("Hospital", typeof(string));
                     dt.Load(reader);
 
-                    dataGridView3.DataSource = dt;
-
-                    Console.Write("i have rows ");
-
+                    dataGridView1.DataSource = dt;
                 }
                 else
                 {
-                    dataGridView3.DataSource = dt;
+                    dataGridView1.DataSource = dt;
                 }
                 con.Close();
             }
@@ -80,7 +77,6 @@ namespace BasesAvanzadas
 
         private void altasHospitalBoton_Click(object sender, EventArgs e)
         {
-            ////PON AQUI TU FORMA MEMO
             FormHospital fomraprueba = new FormHospital();
             fomraprueba.Show();
         }
@@ -128,13 +124,7 @@ namespace BasesAvanzadas
 
         private void buscarDetallesPersonalBoton_Click(object sender, EventArgs e)
         {
-            String apellidoP = apellidoPersonal.Text;
-            String nombreP = nombrePersonal.Text;
-
-            if (!apellidoP.Equals(""))
-            {
-                
-            }
+            filtradoPersonal();
         }
                 
         private void textBoxHospitalNombre_TextChanged(object sender, EventArgs e)
@@ -179,6 +169,32 @@ namespace BasesAvanzadas
         private void apellidoPersonal_TextChanged(object sender, EventArgs e)
         {
             filtradoPersonal();
+        }
+
+        private void InicioAdminG_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'proyectoDBADataSet5.VistaMaestra' Puede moverla o quitarla según sea necesario.
+            this.vistaMaestraTableAdapter1.Fill(this.proyectoDBADataSet5.VistaMaestra);
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.vistaMaestraTableAdapter.FillBy(this.proyectoDBADataSet4.VistaMaestra);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            nombrePersonal.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            apellidoPersonal.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
         }
         
 

@@ -36,7 +36,7 @@ namespace BasesAvanzadas
         {
             SqlConnection conn = new SqlConnection(conexionBase);
             conn.Open();
-            SqlCommand sc = new SqlCommand("SELECT Id_Perfil FROM VistaPerfilTodos WHERE Username = '" + textBoxUsername.Text + "' AND Password = '" + textBoxPassword.Text + "';", conn);
+            SqlCommand sc = new SqlCommand("SELECT Id_Perfil FROM Hospital_Profesional_Salud WHERE Username = '" + textBoxUsername.Text + "' AND Password = '" + textBoxPassword.Text + "';", conn);
             sc.ExecuteNonQuery();
             SqlDataReader dReader = sc.ExecuteReader();
             int perfil = 0;
