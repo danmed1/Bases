@@ -56,7 +56,7 @@ namespace BasesAvanzadas
                 {
                     case 1:
                         this.Hide();
-                        Inicio inicioDoc = new Inicio();
+                        InicioDoctor inicioDoc = new InicioDoctor();
                         inicioDoc.Closed += (s, args) => this.Close();
                         inicioDoc.Show();
                         break;
@@ -68,7 +68,7 @@ namespace BasesAvanzadas
                         break;
                     case 3:
                         this.Hide();
-                        InicioAdminH inAH = new InicioAdminH();
+                        InicioAdminH inAH = new InicioAdminH();                        
                         inAH.Closed += (s, args) => this.Close();
                         inAH.Show();
                         break;

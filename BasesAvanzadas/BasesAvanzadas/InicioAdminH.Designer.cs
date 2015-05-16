@@ -48,12 +48,9 @@
             this.apellidoPersonal = new System.Windows.Forms.TextBox();
             this.nombrePersonal = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.nombrePSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profesionalSaludBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.profesionalSaludBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.proyectoDBADataSet21 = new BasesAvanzadas.ProyectoDBADataSet2();
+            this.profesionalSaludBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.proyectoDBADataSet2 = new BasesAvanzadas.ProyectoDBADataSet2();
             this.profesionalSaludBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.profesionalSaludBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -67,6 +64,13 @@
             this.hospitalTableAdapter = new BasesAvanzadas.ProyectoDBADataSet1TableAdapters.HospitalTableAdapter();
             this.nota_GenTableAdapter = new BasesAvanzadas.ProyectoDBADataSet3TableAdapters.Nota_GenTableAdapter();
             this.profesional_SaludTableAdapter = new BasesAvanzadas.ProyectoDBADataSet2TableAdapters.Profesional_SaludTableAdapter();
+            this.profesionalSaludBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.nombrePSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.No_Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Division1)).BeginInit();
             this.Division1.Panel1.SuspendLayout();
             this.Division1.Panel2.SuspendLayout();
@@ -82,7 +86,9 @@
             this.vistaDetallesPersonal.Panel2.SuspendLayout();
             this.vistaDetallesPersonal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyectoDBADataSet21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proyectoDBADataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource)).BeginInit();
@@ -92,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notaGenBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proyectoDBADataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // personalBoton
@@ -282,51 +289,31 @@
             this.nombrePSDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
+            this.No_Cedula,
             this.Perfil,
             this.Especialidad});
-            this.dataGridView3.DataSource = this.profesionalSaludBindingSource2;
+            this.dataGridView3.DataSource = this.profesionalSaludBindingSource4;
             this.dataGridView3.Location = new System.Drawing.Point(24, 32);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(542, 488);
             this.dataGridView3.TabIndex = 0;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
-            // nombrePSDataGridViewTextBoxColumn
+            // profesionalSaludBindingSource4
             // 
-            this.nombrePSDataGridViewTextBoxColumn.DataPropertyName = "Nombre_PS";
-            this.nombrePSDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombrePSDataGridViewTextBoxColumn.Name = "nombrePSDataGridViewTextBoxColumn";
+            this.profesionalSaludBindingSource4.DataMember = "Profesional_Salud";
+            this.profesionalSaludBindingSource4.DataSource = this.proyectoDBADataSet21;
             // 
-            // dataGridViewTextBoxColumn10
+            // proyectoDBADataSet21
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Ap_Pat";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Apellido paterno";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 110;
+            this.proyectoDBADataSet21.DataSetName = "ProyectoDBADataSet2";
+            this.proyectoDBADataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridViewTextBoxColumn11
+            // profesionalSaludBindingSource3
             // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Ap_Mat";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Apellido materno";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 110;
-            // 
-            // Perfil
-            // 
-            this.Perfil.DataPropertyName = "Perfil";
-            this.Perfil.HeaderText = "Perfil";
-            this.Perfil.Name = "Perfil";
-            // 
-            // Especialidad
-            // 
-            this.Especialidad.DataPropertyName = "Especialidad";
-            this.Especialidad.HeaderText = "Especialidad";
-            this.Especialidad.Name = "Especialidad";
-            // 
-            // profesionalSaludBindingSource2
-            // 
-            this.profesionalSaludBindingSource2.DataMember = "Profesional_Salud";
-            this.profesionalSaludBindingSource2.DataSource = this.proyectoDBADataSet2;
+            this.profesionalSaludBindingSource3.DataMember = "Profesional_Salud";
+            this.profesionalSaludBindingSource3.DataSource = this.proyectoDBADataSet21;
             // 
             // proyectoDBADataSet2
             // 
@@ -369,16 +356,61 @@
             // 
             this.profesional_SaludTableAdapter.ClearBeforeFill = true;
             // 
-            // Inicio
+            // profesionalSaludBindingSource2
+            // 
+            this.profesionalSaludBindingSource2.DataMember = "Profesional_Salud";
+            this.profesionalSaludBindingSource2.DataSource = this.proyectoDBADataSet2;
+            // 
+            // nombrePSDataGridViewTextBoxColumn
+            // 
+            this.nombrePSDataGridViewTextBoxColumn.DataPropertyName = "Nombre_PS";
+            this.nombrePSDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombrePSDataGridViewTextBoxColumn.Name = "nombrePSDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Ap_Pat";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Apellido paterno";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Ap_Mat";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Apellido materno";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 110;
+            // 
+            // No_Cedula
+            // 
+            this.No_Cedula.DataPropertyName = "No_Cedula";
+            this.No_Cedula.HeaderText = "Cedula";
+            this.No_Cedula.Name = "No_Cedula";
+            this.No_Cedula.Width = 80;
+            // 
+            // Perfil
+            // 
+            this.Perfil.DataPropertyName = "Descripcion_Perfil";
+            this.Perfil.HeaderText = "Perfil";
+            this.Perfil.Name = "Perfil";
+            // 
+            // Especialidad
+            // 
+            this.Especialidad.DataPropertyName = "Descripcion_Especialidad";
+            this.Especialidad.HeaderText = "Especialidad";
+            this.Especialidad.Name = "Especialidad";
+            // 
+            // InicioAdminH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(873, 548);
-            this.Controls.Add(this.menuGeneral);
             this.Controls.Add(this.menuPersonal);
-            this.Name = "Inicio";
-            this.Text = "Equipo Negro App";            
+            this.Controls.Add(this.menuGeneral);
+            this.Name = "InicioAdminH";
+            this.Text = "Equipo Negro App";
+            this.Load += new System.EventHandler(this.InicioAdminH_Load);
             this.Division1.Panel1.ResumeLayout(false);
             this.Division1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Division1)).EndInit();
@@ -395,7 +427,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.vistaDetallesPersonal)).EndInit();
             this.vistaDetallesPersonal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyectoDBADataSet21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proyectoDBADataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource)).EndInit();
@@ -405,6 +439,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notaGenBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proyectoDBADataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesionalSaludBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,30 +468,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idPerfilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEspecialidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource proyectoDBADataSetBindingSource;
-        private System.Windows.Forms.BindingSource notaGenBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idNotaGenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numSeguroSocialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProfesionalSaludMTDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idHospitalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn claveDiagnosticoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn docDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProfesionalSaludElabDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idTiempoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource notaGenBindingSource;        
         private System.Windows.Forms.BindingSource pacienteBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numSeguroSocialDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apPatDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apMatDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fNacDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn generoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn domicilioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn escolaridadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn etniaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn religionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource hospitalBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idHospitalDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource profesionalSaludBindingSource1;
         private ProyectoDBADataSet proyectoDBADataSet;
         private System.Windows.Forms.BindingSource pacienteBindingSource1;
@@ -470,13 +484,17 @@
         private ProyectoDBADataSet3 proyectoDBADataSet3;
         private System.Windows.Forms.BindingSource notaGenBindingSource1;
         private ProyectoDBADataSet3TableAdapters.Nota_GenTableAdapter nota_GenTableAdapter;
+        private System.Windows.Forms.Label label8A;
+        private System.Windows.Forms.Label label8N;
+        private ProyectoDBADataSet2 proyectoDBADataSet21;
+        private System.Windows.Forms.BindingSource profesionalSaludBindingSource3;
+        private System.Windows.Forms.BindingSource profesionalSaludBindingSource4;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No_Cedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Perfil;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Especialidad;
-        private System.Windows.Forms.Label label8A;
-        private System.Windows.Forms.Label label8N;        
+        private System.Windows.Forms.DataGridViewTextBoxColumn Especialidad;        
     }
 }
 

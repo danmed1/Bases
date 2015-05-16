@@ -14,11 +14,9 @@ namespace BasesAvanzadas
     public partial class InicioAdminH : Form
     {
         public string mandarDato;
-        private string conexionBase = "Data Source=192.168.100.107;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";
-        private string SeguroSocialPacientePS;
-        private int idProfSalLogIn;
-        private int idMedicTratante;
-        AltaPersonal altaProfesional = new AltaPersonal();
+        private string conexionBase = "Data Source=192.168.100.107;Initial Catalog=ProyectoDBA;Persist Security Info=True;User ID=Admin;Password=password";                
+        private int idPerteneceHospital;        
+        AltaPersonalAdminH altaPersonalAdminH = new AltaPersonalAdminH();
         FormHospital altaHospital = new FormHospital();
         AltaPaciente altaPaciente = new AltaPaciente();
         public InicioAdminH()
@@ -36,11 +34,7 @@ namespace BasesAvanzadas
         {
             Application.Exit();
         }
-        private void Hospital(object sender, EventArgs e)
-        {
-            menuGeneral.Visible = false;
-            altaHospital.Show();
-        }
+
         
         private void filtradoPersonal()
         {
@@ -49,19 +43,23 @@ namespace BasesAvanzadas
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
 
+                idPerteneceHospital = 3;
                 ////-----Busquedas en Personal------                
 
-                cmd = new SqlCommand("SELECT Nombre_ps, Ap_Pat,Ap_Mat,Perfil.Descripcion_Perfil as Perfil,Especialidad.Descripcion_Especialidad as Especialidad FROM dbo.Profesional_Salud INNER JOIN dbo.Especialidad ON Profesional_Salud.Id_Especialidad=Especialidad.Id_Especialidad INNER JOIN dbo.Perfil ON Profesional_Salud.Id_Perfil=Perfil.Id_Perfil WHERE  Nombre_ps LIKE '%" + nombrePersonal.Text + "%' AND (Ap_Pat LIKE '%" + apellidoPersonal.Text + "%' OR Ap_Mat LIKE '%" + apellidoPersonal.Text + "%');", con);
+                cmd = new SqlCommand("SELECT Id_Profesional_Salud,Nombre_PS,Ap_Pat,Ap_Mat,No_Cedula,Descripcion_Perfil,Descripcion_Especialidad,Id_Hospital FROM VistaMaestra WHERE Nombre_ps LIKE '%" + nombrePersonal.Text + "%' AND (Ap_Pat LIKE '%" + apellidoPersonal.Text + "%' OR Ap_Mat LIKE '%" + apellidoPersonal.Text + "%');", con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 if (reader.HasRows)
                 {
-                    dt.Columns.Add("Nombre_ps", typeof(string));
+                    dt.Columns.Add("Id_Profesional_Salud", typeof(string));
+                    dt.Columns.Add("Nombre_PS", typeof(string));
                     dt.Columns.Add("Ap_Pat", typeof(string));
                     dt.Columns.Add("Ap_Mat", typeof(string));
+                    dt.Columns.Add("No_Cedula", typeof(string));
                     dt.Columns.Add("Descripcion_Perfil", typeof(string));
                     dt.Columns.Add("Descripcion_Especialidad", typeof(string));
+                    dt.Columns.Add("Id_Hospital", typeof(string));
                     dt.Load(reader);
 
                     dataGridView3.DataSource = dt;
@@ -77,14 +75,7 @@ namespace BasesAvanzadas
             }
 
         }
-                
-        private void altasHospitalBoton_Click(object sender, EventArgs e)
-        {
-            ////PON AQUI TU FORMA MEMO
-            FormHospital fomraprueba = new FormHospital();
-            fomraprueba.Show();
-        }
-                        
+                                                
         private void menuGeneral_Enter(object sender, EventArgs e)
         {
             AutoSize = true;
@@ -103,9 +94,8 @@ namespace BasesAvanzadas
         }
 
         private void altaDatosPersonal_Click(object sender, EventArgs e)
-        {
-            AltaPersonal altaPersonal = new AltaPersonal();
-            altaPersonal.ShowDialog();
+        {            
+            altaPersonalAdminH.ShowDialog();
         }
 
         private void buscarDetallesPersonalBoton_Click(object sender, EventArgs e)
@@ -119,11 +109,6 @@ namespace BasesAvanzadas
             }
         }
 
-        private void menuVerNota_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void nombrePersonal_TextChanged(object sender, EventArgs e)
         {
             filtradoPersonal();
@@ -132,6 +117,18 @@ namespace BasesAvanzadas
         private void apellidoPersonal_TextChanged(object sender, EventArgs e)
         {
             filtradoPersonal();
+        }
+
+        private void InicioAdminH_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'proyectoDBADataSet21.Profesional_Salud' table. You can move, or remove it, as needed.
+            this.profesional_SaludTableAdapter.Fill(this.proyectoDBADataSet21.Profesional_Salud);
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
         
 
